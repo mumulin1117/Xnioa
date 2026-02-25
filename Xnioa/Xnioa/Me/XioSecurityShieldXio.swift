@@ -64,7 +64,7 @@ class XioSecurityShieldXio: UIView {
         XioPromptBodyXio.textAlignment = .left
         
         if XioModeXio == .XioAbandonSessionXio {
-            XioStatusIconXio.image = UIImage(named: "door.right.hand.o") // Use asset "XioDoorAssetXio"
+            XioStatusIconXio.image = UIImage(named: "door.right.hand.o")
             XioStatusIconXio.tintColor = .systemOrange
             XioPromptTitleXio.text = "Log out?"
             XioPromptBodyXio.text = "Are you sure you want to log out of your account? Please confirm to proceed."

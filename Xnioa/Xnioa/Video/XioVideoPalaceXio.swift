@@ -20,7 +20,7 @@ class XioVideoPalaceXio: UIViewController {
     
     private let XioPrimaryShelfXio = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let XioNavTitleXio = UILabel()
-    private let XioStreamToggleXio = UIImageView()
+    private let XioStreamToggleXio = UIButton()
     private var XioHotListXio: [XioVideoEntityXio] = []
     private var XioFeedListXio: [XioVideoEntityXio] = []
     
@@ -39,14 +39,19 @@ class XioVideoPalaceXio: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    @objc func createXIOXioStreamToggleXio()  {
+        let aicrrwte = XioMotionBroadcastPilotXio()
+        aicrrwte.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(aicrrwte, animated: true)
+    }
     private func XioAssembleHierarchyXio() {
         XioNavTitleXio.text = "Trending"
         XioNavTitleXio.font = .systemFont(ofSize: 28, weight: .bold)
         XioNavTitleXio.textColor = .white
         
-        XioStreamToggleXio.image = UIImage(systemName: "video.fill.badge.plus")
-        XioStreamToggleXio.tintColor = .systemPurple
+        XioStreamToggleXio.setBackgroundImage(UIImage.init(named: "videoill.badge.plus"), for: .normal)
         
+        XioStreamToggleXio.addTarget(self, action: #selector(createXIOXioStreamToggleXio), for: .touchUpInside)
         let XioLayoutXio = UICollectionViewCompositionalLayout { (sectionIndex, _) -> NSCollectionLayoutSection? in
             return sectionIndex == 0 ? self.XioBuildHorizonZoneXio() : self.XioBuildVerticalZoneXio()
         }
@@ -145,6 +150,18 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
         let XioHeadXio = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "XioHeaderGadgetXio", for: indexPath) as! XioHeaderGadgetXio
         XioHeadXio.XioTitleLabelXio.text = "Recommend"
         return XioHeadXio
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let detailuser  = XioPeerPortalPalaceXio()
+            detailuser.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(detailuser, animated: true)
+        } else {
+            let detailuser  = XioMotionInsightPilotXio()
+            detailuser.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(detailuser, animated: true)
+        }
     }
 }
 

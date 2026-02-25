@@ -11,9 +11,11 @@ class XioPostCellXio: UICollectionViewCell {
     private let XioMainFrameXio = UIView()
     private let XioAvatarXio = UIImageView()
     private let XioHandleXio = UILabel()
+    private let AcccTopersonCou = UIButton()//personto
+    
     let AccctoinCou = UIButton()//more
     
-    let AcccTopersonCou = UIButton()//personto
+    
     
     private let XioHeroImageXio = UIImageView()
     private let XioCaptionXio = UILabel()
@@ -30,8 +32,7 @@ class XioPostCellXio: UICollectionViewCell {
     private func XioSetupVisualsXio() {
         XioMainFrameXio.backgroundColor = UIColor(white: 0.12, alpha: 1.0)
         XioMainFrameXio.layer.cornerRadius = 12
-        AccctoinCou.setImage(UIImage.init(named: "AccctoinCou"), for: .normal)
-        
+         
         AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
         
         
@@ -42,7 +43,8 @@ class XioPostCellXio: UICollectionViewCell {
         
         XioHandleXio.font = .systemFont(ofSize: 15, weight: .semibold)
         XioHandleXio.textColor = .white
-        
+        AccctoinCou.setImage(UIImage.init(named: "AccctoinCou"), for: .normal)
+      
         XioHeroImageXio.contentMode = .scaleAspectFill
         XioHeroImageXio.clipsToBounds = true
         XioHeroImageXio.layer.cornerRadius = 8

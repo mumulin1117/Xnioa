@@ -124,6 +124,20 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioGalleryFlowXio.isScrollEnabled = false
     }
 
+    
+   @objc func hhuiXioVintageBannerXio()  {
+       let crrwte = XioPartyArchitectXio()
+       crrwte.hidesBottomBarWhenPushed = true
+       self.navigationController?.pushViewController(crrwte, animated: true)
+    }
+    
+    
+    @objc func hhXioStyleBannerXio()  {
+        let aicrrwte = XioAIVisualPilotXio()
+        aicrrwte.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(aicrrwte, animated: true)
+     }
+    
     private func XioDesignStyleXio() {
     
         XioPulseSearchXio.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search for anything", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
@@ -136,6 +150,10 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioNightCaptionXio.text = "For the Night"
         XioNightCaptionXio.font = .systemFont(ofSize: 18, weight: .bold)
         XioNightCaptionXio.textColor = .lightGray
+        
+        XioVintageBannerXio.addTarget(self, action: #selector(hhuiXioVintageBannerXio), for: .touchUpInside)
+        XioStyleBannerXio.addTarget(self, action: #selector(hhXioStyleBannerXio), for: .touchUpInside)
+        
         
         XioVintageBannerXio.setBackgroundImage(UIImage.init(named: "XioNightCaptionXio"), for: .normal)
         
@@ -239,6 +257,10 @@ extension XioRetroLobbyXio: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width - 30, height: 200 * XioHScaleXio)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(XioVintageGalaTheaterXio(), animated: true)
     }
 }
 
