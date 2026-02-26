@@ -2,7 +2,7 @@
 //  XioSystemTerminalXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/24.
+//  Created by Xnioa on 2026/2/24.
 //
 
 import UIKit
@@ -167,21 +167,7 @@ class XioSystemTerminalXio: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-//    @objc private func XioExecuteLogoutXio() {
-//        let XioAlertXio = UIAlertController(title: "Log out", message: "Confirm leaving session?", preferredStyle: .alert)
-//        XioAlertXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//        XioAlertXio.addAction(UIAlertAction(title: "Confirm", style: .destructive, handler: { _ in
-//            self.dismiss(animated: true)
-//        }))
-//        present(XioAlertXio, animated: true)
-//    }
-//    
-//    @objc private func XioExecuteObliterationXio() {
-//        let XioAlertXio = UIAlertController(title: "Security Alert", message: "This will permanently remove all records. Continue?", preferredStyle: .actionSheet)
-//        XioAlertXio.addAction(UIAlertAction(title: "Obliterate", style: .destructive))
-//        XioAlertXio.addAction(UIAlertAction(title: "Secure", style: .cancel))
-//        present(XioAlertXio, animated: true)
-//    }
+
     
     private func XioLoadLocalVibeXio() {
         XioBalanceTagXio.text = "400"

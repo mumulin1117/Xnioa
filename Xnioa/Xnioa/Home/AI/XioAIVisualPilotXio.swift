@@ -2,12 +2,12 @@
 //  XioAIVisualPilotXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/25.
+//  Created by Xnioa on 2026/2/25.
 //
 
 import UIKit
 
-class XioAIVisualPilotXio: UIViewController {
+class XioAIVisualPilotXio: XioResilienceAnchorXio {
 
     private let XioVortexScrollXio = UIScrollView()
     private let XioCanvasRackXio = UIView()

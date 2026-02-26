@@ -2,14 +2,14 @@
 //  XioPartyCellXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/24.
+//  Created by Xnioa on 2026/2/24.
 //
 
 import UIKit
 class XioPartyCellXio: UICollectionViewCell {
     
     private let XioCardBaseXio = UIImageView(image: UIImage(named: "XioCardBaseXio"))
-    private let XioMainVisualXio = UIImageView()
+     let XioMainVisualXio = UIImageView()
     
     private let XioStatusBadgeXio = UIView()
     private let XioGreenDotXio = UIView()
@@ -57,7 +57,7 @@ class XioPartyCellXio: UICollectionViewCell {
             $0.translatesAutoresizingMaskIntoConstraints = false
             XioHotPanelXio.addSubview($0)
         }
-        
+        XioMainVisualXio.contentMode = .scaleAspectFill
         NSLayoutConstraint.activate([
             XioCardBaseXio.topAnchor.constraint(equalTo: contentView.topAnchor),
             XioCardBaseXio.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

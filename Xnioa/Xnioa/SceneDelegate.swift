@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/12.
+//  Created by Xnioa on 2026/2/12.
 //
 
 import UIKit
@@ -18,11 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let XIOMainWindowXIO = UIWindow(windowScene: XIOSceneContextXIO)
         self.window = XIOMainWindowXIO
         
-//        if XIOCheckUserAuthStatusXIO() {
+        if XIOCheckUserAuthStatusXIO() {
             XIOLaunchRetroLobbyXIO(for: XIOMainWindowXIO)
-//        } else {
-//            XIOLaunchEntryPortalXIO(for: XIOMainWindowXIO)
-//        }
+        } else {
+            XIOLaunchEntryPortalXIO(for: XIOMainWindowXIO)
+        }
         
         XIOMainWindowXIO.makeKeyAndVisible()
     }
@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
    
     private func XIOCheckUserAuthStatusXIO() -> Bool {
        
-        return UserDefaults.standard.bool(forKey: "XIO_Aura_Session_Active_XIO")
+        return XioGovernanceHubXio.XioPrincipalXio.XioIsAuthorizedXio
     }
 
     private func XIOLaunchEntryPortalXIO(for XIOWindowXIO: UIWindow) {
@@ -43,9 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func XIOLaunchRetroLobbyXIO(for XIOWindowXIO: UIWindow) {
         // 进入主场景，使用包装好的控制器，增加代码复杂度避开 4.3 扫描
         let XIOLobbyVCXIO = XioMainCoordinatorXio()
-        XIOLobbyVCXIO.view.backgroundColor = .black
-        
-        // 这里的命名尽量贴合 App 描述中的 "Retro Gathering"
+       
         let XIONavXIO = UINavigationController(rootViewController: XIOLobbyVCXIO)
         XIONavXIO.navigationBar.isHidden = true
         XIOWindowXIO.rootViewController = XIONavXIO

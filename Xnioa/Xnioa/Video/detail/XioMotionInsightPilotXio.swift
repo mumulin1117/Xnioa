@@ -2,13 +2,13 @@
 //  XioMotionInsightPilotXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/25.
+//  Created by Xnioa on 2026/2/25.
 //
 
 import UIKit
 import AVFoundation
 
-class XioMotionInsightPilotXio: UIViewController {
+class XioMotionInsightPilotXio: XioResilienceAnchorXio {
     private let AcccTopersonCou = UIButton()//personto
     private let XioApexDeckXio = UIView()
     private let XioRetreatBtnXio = UIButton()

@@ -2,7 +2,7 @@
 //  XioInboxPalaceXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/24.
+//  Created by Xnioa on 2026/2/24.
 //
 
 import UIKit
@@ -21,7 +21,8 @@ class XioInboxPalaceXio: UIViewController {
     private let XioTitlePlateXio = UILabel()
     private let XioChronicleListXio = UITableView()
     private var XioChatBufferXio: [XioChatEntityXio] = []
-    
+    private let XioVoidPlaceholderXio = UIImageView.init(image: UIImage.init(named: "XioVoidPlaceholderXio"))
+   
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
 
@@ -48,6 +49,9 @@ class XioInboxPalaceXio: UIViewController {
         XioChronicleListXio.register(XioChatTomeCellXio.self, forCellReuseIdentifier: "XioChatTomeCellXio")
         XioChronicleListXio.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(XioChronicleListXio)
+        view.addSubview(XioVoidPlaceholderXio)
+        XioVoidPlaceholderXio.isHidden = true
+        XioVoidPlaceholderXio.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             XioTitlePlateXio.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15 * XioHScaleXio),
@@ -56,7 +60,13 @@ class XioInboxPalaceXio: UIViewController {
             XioChronicleListXio.topAnchor.constraint(equalTo: XioTitlePlateXio.bottomAnchor, constant: 25 * XioHScaleXio),
             XioChronicleListXio.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             XioChronicleListXio.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            XioChronicleListXio.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            XioChronicleListXio.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            
+            XioVoidPlaceholderXio.topAnchor.constraint(equalTo: XioChronicleListXio.topAnchor, constant: 30),
+            XioVoidPlaceholderXio.centerXAnchor.constraint(equalTo: XioChronicleListXio.centerXAnchor),
+            XioVoidPlaceholderXio.widthAnchor.constraint(equalToConstant: 200 * XioWScaleXio),
+            XioVoidPlaceholderXio.heightAnchor.constraint(equalToConstant: 200 * XioWScaleXio),
         ])
     }
     
@@ -67,6 +77,7 @@ class XioInboxPalaceXio: UIViewController {
                 XioChatEntityXio(XioPartnerNameXio: "Martin Randolph", XioSnippetTextXio: "like your post: New year...", XioTimestampXio: "12.50", XioAvatarTokenXio: "v2")
             ]
             self.XioChronicleListXio.reloadData()
+            self.XioVoidPlaceholderXio.isHidden = !(self.XioChatBufferXio.count == 0)
         }
     }
 }

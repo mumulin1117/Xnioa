@@ -2,13 +2,13 @@
 //  XioEmailAuthPortalXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/24.
+//  Created by  on 2026/2/24.
 //
 
 import UIKit
 import SafariServices
 
-class XioEmailAuthPortalXio: UIViewController, UITextFieldDelegate {
+class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate {
 
     private let XioBackCanvasXio = UIView()
     private let XioReturnTriggerXio = UIButton(type: .custom)
@@ -139,11 +139,8 @@ class XioEmailAuthPortalXio: UIViewController, UITextFieldDelegate {
         XioReturnTriggerXio.addTarget(self, action: #selector(XioExitFlowXio), for: .touchUpInside)
         XioActionTriggerXio.addTarget(self, action: #selector(XioVerifyIdentityXio), for: .touchUpInside)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(XioAdjustForKeyboardXio), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(XioAdjustForKeyboardXio), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        let XioDismissTapXio = UITapGestureRecognizer(target: self, action: #selector(XioResignFocusXio))
-        view.addGestureRecognizer(XioDismissTapXio)
+         
+      
     }
 
     @objc private func XioVerifyIdentityXio() {
@@ -159,11 +156,34 @@ class XioEmailAuthPortalXio: UIViewController, UITextFieldDelegate {
         XioActionTriggerXio.addSubview(XioSpinXio)
         XioSpinXio.startAnimating()
         
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             XioSpinXio.stopAnimating()
             XioSpinXio.removeFromSuperview()
-            print("Xio_Retro_Session_Authorized")
+            // 满足基本长度即视为成功（模拟创建新账号）
+                   
+            if  XioGovernanceHubXio.XioPrincipalXio.XioAuthenticateXio(uid: XioMailXio, secret: XioKeyXio){
+                
+                self.XioTransitionToMainStageXio()
+            }
         }
+    }
+    private func XioTransitionToMainStageXio() {
+        guard let XioActiveWinXio = UIApplication.shared.connectedScenes
+                .filter({ $0.activationState == .foregroundActive })
+                .compactMap({ $0 as? UIWindowScene })
+                .first?.windows
+                .filter({ $0.isKeyWindow }).first else { return }
+            
+            // 获取当前的 SceneDelegate 实例并执行切换
+            if let XioDelegateXio = XioActiveWinXio.windowScene?.delegate as? SceneDelegate {
+                let XIOLobbyVCXIO = XioMainCoordinatorXio()
+               
+                let XIONavXIO = UINavigationController(rootViewController: XIOLobbyVCXIO)
+                XIONavXIO.navigationBar.isHidden = true
+                XioDelegateXio.window?.rootViewController = XIONavXIO
+            }
+       
     }
 
     private func XioFeedbackErrXio() {
@@ -176,25 +196,7 @@ class XioEmailAuthPortalXio: UIViewController, UITextFieldDelegate {
         XioActionTriggerXio.layer.add(XioShakeXio, forKey: "shake")
     }
 
-    @objc private func XioAdjustForKeyboardXio(notification: Notification) {
-        guard let XioFrameXio = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        let XioHeightXio = XioFrameXio.cgRectValue.height
-        
-        if notification.name == UIResponder.keyboardWillShowNotification {
-            XioCenterOffsetConstXio?.constant = -XioHeightXio / 3
-        } else {
-            XioCenterOffsetConstXio?.constant = 0
-        }
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
-
-    @objc private func XioResignFocusXio() {
-        view.endEditing(true)
-    }
-
+  
     @objc private func XioExitFlowXio() {
         dismiss(animated: true)
     }

@@ -2,7 +2,7 @@
 //  XioMainCoordinatorXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/24.
+//  Created by Xnioa on 2026/2/24.
 //
 
 import UIKit
@@ -30,13 +30,26 @@ class XioMainCoordinatorXio: UITabBarController {
     }
 
     private func XioSyncAestheticXio() {
-        tabBar.barTintColor = .black
-//        tabBar.tintColor = UIColor(red: 0.7, green: 0.9, blue: 0.6, alpha: 1.0)
-        tabBar.unselectedItemTintColor = .gray
-        tabBar.isTranslucent = false
+       
+                
+        let XioVibeAppearanceXio = UITabBarAppearance()
+       
+        XioVibeAppearanceXio.configureWithOpaqueBackground()
+        XioVibeAppearanceXio.backgroundColor = .black
         
-        let XioLineXio = UIView(frame: CGRect(x: 0, y: 0, width: tabBar.frame.width, height: 1))
-        XioLineXio.backgroundColor = UIColor(white: 0.2, alpha: 1.0)
-        tabBar.addSubview(XioLineXio)
+        XioVibeAppearanceXio.shadowColor = UIColor(white: 0.2, alpha: 1.0)
+        XioVibeAppearanceXio.shadowImage = nil
+        
+      
+        tabBar.standardAppearance = XioVibeAppearanceXio
+        if #available(iOS 15.0, *) {
+            tabBar.scrollEdgeAppearance = XioVibeAppearanceXio
+        }
+        
+       
+        tabBar.tintColor = UIColor(red: 0.7, green: 0.9, blue: 0.6, alpha: 1.0)
+        tabBar.unselectedItemTintColor = .gray
+        
+        tabBar.isTranslucent = false
     }
 }

@@ -2,13 +2,38 @@
 //  XioRetroLobbyXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/24.
+//  Created by Xnioa on 2026/2/24.
 //
 
 import UIKit
+extension XioRetroLobbyXio {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            // 实时搜索过滤
+            XioDispatchSearchQueryXio(searchText)
+        }
+        
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
+        }
+        
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.text = ""
+            XioDispatchSearchQueryXio("")
+            searchBar.resignFirstResponder()
+        }
 
+ 
+
+}
 class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
-    private var XioMockDataXio: [String] = []
+    private let XioVoidAnchorXio = XioVoidStateNavigatorXio()
+    
+    // 当前显示的数据源
+       
+    private var XioCurrentDataXio: [XioGalaEntryXio] = []
+    
+    // 原始总数据源
+    private var XioFullRegistryXio: [XioGalaEntryXio] = []
     private var XioGalleryHeightAnchorXio: NSLayoutConstraint?
     
     private let XioRootScrollXio = UIScrollView()
@@ -29,10 +54,15 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
     private func XioInitialDataLoadXio() {
-        // Initial fake data for the default category
-        XioMockDataXio = Array(repeating: "Vibe_Item", count: 10)
+   
+        XioFullRegistryXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio
+//        XioCurrentDataXio = XioFullRegistryXio
         
+       
     }
+//    
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         XioInitialDataLoadXio()
@@ -40,10 +70,12 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioDesignStyleXio()
 //        XioInjectMockCardsXio()
         XioRegisterSensorsXio()
-        
+        XioInitDismissGestureXio()
+        refreshBottomData(for: "For you")
     }
 
     private func XioConstructStructureXio() {
+        
         let XioLayoutXio = UICollectionViewFlowLayout()
                
         XioLayoutXio.scrollDirection = .vertical
@@ -69,7 +101,13 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
             $0.translatesAutoresizingMaskIntoConstraints = false
             XioContentBoxXio.addSubview($0)
         }
-        let XioTotalHeightXio = (200 * XioHScaleXio + 15 * XioHScaleXio) * CGFloat(XioMockDataXio.count)
+        
+        XioVoidAnchorXio.translatesAutoresizingMaskIntoConstraints = false
+                
+        XioVoidAnchorXio.isHidden = true // 默认隐藏
+       
+        
+        let XioTotalHeightXio = (200 * XioHScaleXio + 15 * XioHScaleXio) * CGFloat(XioFullRegistryXio.count)
         NSLayoutConstraint.activate([
             XioRootScrollXio.topAnchor.constraint(equalTo: view.topAnchor),
                         XioRootScrollXio.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -112,18 +150,44 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
             XioGalleryFlowXio.topAnchor.constraint(equalTo: XioFilterOrbitXio.bottomAnchor, constant: 15),
                         XioGalleryFlowXio.leadingAnchor.constraint(equalTo: XioContentBoxXio.leadingAnchor),
                         XioGalleryFlowXio.trailingAnchor.constraint(equalTo: XioContentBoxXio.trailingAnchor),
-                        
-                        // 关键修正 2: 禁止 CollectionView 自身滚动，让它完全撑开
-                        // 计算高度：(Cell高度 + 间距) * 数量
-                       
+                     
                         XioGalleryFlowXio.heightAnchor.constraint(equalToConstant: XioTotalHeightXio),
                         
                         // 关键修正 3: ContentBox 的底部必须连接到最后一个控件
                         XioGalleryFlowXio.bottomAnchor.constraint(equalTo: XioContentBoxXio.bottomAnchor, constant: -20)
         ])
+        
+        view.addSubview(XioVoidAnchorXio)
+        NSLayoutConstraint.activate([
+                    XioVoidAnchorXio.topAnchor.constraint(equalTo: XioGalleryFlowXio.topAnchor),
+                    XioVoidAnchorXio.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    XioVoidAnchorXio.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    XioVoidAnchorXio.heightAnchor.constraint(equalToConstant: 400)
+               
+        ])
+        
+        
         XioGalleryFlowXio.isScrollEnabled = false
     }
-
+    private func XioDispatchSearchQueryXio(_ text: String) {
+            if text.isEmpty {
+                // 如果为空，恢复原始数据（假设从 GovernanceHub 获取）
+                XioFullRegistryXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio
+            } else {
+                // 本地模糊匹配逻辑
+                XioFullRegistryXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.filter {
+                    $0.XIOName.lowercased().contains(text.lowercased())
+                }
+            }
+            
+            // 更新 UI 状态
+            let XioIsEmptyXio = XioFullRegistryXio.isEmpty
+            XioVoidAnchorXio.isHidden = !XioIsEmptyXio
+        XioGalleryFlowXio.isHidden = XioIsEmptyXio
+            
+        XioGalleryFlowXio.reloadData()
+      
+    }
     
    @objc func hhuiXioVintageBannerXio()  {
        let crrwte = XioPartyArchitectXio()
@@ -214,11 +278,22 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
 
     func refreshBottomData(for category: String) {
         print("当前选中的分类是：\(category)，正在刷新数据...")
+        let XioImpactXio = UIImpactFeedbackGenerator(style: .medium)
+                XioImpactXio.impactOccurred()
+        XioCurrentDataXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.filter {
+            $0.XioSubjectXio == category
+        }
+        
+        let XioNoDataXio = XioCurrentDataXio.isEmpty
+                
+        XioVoidAnchorXio.isHidden = !XioNoDataXio
+        XioGalleryFlowXio.isHidden = XioNoDataXio
+        
         XioGalleryFlowXio.reloadData()
                 
                
         // 更新高度约束
-        let XioNewHeightXio = (200 * XioHScaleXio + 15 * XioHScaleXio) * CGFloat(XioMockDataXio.count)
+        let XioNewHeightXio = (200 * XioHScaleXio + 15 * XioHScaleXio) * CGFloat(XioFullRegistryXio.count)
         XioGalleryHeightAnchorXio?.constant = XioNewHeightXio
         
         UIView.animate(withDuration: 0.3) {
@@ -247,11 +322,14 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
 extension XioRetroLobbyXio: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return XioMockDataXio.count
+        return XioCurrentDataXio.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioPartyCellXio", for: indexPath) as! XioPartyCellXio
+        let roromda = XioCurrentDataXio[indexPath.row]
+        XioCellXio.XioConfigureWithDataXio(name: roromda.XIOName, theme: <#T##String#>, online: "1", hot: "\(Int.random(in: 0...9))")
+        XioCellXio.XioMainVisualXio.image = UIImage.init(named: roromda.XioCoverXio)
         return XioCellXio
     }
     
@@ -261,6 +339,17 @@ extension XioRetroLobbyXio: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(XioVintageGalaTheaterXio(), animated: true)
+    }
+    
+    private func XioInitDismissGestureXio() {
+        let XioTapXio = UITapGestureRecognizer(target: self, action: #selector(XioTerminalEndEditXio))
+        // 关键：确保手势不冲突，允许列表点击正常触发
+        XioTapXio.cancelsTouchesInView = false
+        view.addGestureRecognizer(XioTapXio)
+    }
+
+    @objc private func XioTerminalEndEditXio() {
+        view.endEditing(true)
     }
 }
 
