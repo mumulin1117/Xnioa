@@ -8,7 +8,7 @@
 import UIKit
 
 class XioPostCellXio: UICollectionViewCell {
-    private let XioMainFrameXio = UIView()
+    private let XioMainFrameXio = UIImageView()
     private let XioAvatarXio = UIImageView()
     private let XioHandleXio = UILabel()
     private let AcccTopersonCou = UIButton()//personto
@@ -32,7 +32,7 @@ class XioPostCellXio: UICollectionViewCell {
     private func XioSetupVisualsXio() {
         XioMainFrameXio.backgroundColor = UIColor(white: 0.12, alpha: 1.0)
         XioMainFrameXio.layer.cornerRadius = 12
-         
+        XioMainFrameXio.contentMode = .scaleAspectFill
         AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
         
         
@@ -129,9 +129,23 @@ class XioPostCellXio: UICollectionViewCell {
     
     required init?(coder: NSCoder) { fatalError() }
     
-    func XioSyncEntityXio(_ data: XioVideoEntityXio) {
-        XioHandleXio.text = data.XioCreatorNameXio
-        XioCaptionXio.text = data.XioIntroTextXio
+    func XioSyncEntityXio(_ data: XioGalaEntryXio) {
+        XioHandleXio.text = data.XioAliasXio
+        XioCaptionXio.text = data.XioMoiveTitle
+        
+        XioAvatarXio.image = UIImage(named: data.XioAvatarXio)
+        self.XioHydrateVideoCell(sxnioPath: data.XioMoivepath)
+    }
+    
+    func XioHydrateVideoCell(sxnioPath: String) {
+        
+        SXNIOVideoTool.sxnioFetchThumbnail(from: sxnioPath) { [weak self] sxnioImg in
+            guard let self = self else { return }
+           
+            if let sxnioFinalImg = sxnioImg {
+                self.XioMainFrameXio.image = sxnioFinalImg
+            }
+        }
     }
 }
 

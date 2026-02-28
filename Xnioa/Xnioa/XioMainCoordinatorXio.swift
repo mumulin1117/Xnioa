@@ -50,6 +50,8 @@ class XioMainCoordinatorXio: UITabBarController {
         tabBar.tintColor = UIColor(red: 0.7, green: 0.9, blue: 0.6, alpha: 1.0)
         tabBar.unselectedItemTintColor = .gray
         
-        tabBar.isTranslucent = false
+        tabBar.isTranslucent = true
     }
+    
+
 }

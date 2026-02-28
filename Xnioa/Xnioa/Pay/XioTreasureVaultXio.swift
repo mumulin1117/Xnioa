@@ -6,14 +6,18 @@
 //
 
 import UIKit
-
+import StoreKit
 struct XioWealthPackageXio {
     let XioDiamondCountXio: String
     let XioPriceLabelXio: String
+    let XioAisiKeyXio :String
+    
 }
 
 class XioTreasureVaultXio: UIViewController {
-    
+    deinit {
+        SKPaymentQueue.default().remove(self)
+    }
     private let XioSkyBackdropXio = UIView()
     private let XioRetreatTriggerXio = UIButton()
     
@@ -30,18 +34,23 @@ class XioTreasureVaultXio: UIViewController {
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
     
     private let XioInventoryXio: [XioWealthPackageXio] = [
-        XioWealthPackageXio(XioDiamondCountXio: "400", XioPriceLabelXio: "$0.99"),
-        XioWealthPackageXio(XioDiamondCountXio: "800", XioPriceLabelXio: "$1.99"),
-        XioWealthPackageXio(XioDiamondCountXio: "1900", XioPriceLabelXio: "$3.99"),
-        XioWealthPackageXio(XioDiamondCountXio: "2450", XioPriceLabelXio: "$4.99"),
-        XioWealthPackageXio(XioDiamondCountXio: "3950", XioPriceLabelXio: "$6.99"),
-        XioWealthPackageXio(XioDiamondCountXio: "4900", XioPriceLabelXio: "$9.99")
+        XioWealthPackageXio(XioDiamondCountXio: "400", XioPriceLabelXio: "$0.99", XioAisiKeyXio: "tromcinaagnqmdgg"),
+        XioWealthPackageXio(XioDiamondCountXio: "800", XioPriceLabelXio: "$1.99", XioAisiKeyXio: "yspbttiffmabctne"),
+        XioWealthPackageXio(XioDiamondCountXio: "1900", XioPriceLabelXio: "$3.99", XioAisiKeyXio: "jksndhbushegbfssd"),
+        XioWealthPackageXio(XioDiamondCountXio: "2450", XioPriceLabelXio: "$4.99" ,XioAisiKeyXio: "vvanfzakhqnbnhwm"),
+        XioWealthPackageXio(XioDiamondCountXio: "3950", XioPriceLabelXio: "$6.99", XioAisiKeyXio: "isdjczkjnjxunucbd"),
+        XioWealthPackageXio(XioDiamondCountXio: "4900", XioPriceLabelXio: "$9.99", XioAisiKeyXio: "ywmaoopevjkbvtha"),
+        
+        XioWealthPackageXio(XioDiamondCountXio: "63700", XioPriceLabelXio: "$19.99", XioAisiKeyXio: "fotlfkowhujakytq"),
+        XioWealthPackageXio(XioDiamondCountXio: "29400", XioPriceLabelXio: "$49.99", XioAisiKeyXio: "topvuawhdgpqhqbk"),
+        XioWealthPackageXio(XioDiamondCountXio: "63700", XioPriceLabelXio: "$99.99", XioAisiKeyXio: "dikvyvsveyssxumn"),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         XioInitializeStageXio()
         XioAssembleComponentsXio()
+        sxnioSetupIAPCore()
         XioWealthStreamXio.showsVerticalScrollIndicator = false
     }
     
@@ -70,7 +79,7 @@ class XioTreasureVaultXio: UIViewController {
         XioRetreatTriggerXio.tintColor = .white
         XioRetreatTriggerXio.addTarget(self, action: #selector(XioExitVaultXio), for: .touchUpInside)
         
-        XioTotalWealthTagXio.text = "400"
+        XioTotalWealthTagXio.text = "\(sxnioCurrentBalance)"
         XioTotalWealthTagXio.font = .systemFont(ofSize: 32, weight: .bold)
         XioTotalWealthTagXio.textColor = .black
         
@@ -125,16 +134,20 @@ class XioTreasureVaultXio: UIViewController {
     }
     
     @objc private func XioInvokePaymentXio() {
-        let XioLoadViewXio = UIActivityIndicatorView(style: .large)
-        XioLoadViewXio.center = view.center
-        view.addSubview(XioLoadViewXio)
-        XioLoadViewXio.startAnimating()
+        let sxnioPackage = XioInventoryXio[XioSelectedIdxXio]
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            XioLoadViewXio.stopAnimating()
-            let XioNotifyXio = UIAlertController(title: "Processing", message: "Connecting to secure gateway...", preferredStyle: .alert)
-            XioNotifyXio.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(XioNotifyXio, animated: true)
+        // 显示 Loading
+        sxnioShowLoading(true)
+        
+        // 发起内购请求
+        if SKPaymentQueue.canMakePayments() {
+            let sxnioProductID = sxnioPackage.XioAisiKeyXio
+            let sxnioRequest = SKProductsRequest(productIdentifiers: [sxnioProductID])
+            sxnioRequest.delegate = self
+            sxnioRequest.start()
+        } else {
+            sxnioShowLoading(false)
+            sxnioPresentAlert(sxnioTitle: "Error", sxnioMsg: "In-app purchases are disabled on this device.")
         }
     }
     
@@ -229,4 +242,112 @@ class XioWealthTokenCellXio: UITableViewCell {
             XioCostTagXio.textColor = .systemIndigo
         }
     }
+}
+
+
+// 1. 首先让控制器遵守内购监听协议
+extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDelegate {
+    
+    // --- 新增属性 ---
+    // 模拟本地存储余额（实际项目中建议从 UserDefaults 或服务器获取）
+    private var sxnioCurrentBalance: Int {
+        get { XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio }
+        set {
+            
+            XioTotalWealthTagXio.text = "\(newValue)" // 实时更新 UI
+        }
+    }
+    
+    // 2. 在 viewDidLoad 中设置监听
+    private func sxnioSetupIAPCore() {
+        SKPaymentQueue.default().add(self)
+        // 初始化显示余额
+        if UserDefaults.standard.object(forKey: "sxnio_user_wealth_balance") == nil {
+            sxnioCurrentBalance = XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio
+        } else {
+            XioTotalWealthTagXio.text = "\(sxnioCurrentBalance)"
+        }
+    }
+
+  
+
+    // 4. StoreKit Delegate: 收到产品信息
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        DispatchQueue.main.async {
+            if let sxnioProduct = response.products.first {
+                let sxnioPayment = SKPayment(product: sxnioProduct)
+                SKPaymentQueue.default().add(sxnioPayment)
+            } else {
+                self.sxnioShowLoading(false)
+                self.sxnioPresentAlert(sxnioTitle: "Failed", sxnioMsg: "Product not found in App Store.")
+            }
+        }
+    }
+
+    // 5. StoreKit Delegate: 交易状态监听
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for sxnioTrans in transactions {
+            switch sxnioTrans.transactionState {
+            case .purchased:
+                sxnioHandleSuccessPurchase(sxnioTrans)
+            case .failed:
+                sxnioHandleFailedPurchase(sxnioTrans)
+            case .restored:
+                SKPaymentQueue.default().finishTransaction(sxnioTrans)
+            default: break
+            }
+        }
+    }
+
+    // --- 内部逻辑处理 ---
+
+    private func sxnioHandleSuccessPurchase(_ sxnioTrans: SKPaymentTransaction) {
+        SKPaymentQueue.default().finishTransaction(sxnioTrans)
+        
+        DispatchQueue.main.async {
+            self.sxnioShowLoading(false)
+            // 增加金币逻辑
+            let sxnioAddedCount = Int(self.XioInventoryXio[self.XioSelectedIdxXio].XioDiamondCountXio) ?? 0
+//            self.sxnioCurrentBalance += sxnioAddedCount
+            XioGovernanceHubXio.XioPrincipalXio.XioInjectReserveXio(gain:   sxnioAddedCount)
+            self.XioTotalWealthTagXio.text = "\(self.sxnioCurrentBalance)"
+            self.sxnioPresentAlert(sxnioTitle: "Success", sxnioMsg: "You have received \(sxnioAddedCount) gold coins!")
+        }
+    }
+
+    private func sxnioHandleFailedPurchase(_ sxnioTrans: SKPaymentTransaction) {
+        SKPaymentQueue.default().finishTransaction(sxnioTrans)
+        DispatchQueue.main.async {
+            self.sxnioShowLoading(false)
+            if let sxnioError = sxnioTrans.error as? SKError, sxnioError.code != .paymentCancelled {
+                self.sxnioPresentAlert(sxnioTitle: "Purchase Failed", sxnioMsg: sxnioError.localizedDescription)
+            }
+        }
+    }
+
+    // --- UI 辅助组件 ---
+
+    private func sxnioShowLoading(_ sxnioActive: Bool) {
+        if sxnioActive {
+            let sxnioIndicator = UIActivityIndicatorView(style: .large)
+            sxnioIndicator.color = .systemPurple
+            sxnioIndicator.tag = 999
+            sxnioIndicator.center = view.center
+            view.addSubview(sxnioIndicator)
+            sxnioIndicator.startAnimating()
+            view.isUserInteractionEnabled = false
+        } else {
+            view.viewWithTag(999)?.removeFromSuperview()
+            view.isUserInteractionEnabled = true
+        }
+    }
+
+    private func sxnioPresentAlert(sxnioTitle: String, sxnioMsg: String) {
+        let sxnioAlert = UIAlertController(title: sxnioTitle, message: sxnioMsg, preferredStyle: .alert)
+        sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(sxnioAlert, animated: true)
+    }
+    
+    // 记得在析构时移除监听
+   
 }

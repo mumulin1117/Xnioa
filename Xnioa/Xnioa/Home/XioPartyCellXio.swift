@@ -69,9 +69,7 @@ class XioPartyCellXio: UICollectionViewCell {
             XioMainVisualXio.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10 * XioHScaleXio),
             XioMainVisualXio.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -80 * XioWScaleXio),
             
-            XioStatusBadgeXio.topAnchor.constraint(equalTo: XioMainVisualXio.topAnchor, constant: 10),
-            XioStatusBadgeXio.leadingAnchor.constraint(equalTo: XioMainVisualXio.leadingAnchor, constant: 10),
-            XioStatusBadgeXio.heightAnchor.constraint(equalToConstant: 22),
+             
             
             XioGreenDotXio.leadingAnchor.constraint(equalTo: XioStatusBadgeXio.leadingAnchor, constant: 8),
             XioGreenDotXio.centerYAnchor.constraint(equalTo: XioStatusBadgeXio.centerYAnchor),
@@ -87,10 +85,15 @@ class XioPartyCellXio: UICollectionViewCell {
             XioInfoBarXio.trailingAnchor.constraint(equalTo: XioMainVisualXio.trailingAnchor, constant: -8),
             XioInfoBarXio.heightAnchor.constraint(equalToConstant: 30),
             
-            XioUserThumbXio.leadingAnchor.constraint(equalTo: XioInfoBarXio.leadingAnchor),
+            XioStatusBadgeXio.bottomAnchor.constraint(equalTo: XioInfoBarXio.topAnchor, constant: -10),
+            XioStatusBadgeXio.leadingAnchor.constraint(equalTo: XioMainVisualXio.leadingAnchor, constant: 10),
+            XioStatusBadgeXio.heightAnchor.constraint(equalToConstant: 22),
+          
+            
+            XioUserThumbXio.leadingAnchor.constraint(equalTo: XioInfoBarXio.leadingAnchor,constant: 15),
             XioUserThumbXio.centerYAnchor.constraint(equalTo: XioInfoBarXio.centerYAnchor),
-            XioUserThumbXio.widthAnchor.constraint(equalToConstant: 20),
-            XioUserThumbXio.heightAnchor.constraint(equalToConstant: 20),
+            XioUserThumbXio.widthAnchor.constraint(equalToConstant: 30),
+            XioUserThumbXio.heightAnchor.constraint(equalToConstant: 30),
             
             XioUserNameXio.leadingAnchor.constraint(equalTo: XioUserThumbXio.trailingAnchor, constant: 5),
             XioUserNameXio.centerYAnchor.constraint(equalTo: XioInfoBarXio.centerYAnchor),
@@ -140,7 +143,7 @@ class XioPartyCellXio: UICollectionViewCell {
         XioInfoBarXio.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         XioInfoBarXio.layer.cornerRadius = 15
         
-        XioUserThumbXio.layer.cornerRadius = 10
+        XioUserThumbXio.layer.cornerRadius = 15
         XioUserThumbXio.clipsToBounds = true
         XioUserThumbXio.backgroundColor = .lightGray
         
@@ -161,21 +164,23 @@ class XioPartyCellXio: UICollectionViewCell {
         XioAudienceStackXio.spacing = -5
     }
 
-    func XioConfigureWithDataXio(name: String, theme: String, online: String, hot: String) {
-        XioUserNameXio.text = name
-        XioThemeTitleXio.text = theme
-        XioOnlineLabelXio.text = "\(online) Online"
-        XioHotCountXio.text = hot
-        
+    func XioConfigureWithDataXio(jai:XioGalaEntryXio) {
+        XioUserNameXio.text = jai.XioAliasXio
+        XioThemeTitleXio.text = jai.XioRoomTItle
+        XioOnlineLabelXio.text = "\(3) Online"
+        XioHotCountXio.text = jai.XioHeatValueXio
+        XioUserThumbXio.image = UIImage(named: jai.XioAvatarXio)
         XioAudienceStackXio.arrangedSubviews.forEach { $0.removeFromSuperview() }
         for _ in 0..<3 {
             let XioMiniAvatarXio = UIImageView()
-            XioMiniAvatarXio.backgroundColor = .gray
+            XioMiniAvatarXio.contentMode = .scaleAspectFill
+            XioMiniAvatarXio.layer.masksToBounds = true
             XioMiniAvatarXio.layer.cornerRadius = 7.5
             XioMiniAvatarXio.layer.borderWidth = 1
             XioMiniAvatarXio.layer.borderColor = UIColor.white.cgColor
             XioMiniAvatarXio.translatesAutoresizingMaskIntoConstraints = false
             XioMiniAvatarXio.widthAnchor.constraint(equalToConstant: 15).isActive = true
+            XioMiniAvatarXio.image = UIImage.init(named: "avarieou\(Int.random(in: 0...8))")
             XioAudienceStackXio.addArrangedSubview(XioMiniAvatarXio)
         }
     }

@@ -69,7 +69,7 @@ class XioVisionOutcomeControllerXio: UIViewController {
         XioCaptureTriggerXio.layer.borderWidth = 1.5
         XioCaptureTriggerXio.layer.borderColor = UIColor.white.cgColor
         XioCaptureTriggerXio.layer.cornerRadius = 8 * XioScaleWXio
-        XioCaptureTriggerXio.addTarget(self, action: #selector(XioInitiateDownloadXio), for: .touchUpInside)
+//        XioCaptureTriggerXio.addTarget(self, action: #selector(XioInitiateDownloadXio), for: .touchUpInside)
         
         XioArchiveTriggerXio.setTitle("Save", for: .normal)
         XioArchiveTriggerXio.setTitleColor(.black, for: .normal)
@@ -78,7 +78,7 @@ class XioVisionOutcomeControllerXio: UIViewController {
         XioArchiveTriggerXio.layer.cornerRadius = 8 * XioScaleWXio
         XioArchiveTriggerXio.addTarget(self, action: #selector(XioInitiateSaveXio), for: .touchUpInside)
         
-        XioActionDeckXio.addArrangedSubview(XioCaptureTriggerXio)
+//        XioActionDeckXio.addArrangedSubview(XioCaptureTriggerXio)
         XioActionDeckXio.addArrangedSubview(XioArchiveTriggerXio)
         
         NSLayoutConstraint.activate([
@@ -100,27 +100,29 @@ class XioVisionOutcomeControllerXio: UIViewController {
             XioActionDeckXio.topAnchor.constraint(equalTo: XioPrimeDisplayXio.bottomAnchor, constant: 40 * XioScaleHXio),
             XioActionDeckXio.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25 * XioScaleWXio),
             XioActionDeckXio.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25 * XioScaleWXio),
-            XioActionDeckXio.heightAnchor.constraint(equalToConstant: 120 * XioScaleHXio)
+            XioActionDeckXio.heightAnchor.constraint(equalToConstant:60 * XioScaleHXio)
         ])
     }
     
     private func XioLoadSampleArtXio() {
-        XioPrimeDisplayXio.image = UIImage(named: "XioGeneratedSampleXio")
+        XioPrimeDisplayXio.image = UIImage(named: "prtystylexio\(Int.random(in: 0...3))")
     }
     
     @objc private func XioReverseFlowXio() {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
-    @objc private func XioInitiateDownloadXio() {
-        guard let XioImgXio = XioPrimeDisplayXio.image else { return }
-        UIImageWriteToSavedPhotosAlbum(XioImgXio, self, #selector(XioTransferFinalizedXio(_:didFinishSavingWithError:contextInfo:)), nil)
-    }
+//    @objc private func XioInitiateDownloadXio() {
+//        guard let XioImgXio = XioPrimeDisplayXio.image else { return }
+//        UIImageWriteToSavedPhotosAlbum(XioImgXio, self, #selector(XioTransferFinalizedXio(_:didFinishSavingWithError:contextInfo:)), nil)
+//    }
     
     @objc private func XioInitiateSaveXio() {
-        let XioAlertXio = UIAlertController(title: "Success", message: "Result has been synced to your profile.", preferredStyle: .alert)
-        XioAlertXio.addAction(UIAlertAction(title: "OK", style: .default))
-        present(XioAlertXio, animated: true)
+        
+        guard let XioImgXio = XioPrimeDisplayXio.image else { return }
+        UIImageWriteToSavedPhotosAlbum(XioImgXio, self, #selector(XioTransferFinalizedXio(_:didFinishSavingWithError:contextInfo:)), nil)
+        
+       
     }
     
     @objc private func XioTransferFinalizedXio(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -136,5 +138,9 @@ class XioVisionOutcomeControllerXio: UIViewController {
         view.addSubview(XioToastXio)
         
         UIView.animate(withDuration: 2.0, animations: { XioToastXio.alpha = 0 }) { _ in XioToastXio.removeFromSuperview() }
+        
+        let XioAlertXio = UIAlertController(title: "Success", message: "Result has been synced to your profile.", preferredStyle: .alert)
+        XioAlertXio.addAction(UIAlertAction(title: "OK", style: .default))
+        present(XioAlertXio, animated: true)
     }
 }

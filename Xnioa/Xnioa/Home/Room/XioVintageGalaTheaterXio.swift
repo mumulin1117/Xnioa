@@ -15,7 +15,28 @@ struct XioBalladMessageXio {
 }
 
 class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
+
+    var paymeIngo:(String,UIImage)?
+    var isCreaterr:Bool
+    var usier: XioGalaEntryXio?
+  
     
+    init(iscreate:Bool, usiersd:XioGalaEntryXio?,info:(String,UIImage)?) {
+        self.paymeIngo = info
+        self.usier = usiersd
+        self.isCreaterr = iscreate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @MainActor required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+  
+    
+    
+    
+    private let XioAudienceStackXio = UIStackView()
     private let XioStageHeaderXio = UIView()
     private let XioAvatarXio = UIImageView()
     private let XioHandleXio = UILabel()
@@ -39,18 +60,22 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
     private let XioLyricFieldXio = UITextField()
     private let XioTransmitTriggerXio = UIButton()
     
-    private var XioChatHistoryXio: [XioBalladMessageXio] = [
-        XioBalladMessageXio(XioOratorNameXio: "Clara", XioOratorAvatarXio: "avatar1", XioLyricContentXio: "Hello Everyone!", XioIsDivineSelfXio: false),
-        XioBalladMessageXio(XioOratorNameXio: "Henry", XioOratorAvatarXio: "avatar2", XioLyricContentXio: "Hello", XioIsDivineSelfXio: false),
-        XioBalladMessageXio(XioOratorNameXio: "Evelyn", XioOratorAvatarXio: "avatar3", XioLyricContentXio: "This Music Feels Like It Belongs To Another Time.", XioIsDivineSelfXio: false),
-        XioBalladMessageXio(XioOratorNameXio: "Arthur", XioOratorAvatarXio: "avatar4", XioLyricContentXio: "I Can Almost Picture Everyone Dancing In Dim Light.", XioIsDivineSelfXio: false)
-    ]
+    private var XioChatHistoryXio: [XioBalladMessageXio] = []
     
     private let XioWidthRatioXio = UIScreen.main.bounds.width / 375
     private let XioHeightRatioXio = UIScreen.main.bounds.height / 812
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        XioReportAbuseTriggerXio.addTarget(self, action: #selector(XioReportStageXio), for: .touchUpInside)
+        self.XioChatHistoryXio = isCreaterr ? [] :  [
+            [
+                XioBalladMessageXio(XioOratorNameXio: "Clara", XioOratorAvatarXio: "avarieou7", XioLyricContentXio: "Hello Everyone!", XioIsDivineSelfXio: false),
+                XioBalladMessageXio(XioOratorNameXio: "Henry", XioOratorAvatarXio: "avarieou3", XioLyricContentXio: "Hello", XioIsDivineSelfXio: false),
+                XioBalladMessageXio(XioOratorNameXio: "Evelyn", XioOratorAvatarXio: "avarieou4", XioLyricContentXio: "This Music Feels Like It Belongs To Another Time.", XioIsDivineSelfXio: false),
+                XioBalladMessageXio(XioOratorNameXio: "Arthur", XioOratorAvatarXio: "avarieou2", XioLyricContentXio: "I Can Almost Picture Everyone Dancing In Dim Light.", XioIsDivineSelfXio: false)
+            ].randomElement()!
+        ]
         XioSetTheStageXio()
         XioForgeArchitectureXio()
         XioIgniteAtmosphereXio()
@@ -58,8 +83,10 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
     
     private func XioSetTheStageXio() {
         view.backgroundColor = .black
-        XioGrandBackdropXio.image = UIImage(named: "picjkBg0")
+        XioGrandBackdropXio.image = isCreaterr ?  (paymeIngo?.1 ): UIImage(named: usier?.XioRoomScene ?? "picjkBg0")
         XioGrandBackdropXio.contentMode = .scaleAspectFill
+        
+        
         
         XioLyricStreamXio.backgroundColor = .clear
         XioLyricStreamXio.separatorStyle = .none
@@ -83,21 +110,29 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioHandleXio.translatesAutoresizingMaskIntoConstraints = false
         AcccTopersonCou.translatesAutoresizingMaskIntoConstraints = false
         AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
+        
+        AcccTopersonCou.isHidden = isCreaterr ? true : false
         XioAvatarXio.layer.cornerRadius = 20
         XioAvatarXio.clipsToBounds = true
         XioAvatarXio.backgroundColor = .lightGray
+        XioAvatarXio.image = UIImage(named: usier?.XioAvatarXio ?? "")
         
         XioHandleXio.font = .systemFont(ofSize: 15, weight: .semibold)
         XioHandleXio.textColor = .white
         
-    
+        XioHostNameTagXio.font = .systemFont(ofSize: 15, weight: .semibold)
+        XioHostNameTagXio.textColor = .white
+        
+        
+        XioHandleXio.text = isCreaterr ? "Me" : self.usier?.XioAliasXio ?? ""
+        
         XioExitStageTriggerXio.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         XioExitStageTriggerXio.tintColor = .white
         XioExitStageTriggerXio.addTarget(self, action: #selector(XioRetreatFromStageXio), for: .touchUpInside)
         
-        XioGalaTitleTagXio.text = "Vintage Gala"
+        XioGalaTitleTagXio.text = "Them:  "  + ((isCreaterr ? paymeIngo?.0 : usier?.XioRoomTItle) ?? "")
         XioGalaTitleTagXio.textColor = .white
-        XioGalaTitleTagXio.font = .systemFont(ofSize: 22 * XioWidthRatioXio, weight: .bold)
+        XioGalaTitleTagXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
         XioReportAbuseTriggerXio.setImage(UIImage(systemName: "exclamationmark.circle"), for: .normal)
         XioReportAbuseTriggerXio.tintColor = .white
@@ -116,7 +151,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioTransmitTriggerXio.tintColor = .systemGreen
         XioTransmitTriggerXio.addTarget(self, action: #selector(XioBroadcastLyricXio), for: .touchUpInside)
         
-        [XioExitStageTriggerXio, XioGalaTitleTagXio, XioReportAbuseTriggerXio].forEach {
+        [XioExitStageTriggerXio, XioGalaTitleTagXio,XioAudienceStackXio, XioReportAbuseTriggerXio].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             XioStageHeaderXio.addSubview($0)
         }
@@ -137,6 +172,9 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
             XioStageHeaderXio.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             XioStageHeaderXio.heightAnchor.constraint(equalToConstant: 60 * XioHeightRatioXio),
             
+            
+            
+            
             XioAvatarXio.leadingAnchor.constraint(equalTo: XioHostPodiumXio.leadingAnchor),
             XioAvatarXio.centerYAnchor.constraint(equalTo: XioHostPodiumXio.centerYAnchor),
             XioAvatarXio.widthAnchor.constraint(equalToConstant: 40),
@@ -144,11 +182,11 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
             
             XioHandleXio.leadingAnchor.constraint(equalTo: XioAvatarXio.trailingAnchor,constant: 8),
             XioHandleXio.centerYAnchor.constraint(equalTo: XioHostPodiumXio.centerYAnchor),
-            
+            XioHandleXio.widthAnchor.constraint(equalToConstant: 45),
             AcccTopersonCou.widthAnchor.constraint(equalToConstant: 25),
             AcccTopersonCou.heightAnchor.constraint(equalToConstant: 25),
             AcccTopersonCou.centerYAnchor.constraint(equalTo: XioHostPodiumXio.centerYAnchor),
-            AcccTopersonCou.trailingAnchor.constraint(equalTo: XioHostPodiumXio.trailingAnchor, constant: -10),
+            AcccTopersonCou.trailingAnchor.constraint(equalTo: XioHostPodiumXio.trailingAnchor, constant: 2),
             
             
             XioExitStageTriggerXio.leadingAnchor.constraint(equalTo: XioStageHeaderXio.leadingAnchor, constant: 15 * XioWidthRatioXio),
@@ -156,6 +194,13 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
             
             XioGalaTitleTagXio.leadingAnchor.constraint(equalTo: XioExitStageTriggerXio.trailingAnchor, constant: 12),
             XioGalaTitleTagXio.centerYAnchor.constraint(equalTo: XioStageHeaderXio.centerYAnchor),
+            
+            
+            XioAudienceStackXio.trailingAnchor.constraint(equalTo: XioReportAbuseTriggerXio.leadingAnchor, constant: -10),
+            XioAudienceStackXio.centerYAnchor.constraint(equalTo: XioGalaTitleTagXio.centerYAnchor),
+            XioAudienceStackXio.heightAnchor.constraint(equalToConstant: 15),
+            XioAudienceStackXio.widthAnchor.constraint(equalToConstant: 45),
+            
             
             XioReportAbuseTriggerXio.trailingAnchor.constraint(equalTo: XioStageHeaderXio.trailingAnchor, constant: -15 * XioWidthRatioXio),
             XioReportAbuseTriggerXio.centerYAnchor.constraint(equalTo: XioStageHeaderXio.centerYAnchor),
@@ -181,8 +226,27 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
             
             XioTransmitTriggerXio.trailingAnchor.constraint(equalTo: XioWhisperInputDockXio.trailingAnchor, constant: -10),
             XioTransmitTriggerXio.centerYAnchor.constraint(equalTo: XioWhisperInputDockXio.centerYAnchor),
-            XioTransmitTriggerXio.widthAnchor.constraint(equalToConstant: 30 * XioWidthRatioXio)
+            XioTransmitTriggerXio.widthAnchor.constraint(equalToConstant: 30 * XioWidthRatioXio),
+            
+          
         ])
+        if isCreaterr {
+            return
+        }
+        
+        XioAudienceStackXio.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        for _ in 0..<3 {
+            let XioMiniAvatarXio = UIImageView()
+            XioMiniAvatarXio.contentMode = .scaleAspectFill
+            XioMiniAvatarXio.layer.masksToBounds = true
+            XioMiniAvatarXio.layer.cornerRadius = 7.5
+            XioMiniAvatarXio.layer.borderWidth = 1
+            XioMiniAvatarXio.layer.borderColor = UIColor.white.cgColor
+            XioMiniAvatarXio.translatesAutoresizingMaskIntoConstraints = false
+            XioMiniAvatarXio.widthAnchor.constraint(equalToConstant: 15).isActive = true
+            XioMiniAvatarXio.image = UIImage.init(named: "avarieou\(Int.random(in: 0...8))")
+            XioAudienceStackXio.addArrangedSubview(XioMiniAvatarXio)
+        }
     }
     
     private func XioIgniteAtmosphereXio() {
@@ -205,12 +269,18 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
     }
     
     @objc private func XioBroadcastLyricXio() {
-        guard let XioTextXio = XioLyricFieldXio.text, !XioTextXio.isEmpty else { return }
+        guard let XioTextXio = XioLyricFieldXio.text, !XioTextXio.isEmpty else {
+            
+            let sxnioAlert = UIAlertController(title: nil, message: "Please enter your contetnt at first!", preferredStyle: .alert)
+            sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(sxnioAlert, animated: true)
+            return
+        }
         
-        let XioNewMessageXio = XioBalladMessageXio(XioOratorNameXio: "Me", XioOratorAvatarXio: "me_avatar", XioLyricContentXio: XioTextXio, XioIsDivineSelfXio: true)
+        let XioNewMessageXio = XioBalladMessageXio(XioOratorNameXio: "Me", XioOratorAvatarXio: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "", XioLyricContentXio: XioTextXio, XioIsDivineSelfXio: true)
         XioChatHistoryXio.append(XioNewMessageXio)
         
-        XioLyricFieldXio.text = ""
+        XioLyricFieldXio.text =  ""
         XioLyricStreamXio.reloadData()
         
         let XioPathXio = IndexPath(row: XioChatHistoryXio.count - 1, section: 0)
@@ -218,7 +288,12 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
     }
     
     @objc private func XioRetreatFromStageXio() {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    @objc private func XioReportStageXio() {
+        navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
     }
 }
 
@@ -271,7 +346,7 @@ class XioLyricCellXio: UITableViewCell {
         let XioAttrTextXio = NSMutableAttributedString(string: "\(XioDataXio.XioOratorNameXio): ", attributes: [.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor: UIColor.systemOrange])
         XioAttrTextXio.append(NSAttributedString(string: XioDataXio.XioLyricContentXio))
         XioLyricLabelXio.attributedText = XioAttrTextXio
-        
+        XioAvatarOrbitXio.image = UIImage(named: XioDataXio.XioOratorAvatarXio)
         NSLayoutConstraint.deactivate(contentView.constraints)
         
         if XioDataXio.XioIsDivineSelfXio {

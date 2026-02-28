@@ -8,22 +8,42 @@
 import UIKit
 
 // MARK: - Models
-struct XioVideoEntityXio {
-    let XioIdentiferXio = UUID()
-    let XioCreatorNameXio: String
-    let XioIntroTextXio: String
-    let XioCoverTokenXio: String
-}
+//struct XioVideoEntityXio {
+//    let XioIdentiferXio = UUID()
+//    let XioCreatorNameXio: String
+//    let XioIntroTextXio: String
+//    let XioCoverTokenXio: String
+//}
 
 // MARK: - Controller
 class XioVideoPalaceXio: UIViewController {
+    private var XioCurrentAvatoDataXio: [XioGalaEntryXio] = []
+    
+    
+    private var XioCurrentVioDataXio: [XioGalaEntryXio] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        XioCurrentAvatoDataXio = Array(XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.suffix(3))
+        
+        XioCurrentVioDataXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.filter {
+            $0.XioMoivepath != "" && !$0.XioMoivepath.isEmpty
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.XioPrimaryShelfXio.reloadData()
+        }
+        
+    }
+    
     
     private let XioPrimaryShelfXio = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let XioNavTitleXio = UILabel()
     private let XioStreamToggleXio = UIButton()
-    private var XioHotListXio: [XioVideoEntityXio] = []
-    private var XioFeedListXio: [XioVideoEntityXio] = []
-    
+//    private var XioHotListXio: [XioVideoEntityXio] = []
+//    private var XioFeedListXio: [XioVideoEntityXio] = []
+//    
     private let XioWFactorXio = UIScreen.main.bounds.width / 375
     private let XioHFactorXio = UIScreen.main.bounds.height / 812
 
@@ -31,7 +51,7 @@ class XioVideoPalaceXio: UIViewController {
         super.viewDidLoad()
         XioInitialBaseSettingsXio()
         XioAssembleHierarchyXio()
-        XioTriggerRemotePulseXio()
+//        XioTriggerRemotePulseXio()
     }
     
     private func XioInitialBaseSettingsXio() {
@@ -108,22 +128,7 @@ class XioVideoPalaceXio: UIViewController {
         return XioSectionXio
     }
     
-    private func XioTriggerRemotePulseXio() {
-        XioHotListXio = [
-            XioVideoEntityXio(XioCreatorNameXio: "EmpirePower", XioIntroTextXio: "", XioCoverTokenXio: ""),
-            XioVideoEntityXio(XioCreatorNameXio: "RetroVibe", XioIntroTextXio: "", XioCoverTokenXio: ""),
-            XioVideoEntityXio(XioCreatorNameXio: "ClassicArt", XioIntroTextXio: "", XioCoverTokenXio: "")
-        ]
-        
-        XioFeedListXio = [
-            XioVideoEntityXio(XioCreatorNameXio: "HoltHamlet", XioIntroTextXio: "Soft lights, old songs, and unhurried conversations.", XioCoverTokenXio: ""),
-            XioVideoEntityXio(XioCreatorNameXio: "SilkRoad", XioIntroTextXio: "Echoes of the past in a modern lens.", XioCoverTokenXio: "")
-        ]
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.XioPrimaryShelfXio.reloadData()
-        }
-    }
+
 }
 
 // MARK: - UI Logic
@@ -131,17 +136,17 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
     func numberOfSections(in collectionView: UICollectionView) -> Int { return 2 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? XioHotListXio.count : XioFeedListXio.count
+        return section == 0 ? XioCurrentAvatoDataXio.count : XioCurrentVioDataXio.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioOrbitCellXio", for: indexPath) as! XioOrbitCellXio
-            XioCellXio.XioSyncEntityXio(XioHotListXio[indexPath.item])
+            XioCellXio.XioSyncEntityXio(XioCurrentAvatoDataXio[indexPath.item])
             return XioCellXio
         } else {
             let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioPostCellXio", for: indexPath) as! XioPostCellXio
-            XioCellXio.XioSyncEntityXio(XioFeedListXio[indexPath.item])
+            XioCellXio.XioSyncEntityXio(XioCurrentVioDataXio[indexPath.item])
             return XioCellXio
         }
     }
@@ -154,11 +159,11 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            let detailuser  = XioPeerPortalPalaceXio()
+            let detailuser  = XioPeerPortalPalaceXio(usiersd: XioCurrentAvatoDataXio[indexPath.row])
             detailuser.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(detailuser, animated: true)
         } else {
-            let detailuser  = XioMotionInsightPilotXio()
+            let detailuser  = XioMotionInsightPilotXio(usiersd: XioCurrentVioDataXio[indexPath.row])
             detailuser.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(detailuser, animated: true)
         }

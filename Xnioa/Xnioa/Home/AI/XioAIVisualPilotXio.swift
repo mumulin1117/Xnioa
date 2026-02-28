@@ -45,8 +45,11 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
     private var XioActiveTypeXio = "Court Ball"
 
     
-    private var XioUserBalanceXio: Int = 400 // Local mock balance
-        private let XioForgeCostXio: Int = 400
+    private var XioUserBalanceXio: Int  {
+       return XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio
+    }// Local mock balance
+        
+    private let XioForgeCostXio: Int = 400
     
     
     override func viewDidLoad() {
@@ -58,8 +61,25 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         XioForgeTriggerXio.addTarget(self, action: #selector(XioInitiateForgeProcessXio), for: .touchUpInside)
     }
     @objc private func XioInitiateForgeProcessXio() {
-            XioShowDeductionAlertXio()
+        
+        let sxnioInputName = XioPromptFieldXio.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        if sxnioInputName.isEmpty {
+            sxnioShowAlert(sxnioMsg: "Please enter the keyboard words!")
+            return
+            
         }
+        
+        if XioCurrentSelectionIndexXio == nil {
+            
+            sxnioShowAlert(sxnioMsg: "Please pick your clothing style at first!")
+            
+            return
+        }
+        
+        XioShowDeductionAlertXio()
+        
+    }
     private func XioShowDeductionAlertXio() {
         let XioAlertXio = XioDiamondNoticeViewXio(frame: view.bounds)
         XioAlertXio.XioConfigureAsConfirmXio(cost: XioForgeCostXio) { [weak self] in
@@ -70,14 +90,23 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
     }
         
         private func XioExecutePaymentXio() {
-            if XioUserBalanceXio >= XioForgeCostXio {
-                XioUserBalanceXio -= XioForgeCostXio
+            
+         
+            
+            if XioGovernanceHubXio.XioPrincipalXio.XioSpendReserveXio(cost: XioForgeCostXio) {
+                
+              
                 XioTriggerSuccessFeedbackXio()
             } else {
                 XioShowInsufficientAlertXio()
             }
+       
         }
-        
+    private func sxnioShowAlert(sxnioMsg: String) {
+        let sxnioAlert = UIAlertController(title: nil, message: sxnioMsg, preferredStyle: .alert)
+        sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(sxnioAlert, animated: true)
+    }
         private func XioShowInsufficientAlertXio() {
             let XioAlertXio = XioDiamondNoticeViewXio(frame: view.bounds)
             XioAlertXio.XioConfigureAsInsufficientXio { [weak self] in
@@ -94,8 +123,7 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         }
         
         private func XioRouteToStoreXio() {
-            // Navigation to recharge page
-            print("Routing to Recharge...")
+            self.navigationController?.pushViewController(XioTreasureVaultXio(), animated: true)
         }
     private func XioSetupEnvironmentXio() {
         view.backgroundColor = UIColor(white: 0.08, alpha: 1.0)

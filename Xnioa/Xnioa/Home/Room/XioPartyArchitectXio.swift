@@ -6,9 +6,14 @@
 //
 
 import UIKit
-
+//create rooom
 class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
+   
+    
+    
+    
     private let XioChronicleScrollerXio = UIScrollView()
     private let XioMasterRackXio = UIView()
     
@@ -67,6 +72,7 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
         view.addSubview(XioChronicleScrollerXio)
         XioChronicleScrollerXio.addSubview(XioMasterRackXio)
         
+        XioRetreatTriggerXio.isUserInteractionEnabled = true
         XioRetreatTriggerXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         XioRetreatTriggerXio.tintColor = .white
         XioRetreatTriggerXio.addTarget(self, action: #selector(XioPerformRetreatXio), for: .touchUpInside)
@@ -121,7 +127,7 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
         }
         
         XioCoverDisplayXio.image = UIImage(named: "adddCovertw")
-        
+        XioCoverKillTriggerXio.isHidden = true
         
         XioCoverDisplayXio.translatesAutoresizingMaskIntoConstraints = false
         XioCoverKillTriggerXio.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +138,8 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
         XioPencilIconXio.translatesAutoresizingMaskIntoConstraints = false
         XioNamingVesselXio.addSubview(XioNameInputXio)
         XioNamingVesselXio.addSubview(XioPencilIconXio)
-        
+        // 在 XioForgeLayoutXio 的最后添加
+        XioMasterRackXio.bringSubviewToFront(XioNavigationHeaderXio)
         NSLayoutConstraint.activate([
             XioChronicleScrollerXio.topAnchor.constraint(equalTo: view.topAnchor),
             XioChronicleScrollerXio.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -144,11 +151,15 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
             XioMasterRackXio.bottomAnchor.constraint(equalTo: XioChronicleScrollerXio.bottomAnchor),
             
             XioNavigationHeaderXio.topAnchor.constraint(equalTo: XioMasterRackXio.topAnchor, constant: 50 * XioHeightRatioXio),
-            XioNavigationHeaderXio.leadingAnchor.constraint(equalTo: XioMasterRackXio.leadingAnchor),
-            XioNavigationHeaderXio.heightAnchor.constraint(equalToConstant: 44),
+                XioNavigationHeaderXio.leadingAnchor.constraint(equalTo: XioMasterRackXio.leadingAnchor),
+                // 必须添加 trailing 约束，否则 Header 的宽度可能为 0
+                XioNavigationHeaderXio.trailingAnchor.constraint(equalTo: XioMasterRackXio.trailingAnchor),
+                XioNavigationHeaderXio.heightAnchor.constraint(equalToConstant: 44),
             
             XioRetreatTriggerXio.leadingAnchor.constraint(equalTo: XioNavigationHeaderXio.leadingAnchor, constant: 20 * XioWidthRatioXio),
             XioRetreatTriggerXio.centerYAnchor.constraint(equalTo: XioNavigationHeaderXio.centerYAnchor),
+            XioRetreatTriggerXio.widthAnchor.constraint(equalToConstant: 30),
+            XioRetreatTriggerXio.heightAnchor.constraint(equalToConstant: 30),
             XioDraftTitleTagXio.leadingAnchor.constraint(equalTo: XioRetreatTriggerXio.trailingAnchor, constant: 15 * XioWidthRatioXio),
             XioDraftTitleTagXio.centerYAnchor.constraint(equalTo: XioNavigationHeaderXio.centerYAnchor),
             
@@ -240,13 +251,38 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
     }
     
     @objc private func XioExecuteCreationXio() {
-        let XioFeedbackXio = UIImpactFeedbackGenerator(style: .heavy)
-        XioFeedbackXio.impactOccurred()
-        self.dismiss(animated: true)
+        let sxnioInputName = XioNameInputXio.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let sxnioIsDefaultCover = XioCoverDisplayXio.image == UIImage(named: "adddCovertw")
+        if sxnioInputName.isEmpty {
+                sxnioShowAlert(sxnioMsg: "Please enter a room name")
+                return
+            }
+            
+            if sxnioIsDefaultCover {
+                sxnioShowAlert(sxnioMsg: "Please select a party cover")
+                return
+            }
+        
+        let sxnioNewRoom = XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio
+            // 5. 触发震动反馈
+            let XioFeedbackXio = UIImpactFeedbackGenerator(style: .heavy)
+            XioFeedbackXio.impactOccurred()
+            
+        let sxnioTheaterVC = XioVintageGalaTheaterXio.init(iscreate: true, usiersd: sxnioNewRoom, info: (sxnioInputName,UIImage(named: "picjkBg\(self.XioSelectedSceneIndexXio)")) as? (String, UIImage) )
+          
+            if let sxnioNav = navigationController {
+                sxnioNav.pushViewController(sxnioTheaterVC, animated: true)
+            }
     }
     
     @objc private func XioPerformRetreatXio() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func sxnioShowAlert(sxnioMsg: String) {
+        let sxnioAlert = UIAlertController(title: nil, message: sxnioMsg, preferredStyle: .alert)
+        sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(sxnioAlert, animated: true)
     }
 }
 

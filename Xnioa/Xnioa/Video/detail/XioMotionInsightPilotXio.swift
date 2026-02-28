@@ -9,6 +9,20 @@ import UIKit
 import AVFoundation
 
 class XioMotionInsightPilotXio: XioResilienceAnchorXio {
+    var usier: XioGalaEntryXio
+    init(usiersd:XioGalaEntryXio) {
+       
+        self.usier = usiersd
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @MainActor required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     private let AcccTopersonCou = UIButton()//personto
     private let XioApexDeckXio = UIView()
     private let XioRetreatBtnXio = UIButton()
@@ -62,7 +76,7 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio {
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioDismissSceneXio), for: .touchUpInside)
         
-        XioHostNameXio.text = "Holt Hamlet"
+        XioHostNameXio.text =  usier.XioAliasXio
         XioHostNameXio.textColor = .white
         XioHostNameXio.font = .systemFont(ofSize: 18 * XioRatioWXio, weight: .bold)
         
@@ -156,6 +170,11 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio {
         XioDraftFieldXio.text = ""
         XioDraftFieldXio.resignFirstResponder()
     }
+    
+    func XioHydrateVideoCell(sxnioPath: String) {
+        
+        
+    }
 }
 
 extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
@@ -177,8 +196,15 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
         XioVisualXio.clipsToBounds = true
         XioVisualXio.contentMode = .scaleAspectFill
         XioVisualXio.isUserInteractionEnabled = true
-        XioVisualXio.image = UIImage(named: "XioVideoThumbXio")
         
+        SXNIOVideoTool.sxnioFetchThumbnail(from: usier.XioMoivepath) { [weak self] sxnioImg in
+            guard let self = self else { return }
+           
+            if let sxnioFinalImg = sxnioImg {
+                
+                XioVisualXio.image = sxnioFinalImg
+            }
+        }
         let XioPlayBtnXio = UIButton(frame: CGRect(x: 345*XioRatioWXio - 50, y: 345*XioRatioWXio - 50, width: 40, height: 40))
         XioPlayBtnXio.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
         XioPlayBtnXio.tintColor = .white

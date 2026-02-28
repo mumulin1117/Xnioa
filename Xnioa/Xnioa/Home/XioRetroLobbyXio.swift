@@ -176,7 +176,7 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
             } else {
                 // 本地模糊匹配逻辑
                 XioFullRegistryXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.filter {
-                    $0.XIOName.lowercased().contains(text.lowercased())
+                    $0.XioRoomTItle.lowercased().contains(text.lowercased())
                 }
             }
             
@@ -328,8 +328,8 @@ extension XioRetroLobbyXio: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioPartyCellXio", for: indexPath) as! XioPartyCellXio
         let roromda = XioCurrentDataXio[indexPath.row]
-        XioCellXio.XioConfigureWithDataXio(name: roromda.XIOName, theme: <#T##String#>, online: "1", hot: "\(Int.random(in: 0...9))")
-        XioCellXio.XioMainVisualXio.image = UIImage.init(named: roromda.XioCoverXio)
+        XioCellXio.XioConfigureWithDataXio(jai: roromda)
+        XioCellXio.XioMainVisualXio.image = UIImage.init(named: roromda.XioRoomCover)
         return XioCellXio
     }
     
@@ -338,7 +338,9 @@ extension XioRetroLobbyXio: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(XioVintageGalaTheaterXio(), animated: true)
+        
+        let vc = XioVintageGalaTheaterXio.init(iscreate: false, usiersd: XioCurrentDataXio[indexPath.row], info: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func XioInitDismissGestureXio() {

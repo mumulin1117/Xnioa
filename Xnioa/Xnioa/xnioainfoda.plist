@@ -18,9 +18,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster0</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Throwback Party</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg0</string>
+		<key>XioHeatValueXio</key>
+		<string>345</string>
+		<key>XioSubjectXio</key>
+		<string>For you</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -28,7 +32,7 @@
 		<key>XioBadgeIDXio</key>
 		<string>3981</string>
 		<key>XioAvatarXio</key>
-		<string>XioMottoXioq</string>
+		<string>XioMottoXio1</string>
 		<key>XioMottoXio</key>
 		<string>Lost in the rhythm of AI-generated beats.</string>
 		<key>XioMoiveTitle</key>
@@ -38,9 +42,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster1</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Retro Nights</string>
+		<key>XioHeatValueXio</key>
+		<string>235</string>
+		<key>XioSubjectXio</key>
+		<string>Trending</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg2</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -58,9 +66,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster2</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Vinyl Nights</string>
+		<key>XioHeatValueXio</key>
+		<string>355</string>
+		<key>XioSubjectXio</key>
+		<string>Fairy tale</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg3</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -78,9 +90,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster3</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Disco Lounge</string>
+		<key>XioHeatValueXio</key>
+		<string>233</string>
+		<key>XioSubjectXio</key>
+		<string>For you</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg0</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -98,9 +114,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster4</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Vintage Vibes</string>
+		<key>XioHeatValueXio</key>
+		<string>655</string>
+		<key>XioSubjectXio</key>
+		<string>For you</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg1</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -118,9 +138,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster5</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Throwback Party</string>
+		<key>XioHeatValueXio</key>
+		<string>235</string>
+		<key>XioSubjectXio</key>
+		<string>Trending</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg2</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -138,9 +162,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster6</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Old School Beats</string>
+		<key>XioHeatValueXio</key>
+		<string>256</string>
+		<key>XioSubjectXio</key>
+		<string>Fairy tale</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg3</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -158,9 +186,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster7</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Retro Dancefloor</string>
+		<key>XioHeatValueXio</key>
+		<string>123</string>
+		<key>XioSubjectXio</key>
+		<string>Age</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg0</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -178,9 +210,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster8</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Timeless Style</string>
+		<key>XioHeatValueXio</key>
+		<string>444</string>
+		<key>XioSubjectXio</key>
+		<string>Fairy tale</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg1</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -198,9 +234,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster9</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Classic Party</string>
+		<key>XioHeatValueXio</key>
+		<string>234</string>
+		<key>XioSubjectXio</key>
+		<string>For you</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg2</string>
 	</dict>
 	<dict>
 		<key>XioAliasXio</key>
@@ -218,9 +258,13 @@
 		<key>XioRoomCover</key>
 		<string>VibeMaster10</string>
 		<key>XioRoomTItle</key>
-		<string></string>
-		<key>XioRoomhoter</key>
-		<string></string>
+		<string>Golden Era</string>
+		<key>XioHeatValueXio</key>
+		<string>100</string>
+		<key>XioSubjectXio</key>
+		<string>Age</string>
+		<key>XioRoomScene</key>
+		<string>picjkBg3</string>
 	</dict>
 </array>
 </plist>

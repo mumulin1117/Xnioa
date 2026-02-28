@@ -15,9 +15,11 @@ class XioGovernanceHubXio {
     private let XioIdentityTokenXio = "XioAccessPermitKeyXio"
     private let XioTreasuryKeyXio = "XioGoldenReserveKeyXio"
     
-    private(set) var XioActiveProfileXio: XioIdentityArchiveXio?
+     var XioActiveProfileXio: XioGalaEntryXio?
     
     private init() {
+        
+        XioRoomPoolXio =  sxnioLoadRegistryFromLocal()
         XioRestoreSessionXio()
     }
  
@@ -32,6 +34,7 @@ class XioGovernanceHubXio {
             XioInitializeLocalProfileXio(name: uid)
             return true
         }
+       
         return false
     }
     
@@ -53,32 +56,48 @@ class XioGovernanceHubXio {
     }
     
     private func XioInitializeLocalProfileXio(name: String) {
-        XioActiveProfileXio = XioIdentityArchiveXio(
-            XioAliasXio: name,
-            XioBadgeIDXio: "ID_\(Int.random(in: 1000...9999))",
-            XioMottoXio: "Vibing in the AI Party",
-            XioAvatarXio: "XioDefaultAsset",
-            XioExileListXio: ["Bot_01"],
-            XioAdoreListXio: []
-        )
+        XioActiveProfileXio = XioGalaEntryXio.init(XioAliasXio: name,
+                                                   XioBadgeIDXio: "\(Int.random(in: 238294...8274747))",
+                                                   XioAvatarXio: "meHEiaudo",
+                                                   XioMottoXio: "Nothing...",
+                                                   XioMoiveTitle: "",
+                                                   XioMoivepath: "",
+                                                   XioSubjectXio: "",
+                                                   XioRoomCover: "", XioRoomScene: "",
+                                                   XioHeatValueXio: "",
+                                                   XioRoomTItle: "")
+//        XioGalaEntryXio.init(XioAliasXio: name,
+//                                                   XioBadgeIDXio: "3456789",
+//                                                   XioAvatarXio: "meHEiaudo",
+//                                                   XioMottoXio: "Oka,show",
+//                                                   XioMoiveTitle: "",
+//                                                   XioMoivepath: "",
+//                                                   XioSubjectXio: "",
+//                                                   XioRoomCover: "",
+//                                                   XioHeatValueXio: "",
+//                                                   XioRoomTItle: "")
     }
 
     // 本地 mock 数据：派对房间
         
-    lazy var XioRoomPoolXio: [XioGalaEntryXio] = [
-        XioGalaEntryXio(XioSubjectXio: "For you", XioCoverXio: "VibeMaster0", XioHeatValueXio: 120, XIOName: "Retro Nights"),
-        XioGalaEntryXio(XioSubjectXio: "Trending", XioCoverXio: "VibeMaster1", XioHeatValueXio: 340, XIOName: "Disco Lounge"),
-        XioGalaEntryXio(XioSubjectXio: "Fairy tale", XioCoverXio: "VibeMaster2", XioHeatValueXio: 56, XIOName: "Vintage Vibes"),
-        XioGalaEntryXio(XioSubjectXio: "For you", XioCoverXio: "VibeMaster3", XioHeatValueXio: 56, XIOName: "Throwback Party"),
-        XioGalaEntryXio(XioSubjectXio: "For you", XioCoverXio: "VibeMaster4", XioHeatValueXio: 56, XIOName: "Old School Beats"),
-        XioGalaEntryXio(XioSubjectXio: "Trending", XioCoverXio: "VibeMaster5", XioHeatValueXio: 56, XIOName: "Retro Dancefloor"),
-        XioGalaEntryXio(XioSubjectXio: "Fairy tale", XioCoverXio: "VibeMaster6", XioHeatValueXio: 56, XIOName: "Vinyl Nights"),
-        XioGalaEntryXio(XioSubjectXio: "Age", XioCoverXio: "VibeMaster7", XioHeatValueXio: 56, XIOName: "Timeless Style"),
-        XioGalaEntryXio(XioSubjectXio: "Fairy tale", XioCoverXio: "VibeMaster8", XioHeatValueXio: 56, XIOName: "Classic Party"),
-        XioGalaEntryXio(XioSubjectXio: "For you", XioCoverXio: "VibeMaster9", XioHeatValueXio: 56, XIOName: "Golden Era")
-       
-    ]
+    lazy var XioRoomPoolXio: [XioGalaEntryXio] = []
     
+    func sxnioLoadRegistryFromLocal() -> [XioGalaEntryXio] {
+        // 假设你的文件名为 DataList.plist
+        guard let sxnioUrl = Bundle.main.url(forResource: "xnioainfoda", withExtension: "plist"),
+              let sxnioRawData = try? Data(contentsOf: sxnioUrl) else {
+            return []
+        }
+        
+        do {
+          
+            let sxnioResult = try PropertyListDecoder().decode([XioGalaEntryXio].self, from: sxnioRawData)
+            return sxnioResult
+        } catch {
+            print("sxnio error: \(error)")
+            return []
+        }
+    }
     var XioCurrentReserveXio: Int {
         get {
             let XioValXio = XioVaultXio.integer(forKey: XioTreasuryKeyXio)
@@ -100,24 +119,28 @@ class XioGovernanceHubXio {
     }
 
     // MARK: - Social & Relation (Exile / Adore)
+    var XioExileListXio: [String] = Array<String>()
+    
     
     func XioUpdateExileStatusXio(target: String, xAdd: Bool) {
         if xAdd {
-            if !XioActiveProfileXio!.XioExileListXio.contains(target) {
-                XioActiveProfileXio?.XioExileListXio.append(target)
+            if !XioExileListXio.contains(target) {
+                XioExileListXio.append(target)
             }
         } else {
-            XioActiveProfileXio?.XioExileListXio.removeAll { $0 == target }
+           XioExileListXio.removeAll { $0 == target }
         }
     }
     
+    
+    var XioAdoreListXio: [String] = Array<String>()
     func XioUpdateAdoreStatusXio(target: String, xLike: Bool) {
         if xLike {
-            if !XioActiveProfileXio!.XioAdoreListXio.contains(target) {
-                XioActiveProfileXio?.XioAdoreListXio.append(target)
+            if !XioAdoreListXio.contains(target) {
+                XioAdoreListXio.append(target)
             }
         } else {
-            XioActiveProfileXio?.XioAdoreListXio.removeAll { $0 == target }
+            XioAdoreListXio.removeAll { $0 == target }
         }
     }
 
@@ -131,16 +154,6 @@ class XioGovernanceHubXio {
     }
 }
 
-// MARK: - Support Entities
-
-struct XioIdentityArchiveXio {
-    var XioAliasXio: String
-    var XioBadgeIDXio: String
-    var XioMottoXio: String
-    var XioAvatarXio: String
-    var XioExileListXio: [String]
-    var XioAdoreListXio: [String]
-}
 
 struct XioDialogSnippetXio {
     let XioPeerXio: String
@@ -148,9 +161,21 @@ struct XioDialogSnippetXio {
     let XioStampXio: String
 }
 
-struct XioGalaEntryXio {
-    let XioSubjectXio: String
-    let XioCoverXio: String
-    let XioHeatValueXio: Int
-    let XIOName:String
+struct XioGalaEntryXio : Codable{
+    let XioAliasXio:String//名字
+    let XioBadgeIDXio:String//ID
+    let XioAvatarXio:String//头像
+    let XioMottoXio:String//signiture
+    
+    let XioMoiveTitle:String//
+    let XioMoivepath:String//
+    
+    let XioSubjectXio: String//主题
+    let XioRoomCover: String//封面
+    let XioRoomScene:String// = <#value#>
+    
+    let XioHeatValueXio: String//热度
+    let XioRoomTItle:String//名字
+    
+    
 }

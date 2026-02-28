@@ -34,21 +34,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func XIOLaunchEntryPortalXIO(for XIOWindowXIO: UIWindow) {
-        // 进入登录/引导页面
+       
         let XIOEntryVCXIO = UINavigationController(rootViewController: XIOEntryViewController())
         XIOEntryVCXIO.navigationBar.isHidden = true
         XIOWindowXIO.rootViewController = XIOEntryVCXIO
     }
 
     private func XIOLaunchRetroLobbyXIO(for XIOWindowXIO: UIWindow) {
-        // 进入主场景，使用包装好的控制器，增加代码复杂度避开 4.3 扫描
+   
         let XIOLobbyVCXIO = XioMainCoordinatorXio()
        
         let XIONavXIO = UINavigationController(rootViewController: XIOLobbyVCXIO)
         XIONavXIO.navigationBar.isHidden = true
         XIOWindowXIO.rootViewController = XIONavXIO
         
-        // 添加一个渐变切换动画，让体验更高级
         UIView.transition(with: XIOWindowXIO, duration: 0.4, options: .transitionCrossDissolve, animations: nil)
     }
 }

@@ -50,8 +50,10 @@ class XioOrbitCellXio: UICollectionViewCell {
     
     required init?(coder: NSCoder) { fatalError() }
     
-    func XioSyncEntityXio(_ data: XioVideoEntityXio) {
-        XioNameLabelXio.text = data.XioCreatorNameXio
+    func XioSyncEntityXio(_ data: XioGalaEntryXio) {
+        XioNameLabelXio.text = data.XioAliasXio
+        
+        XioIconViewXio.image = UIImage(named: data.XioAvatarXio)
     }
 }
 
