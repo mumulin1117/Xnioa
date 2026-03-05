@@ -21,7 +21,7 @@ class XioLegalCenterXio: UIViewController {
     
     private var XioCurrentTypeXio: XioLegalTypeXio = .XioEulaXio
     var XioAgreedCallbackXio: (() -> Void)?
-
+    var XiodisAgreedCallbackXio: (() -> Void)?
    
     init(XioContentTypeXio: XioLegalTypeXio) {
         super.init(nibName: nil, bundle: nil)
@@ -223,6 +223,7 @@ You have the right to access, update, or delete your shared moments at any time.
 
     @objc private func XioDismissPortalXio() {
         dismiss(animated: true)
+        self.XiodisAgreedCallbackXio?()
     }
 }
 
@@ -233,6 +234,14 @@ func XioTriggerLegalFlowXio(from XioHostXio: UIViewController, XioCategoryXio: X
     
     XioLegalPortalXio.XioAgreedCallbackXio = {
         print("User_Accepted_\(XioCategoryXio)_Successfully")
+        XIOEntryViewController.ifAccept = true
+        NotificationCenter.default.post(name: NSNotification.Name.init("ifAccept"), object: nil)
+    }
+    
+    XioLegalPortalXio.XiodisAgreedCallbackXio = {
+        
+        XIOEntryViewController.ifAccept = false
+        NotificationCenter.default.post(name: NSNotification.Name.init("ifAccept"), object: nil)
     }
     
     XioHostXio.present(XioLegalPortalXio, animated: true)

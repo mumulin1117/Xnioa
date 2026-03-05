@@ -2,44 +2,61 @@
 //  SXNIOVideoTool.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/28.
+//  Created by Xnioa on 2026/2/28.
 //
 
 import AVFoundation
 import UIKit
 
-class SXNIOVideoTool {
-    
-    static var sxnioThumbnailCache = NSCache<NSString, UIImage>()
+import UIKit
+import AVFoundation
 
-    static func sxnioFetchThumbnail(from sxnioPath: String, completion: @escaping (UIImage?) -> Void) {
-       
-        if let sxnioCachedImage = sxnioThumbnailCache.object(forKey: sxnioPath as NSString) {
-            completion(sxnioCachedImage)
+class XioVisualMediaPilotXio {
+    
+    static let XioPixelCacheXio = NSCache<NSString, UIImage>()
+
+    static func XioExtractFrameXio(from XioResourceNameXio: String, XioResultXio: @escaping (UIImage?) -> Void) {
+        
+        // 1. 检查缓存
+        if let XioCachedImageXio = XioPixelCacheXio.object(forKey: XioResourceNameXio as NSString) {
+            XioResultXio(XioCachedImageXio)
             return
         }
         
-        DispatchQueue.global().async {
-            let sxnioURL = URL(fileURLWithPath: sxnioPath)
-            let sxnioAsset = AVAsset(url: sxnioURL)
-            let sxnioGenerator = AVAssetImageGenerator(asset: sxnioAsset)
+        // 2. 核心修复：从 Bundle 中获取正确路径
+        guard let XioBundlePathXio = Bundle.main.path(forResource: XioResourceNameXio, ofType: "mp4") else {
+            print("Xio Trace: Resource not found in bundle - \(XioResourceNameXio)")
+            XioResultXio(nil)
+            return
+        }
+        
+        let XioAssetURLXio = URL(fileURLWithPath: XioBundlePathXio)
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            let XioMediaAssetXio = AVAsset(url: XioAssetURLXio)
+            let XioFrameGeneratorXio = AVAssetImageGenerator(asset: XioMediaAssetXio)
             
-          
-            sxnioGenerator.appliesPreferredTrackTransform = true
-          
-            let sxnioTime = CMTime(seconds: 1.0, preferredTimescale: 600)
+            // 确保缩略图方向正确
+            XioFrameGeneratorXio.appliesPreferredTrackTransform = true
+            // 允许略微的时间偏差以提高获取速度
+            XioFrameGeneratorXio.requestedTimeToleranceBefore = .zero
+            XioFrameGeneratorXio.requestedTimeToleranceAfter = .zero
+            
+            let XioCaptureTimeXio = CMTime(seconds: 1.0, preferredTimescale: 600)
             
             do {
-                let sxnioCGImage = try sxnioGenerator.copyCGImage(at: sxnioTime, actualTime: nil)
-                let sxnioImage = UIImage(cgImage: sxnioCGImage)
-               
-                sxnioThumbnailCache.setObject(sxnioImage, forKey: sxnioPath as NSString)
+                let XioCGRenderXio = try XioFrameGeneratorXio.copyCGImage(at: XioCaptureTimeXio, actualTime: nil)
+                let XioFinalImageXio = UIImage(cgImage: XioCGRenderXio)
+                
+                // 存入缓存
+                XioPixelCacheXio.setObject(XioFinalImageXio, forKey: XioResourceNameXio as NSString)
+                
                 DispatchQueue.main.async {
-                    completion(sxnioImage)
+                    XioResultXio(XioFinalImageXio)
                 }
             } catch {
-                print("sxnio error: Failed to extract thumbnail - \(error)")
-                DispatchQueue.main.async { completion(nil) }
+                print("Xio Trace: Render failure - \(error.localizedDescription)")
+                DispatchQueue.main.async { XioResultXio(nil) }
             }
         }
     }

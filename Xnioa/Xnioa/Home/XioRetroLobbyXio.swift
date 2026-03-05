@@ -8,7 +8,6 @@
 import UIKit
 extension XioRetroLobbyXio {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            // 实时搜索过滤
             XioDispatchSearchQueryXio(searchText)
         }
         
@@ -28,11 +27,8 @@ extension XioRetroLobbyXio {
 class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
     private let XioVoidAnchorXio = XioVoidStateNavigatorXio()
     
-    // 当前显示的数据源
-       
     private var XioCurrentDataXio: [XioGalaEntryXio] = []
-    
-    // 原始总数据源
+  
     private var XioFullRegistryXio: [XioGalaEntryXio] = []
     private var XioGalleryHeightAnchorXio: NSLayoutConstraint?
     
@@ -68,12 +64,23 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioInitialDataLoadXio()
         XioConstructStructureXio()
         XioDesignStyleXio()
-//        XioInjectMockCardsXio()
+
         XioRegisterSensorsXio()
         XioInitDismissGestureXio()
         refreshBottomData(for: "For you")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+          
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(refrejsh), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
     }
 
+   @objc func refrejsh()  {
+      
+        refreshBottomData(for: picjnig)
+    }
+    
     private func XioConstructStructureXio() {
         
         let XioLayoutXio = UICollectionViewFlowLayout()
@@ -261,23 +268,27 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
             button.setTitleColor(.white, for: .normal)
         }
     }
-
+    
+    
+   private var picjnig:String = ""
+    
     @objc func filterButtonTapped(_ sender: UIButton) {
-        // 1. 遍历 StackView 中所有的按钮，重置为未选中状态
+       
         XioFilterOrbitXio.arrangedSubviews.compactMap { $0 as? UIButton }.forEach { button in
             updateButtonStyle(button, isSelected: false)
         }
         
-        // 2. 设置当前点击的按钮为选中状态
+
         updateButtonStyle(sender, isSelected: true)
         
-        // 3. 刷新底部数据
         let selectedCategory = sender.title(for: .normal) ?? ""
+        picjnig = selectedCategory
+        
         refreshBottomData(for: selectedCategory)
     }
 
     func refreshBottomData(for category: String) {
-        print("当前选中的分类是：\(category)，正在刷新数据...")
+     
         let XioImpactXio = UIImpactFeedbackGenerator(style: .medium)
                 XioImpactXio.impactOccurred()
         XioCurrentDataXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.filter {

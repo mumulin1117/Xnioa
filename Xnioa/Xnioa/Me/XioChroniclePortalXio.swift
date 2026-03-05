@@ -41,7 +41,7 @@ class XioChroniclePortalXio: UIViewController {
         XioPortalTitleXio.textColor = .white
         XioPortalTitleXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
-        XioBrandHaloXio.image = UIImage(named: "XioAppLogoAssetXio")
+        XioBrandHaloXio.image = UIImage(named: "suhxioa")
         XioBrandHaloXio.contentMode = .scaleAspectFit
         XioBrandHaloXio.layer.cornerRadius = 45 * XioWidthRatioXio
         XioBrandHaloXio.clipsToBounds = true
@@ -52,7 +52,7 @@ class XioChroniclePortalXio: UIViewController {
         XioBrandNameTagXio.font = .systemFont(ofSize: 24 * XioWidthRatioXio, weight: .black)
         XioBrandNameTagXio.textAlignment = .center
         
-        XioEditionTagXio.text = "Version 1.0.0"
+        XioEditionTagXio.text = "Version 1.0"
         XioEditionTagXio.textColor = .gray
         XioEditionTagXio.font = .systemFont(ofSize: 14 * XioWidthRatioXio)
         XioEditionTagXio.textAlignment = .center

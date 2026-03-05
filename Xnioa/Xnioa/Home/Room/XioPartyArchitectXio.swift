@@ -269,10 +269,12 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
             XioFeedbackXio.impactOccurred()
             
         let sxnioTheaterVC = XioVintageGalaTheaterXio.init(iscreate: true, usiersd: sxnioNewRoom, info: (sxnioInputName,UIImage(named: "picjkBg\(self.XioSelectedSceneIndexXio)")) as? (String, UIImage) )
-          
-            if let sxnioNav = navigationController {
-                sxnioNav.pushViewController(sxnioTheaterVC, animated: true)
-            }
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Creating...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+            self.navigationController?.pushViewController(sxnioTheaterVC, animated: true)
+        }
+            
     }
     
     @objc private func XioPerformRetreatXio() {

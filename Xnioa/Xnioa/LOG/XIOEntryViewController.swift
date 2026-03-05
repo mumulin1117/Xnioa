@@ -9,7 +9,8 @@ import UIKit
 import SafariServices
 
 class XIOEntryViewController: UIViewController {
-
+    static var ifAccept:Bool = false
+    
     private let XIOMainBackgroundXIO = UIImageView()
     private let XIOGoldenOverlayXIO = UIView()
     private let XIOHeadlineLabelXIO = UILabel()
@@ -23,11 +24,18 @@ class XIOEntryViewController: UIViewController {
 
     private let XIOScreenHeightXIO = UIScreen.main.bounds.height
     private let XIOScreenWidthXIO = UIScreen.main.bounds.width
-    private var XIOIsAgreedXIO = false
+    @objc  func upadateStatuse()  {
+        
+//        self.XIOTermsCheckboxXIO.isSelected = XIOEntryViewController.ifAccept
+        XIOTermsCheckboxXIO.backgroundColor = XIOEntryViewController.ifAccept ? .white : .clear
+        XIOTermsCheckboxXIO.setImage(XIOEntryViewController.ifAccept ? UIImage(systemName: "checkmark") : nil, for: .normal)
+//        XIOTermsCheckboxXIO.tintColor = .black
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        XIOEntryViewController.ifAccept = false
+        NotificationCenter.default.addObserver(self, selector: #selector(upadateStatuse), name: NSNotification.Name.init("ifAccept"), object: nil)
         XIOStyleBindingXIO()
         XIOLayoutSetupXIO()
         
@@ -170,14 +178,14 @@ class XIOEntryViewController: UIViewController {
     }
 
     @objc private func XIOTapToggleAgreedXIO() {
-        XIOIsAgreedXIO.toggle()
-        XIOTermsCheckboxXIO.backgroundColor = XIOIsAgreedXIO ? .white : .clear
-        XIOTermsCheckboxXIO.setImage(XIOIsAgreedXIO ? UIImage(systemName: "checkmark") : nil, for: .normal)
+        XIOEntryViewController.ifAccept.toggle()
+        XIOTermsCheckboxXIO.backgroundColor = XIOEntryViewController.ifAccept ? .white : .clear
+        XIOTermsCheckboxXIO.setImage(XIOEntryViewController.ifAccept ? UIImage(systemName: "checkmark") : nil, for: .normal)
         XIOTermsCheckboxXIO.tintColor = .black
     }
 
     @objc private func XIOTapAuthXIO() {
-        guard XIOIsAgreedXIO else {
+        guard XIOEntryViewController.ifAccept else {
             let XIOAnimXIO = CABasicAnimation(keyPath: "position")
             XIOAnimXIO.duration = 0.07
             XIOAnimXIO.repeatCount = 3
@@ -188,14 +196,10 @@ class XIOEntryViewController: UIViewController {
             return
         }
         
-        let XIOLoadingXIO = UIActivityIndicatorView(style: .large)
-        XIOLoadingXIO.center = view.center
-        XIOLoadingXIO.color = .white
-        view.addSubview(XIOLoadingXIO)
-        XIOLoadingXIO.startAnimating()
-        
+      
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "")
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            XIOLoadingXIO.stopAnimating()
+            XNioaAppIndicatorMannager.XNioadismiss()
             self.navigationController?.pushViewController(XioEmailAuthPortalXio(), animated: true)
         }
     }

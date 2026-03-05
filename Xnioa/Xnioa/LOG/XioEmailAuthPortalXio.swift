@@ -147,28 +147,27 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate {
         guard let XioMailXio = XioEmailInputXio.text, XioMailXio.contains("@"),
               let XioKeyXio = XioPassInputXio.text, XioKeyXio.count >= 6 else {
             XioFeedbackErrXio()
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Your email pr password format is error")
             return
         }
         
+       
         XioActionTriggerXio.isEnabled = false
-        let XioSpinXio = UIActivityIndicatorView(style: .medium)
-        XioSpinXio.center = CGPoint(x: XioActionTriggerXio.frame.width/2, y: XioActionTriggerXio.frame.height/2)
-        XioActionTriggerXio.addSubview(XioSpinXio)
-        XioSpinXio.startAnimating()
-        
+      
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Login...")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            XioSpinXio.stopAnimating()
-            XioSpinXio.removeFromSuperview()
-            // 满足基本长度即视为成功（模拟创建新账号）
-                   
+            XNioaAppIndicatorMannager.XNioadismiss()
+              
             if  XioGovernanceHubXio.XioPrincipalXio.XioAuthenticateXio(uid: XioMailXio, secret: XioKeyXio){
                 
-                self.XioTransitionToMainStageXio()
+                XioEmailAuthPortalXio.XioTransitionToMainStageXio()
+            }else{
+                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Log in failed!")
             }
         }
     }
-    private func XioTransitionToMainStageXio() {
+    class func XioTransitionToMainStageXio() {
         guard let XioActiveWinXio = UIApplication.shared.connectedScenes
                 .filter({ $0.activationState == .foregroundActive })
                 .compactMap({ $0 as? UIWindowScene })

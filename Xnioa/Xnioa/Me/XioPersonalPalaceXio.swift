@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 // MARK: - Core Data Model
 struct XioUserProfileXio {
@@ -17,8 +18,8 @@ struct XioUserProfileXio {
 }
 
 // MARK: - Profile Controller
-class XioPersonalPalaceXio: UIViewController {
-    
+class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    private let XioEditNameBtnXio = UIButton() // 新增编辑名字按钮
     private let XioRootScrollXio = UIScrollView()
     private let XioContentRackXio = UIView()
     
@@ -27,7 +28,7 @@ class XioPersonalPalaceXio: UIViewController {
     private let XioDiamondIconXio = UIImageView()
     private let XioDiamondValueXio = UILabel()
     
-    private let XioMasterAvatarXio = UIImageView()
+    private let XioMasterAvatarXio = UIButton()
     private let XioMasterNameXio = UILabel()
     
     private let XioSocialStackXio = UIStackView()
@@ -50,8 +51,23 @@ class XioPersonalPalaceXio: UIViewController {
         super.viewDidLoad()
         XioInitializeCanvasXio()
         XioForgeArchitectureXio()
-        XioRequestProfilePulseXio()
+       
+        XioEditNameBtnXio.setImage(UIImage(named: "PencilxioOutline"), for: .normal)
+        XioMasterAvatarXio.setImage(UIImage.init(named: "mortMinimalistic"), for: .normal)
+        
+        XioMasterAvatarXio.addTarget(self, action: #selector(XioAvatarTappedXio), for: .touchUpInside)
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+           
+        }
+        XioEditNameBtnXio.addTarget(self, action: #selector(XioEditNameTappedXio), for: .touchUpInside)
         XioDiamondBadgeXio.addTarget(self, action: #selector(XioDimonedCallXio), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        XioRequestProfilePulseXio()
     }
     
     private func XioInitializeCanvasXio() {
@@ -104,7 +120,7 @@ class XioPersonalPalaceXio: UIViewController {
         XioVoidPlaceholderXio.contentMode = .scaleAspectFit
         XioVoidPlaceholderXio.image = UIImage(named: "XioVoidPlaceholderXio")
         
-        [XioSettingsTriggerXio, XioDiamondBadgeXio, XioMasterAvatarXio, XioMasterNameXio, XioSocialStackXio, XioSegmentDockXio, XioVoidPlaceholderXio].forEach {
+        [XioSettingsTriggerXio, XioDiamondBadgeXio, XioMasterAvatarXio, XioMasterNameXio,XioEditNameBtnXio, XioSocialStackXio, XioSegmentDockXio, XioVoidPlaceholderXio].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             XioContentRackXio.addSubview($0)
         }
@@ -114,11 +130,11 @@ class XioPersonalPalaceXio: UIViewController {
         XioFollowerBoxXio.textColor = .white
         XioFollowerBoxXio.font = UIFont(name: "Inter-Semi Bold", size: 16)
         XioFollowerBoxXio.textAlignment = .center
-        XioFollowerBoxXio.text = "0 Followers"
+        XioFollowerBoxXio.text = "0 Fans"
         XioFollowingBoxXio.textColor = .white
         XioFollowingBoxXio.font = UIFont(name: "Inter-Semi Bold", size: 16)
         XioFollowingBoxXio.textAlignment = .center
-        XioFollowingBoxXio.text = "0 Following"
+        
         
         
         view.addSubview(XioFollowerBoxXio)
@@ -162,7 +178,10 @@ class XioPersonalPalaceXio: UIViewController {
             
             XioMasterNameXio.topAnchor.constraint(equalTo: XioMasterAvatarXio.bottomAnchor, constant: 15 * XioHScaleXio),
             XioMasterNameXio.centerXAnchor.constraint(equalTo: XioContentRackXio.centerXAnchor),
-            
+            XioEditNameBtnXio.centerYAnchor.constraint(equalTo: XioMasterNameXio.centerYAnchor),
+            XioEditNameBtnXio.widthAnchor.constraint(equalToConstant: 28),
+            XioEditNameBtnXio.heightAnchor.constraint(equalToConstant: 28),
+            XioEditNameBtnXio.leadingAnchor.constraint(equalTo: XioMasterNameXio.trailingAnchor,constant: 5),
             
             XioFollowerBoxXio.widthAnchor.constraint(equalToConstant: 100),
             XioFollowerBoxXio.heightAnchor.constraint(equalToConstant: 25),
@@ -188,7 +207,36 @@ class XioPersonalPalaceXio: UIViewController {
         
         XioBuildTabStackXio()
     }
-    
+    @objc private func XioEditNameTappedXio() {
+            let alertController = UIAlertController(title: "Edit nickname", message: nil, preferredStyle: .alert)
+            
+            alertController.addTextField { textField in
+                textField.placeholder = "Please enter a new nickname"
+                textField.text = self.XioMasterNameXio.text
+                textField.clearButtonMode = .whileEditing
+            }
+            
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            
+            alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
+                guard let newName = alertController.textFields?.first?.text, !newName.isEmpty else { return }
+                self.XioMasterNameXio.text = newName
+                XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAliasXio = newName
+              
+                
+                self.XioShowAlertXio(message: "Nickname modification successful", isSuccess: true)
+            }))
+            
+            present(alertController, animated: true)
+       
+    }
+    private func XioShowAlertXio(message: String, isSuccess: Bool = false) {
+           
+        let alert = UIAlertController(title: isSuccess ? "Success" : "Prompt", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sure", style: .default))
+        present(alert, animated: true)
+       
+    }
     private func XioConfigureTabXio(_ button: UIButton, title: String, tag: Int) {
         button.setTitle(title, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
@@ -230,17 +278,13 @@ class XioPersonalPalaceXio: UIViewController {
     }
     
     private func XioRequestProfilePulseXio() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let XioFakeDataXio = XioUserProfileXio(
-                XioIdentityNameXio: "Jean Brooks",
-                XioAvatarKeyXio: "",
-                XioWealthCountXio: 400,
-                XioFollowerTotalXio: 1,
-                XioFollowingTotalXio: 1
-            )
-            self.XioMasterNameXio.text = XioFakeDataXio.XioIdentityNameXio
-            self.XioDiamondValueXio.text = "\(XioFakeDataXio.XioWealthCountXio)"
-        }
+        self.XioMasterNameXio.text = XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAliasXio
+        self.XioDiamondValueXio.text = "\(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)"
+        XioFollowingBoxXio.text =  "\(XioGovernanceHubXio.XioPrincipalXio.XioExileListXio.count) Following"
+        
+       let avo = XioGovernanceHubXio.XioPrincipalXio.XioAUsedCachePhotoio
+       
+        self.XioMasterAvatarXio.setBackgroundImage((avo == nil) ? UIImage(named: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "") : avo, for: .normal)
     }
     
     @objc private func XioDimonedCallXio() {
@@ -254,4 +298,92 @@ class XioPersonalPalaceXio: UIViewController {
         XioCallXio.hidesBottomBarWhenPushed = true// Replace with your XioVideoCallPortalXio
         self.navigationController?.pushViewController(XioCallXio, animated: true)
     }
+    
+    
+    
+    @objc private func XioAvatarTappedXio() {
+           let actionSheet = UIAlertController(title: "Change avatar", message: nil, preferredStyle: .actionSheet)
+           
+           actionSheet.addAction(UIAlertAction(title: "take a photo", style: .default, handler: { _ in
+               self.XioOpenCameraXio()
+           }))
+           
+           actionSheet.addAction(UIAlertAction(title: "Select from album", style: .default, handler: { _ in
+               self.XioOpenPhotoLibraryXio()
+           }))
+           
+           actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+           
+           present(actionSheet, animated: true)
+       }
+       
+       private func XioOpenCameraXio() {
+           guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+             
+               return
+           }
+           
+           let imagePicker = UIImagePickerController()
+           imagePicker.sourceType = .camera
+           imagePicker.delegate = self
+           imagePicker.allowsEditing = true
+           present(imagePicker, animated: true)
+       }
+       
+       private func XioOpenPhotoLibraryXio() {
+           var config = PHPickerConfiguration()
+           config.selectionLimit = 1
+           config.filter = .images
+           
+           let picker = PHPickerViewController(configuration: config)
+           picker.delegate = self
+           present(picker, animated: true)
+       }
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            picker.dismiss(animated: true)
+            
+            guard let provider = results.first?.itemProvider,
+                  provider.canLoadObject(ofClass: UIImage.self) else { return }
+            
+            provider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
+                DispatchQueue.main.async {
+                    if let selectedImage = image as? UIImage {
+                        self?.XioUpdateAvatarXio(with: selectedImage)
+                    } else if let error = error {
+                        self?.XioShowAlertXio(message: "Image loading failed: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            picker.dismiss(animated: true)
+            
+            if let editedImage = info[.editedImage] as? UIImage {
+                XioUpdateAvatarXio(with: editedImage)
+            } else if let originalImage = info[.originalImage] as? UIImage {
+                XioUpdateAvatarXio(with: originalImage)
+            }
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true)
+        }
+    
+    private func XioUpdateAvatarXio(with image: UIImage) {
+            // 更新UI
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "uploading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+            XioGovernanceHubXio.XioPrincipalXio.XioAUsedCachePhotoio = image
+            self.XioMasterAvatarXio.setBackgroundImage(image, for: .normal)
+            
+            self.XioShowAlertXio(message: "Avatar uploaded successfully", isSuccess: true)
+        }
+        
+       
+            
+       
+    }
+    
 }

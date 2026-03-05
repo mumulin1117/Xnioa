@@ -79,8 +79,17 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioSetTheStageXio()
         XioForgeArchitectureXio()
         XioIgniteAtmosphereXio()
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+            
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(XioRetreatFromStageXio), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        AcccTopersonCou.addTarget(self, action: #selector(safetyFire), for: .touchUpInside)
+        
     }
-    
+
+  
     private func XioSetTheStageXio() {
         view.backgroundColor = .black
         XioGrandBackdropXio.image = isCreaterr ?  (paymeIngo?.1 ): UIImage(named: usier?.XioRoomScene ?? "picjkBg0")
@@ -286,6 +295,15 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         let XioPathXio = IndexPath(row: XioChatHistoryXio.count - 1, section: 0)
         XioLyricStreamXio.scrollToRow(at: XioPathXio, at: .bottom, animated: true)
     }
+    
+    @objc func safetyFire()  {
+        guard let myuise = usier else {
+            return
+        }
+        let activet = XioPeerPortalPalaceXio.init(usiersd: myuise )
+        self.navigationController?.pushViewController(activet, animated: true)
+    }
+    
     
     @objc private func XioRetreatFromStageXio() {
         navigationController?.popToRootViewController(animated: true)

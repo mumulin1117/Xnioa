@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 //他人主页
 // MARK: - Data Architecture
 struct XioPeerProfileEntityXio {
@@ -19,6 +20,7 @@ struct XioPeerProfileEntityXio {
 
 // MARK: - Controller
 class XioPeerPortalPalaceXio: UIViewController {
+   
     var usier: XioGalaEntryXio
     init(usiersd:XioGalaEntryXio) {
        
@@ -26,13 +28,13 @@ class XioPeerPortalPalaceXio: UIViewController {
         
         super.init(nibName: nil, bundle: nil)
     }
-    
+    private let XioEditNameBtnXio = UIButton()
     @MainActor required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    
+    private let AcccTopersonCou = UIButton()
     
     private let XioMainScrollerXio = UIScrollView()
     private let XioCanvasXio = UIView()
@@ -41,7 +43,7 @@ class XioPeerPortalPalaceXio: UIViewController {
     private let XioRetreatBtnXio = UIButton()
     private let XioOptionBtnXio = UIButton()
     
-    private let XioFaceOrbitXio = UIImageView()
+    private let XioFaceOrbitXio = UIButton()
     private let XioHandleLabelXio = UILabel()
     private let XioSocialMetricsLabelXio = UILabel()
     private let XioVideoCallTriggerXio = UIButton()
@@ -63,11 +65,28 @@ class XioPeerPortalPalaceXio: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        AcccTopersonCou.isSelected = XioGovernanceHubXio.XioPrincipalXio.XioAdoreListXio.contains(where: { XioGalaEntryXio in
+            XioGalaEntryXio.XioBadgeIDXio == self.usier.XioBadgeIDXio
+        })
+        AcccTopersonCou.addTarget(self, action: #selector(safetyFire(toUset:)), for: .touchUpInside)
+        AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
+        AcccTopersonCou.setImage(UIImage.init(named: "AllRounded"), for: .selected)
         XioSetupBaseThemeXio()
         XioForgeArchitectureXio()
         XioTriggerDataPulseXio()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(abpihd), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
     }
     
+    @objc func abpihd()  {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc func safetyFire(toUset:UIButton)  {
+        toUset.isSelected = !toUset.isSelected
+        
+        XioGovernanceHubXio.XioPrincipalXio.XioUpdateAdoreStatusXio(target: usier, xLike: toUset.isSelected)
+    }
     private func XioSetupBaseThemeXio() {
         view.backgroundColor = UIColor(white: 0.05, alpha: 1.0)
         XioMainScrollerXio.contentInsetAdjustmentBehavior = .never
@@ -83,14 +102,17 @@ class XioPeerPortalPalaceXio: UIViewController {
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioPerformRetreatXio), for: .touchUpInside)
         
+        
+        
+        
         XioOptionBtnXio.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         XioOptionBtnXio.tintColor = .white
         XioOptionBtnXio.addTarget(self, action: #selector(XioInvokePolicyMenuXio), for: .touchUpInside)
+        XioFaceOrbitXio.setImage(UIImage.init(named: "mortMinimalistic"), for: .normal)
         
         XioFaceOrbitXio.layer.cornerRadius = 35 * XioWFactorXio
         XioFaceOrbitXio.clipsToBounds = true
         XioFaceOrbitXio.backgroundColor = .darkGray
-        XioFaceOrbitXio.image = UIImage(named: self.usier.XioAvatarXio)
         
         
         XioHandleLabelXio.font = .systemFont(ofSize: 22, weight: .bold)
@@ -127,6 +149,8 @@ class XioPeerPortalPalaceXio: UIViewController {
         XioPartnerDataXio = XioPeerProfileEntityXio(XioPartnerNameXio: usier.XioAliasXio, XioFanCountXio: Int.random(in: 0...3), XioFocusCountXio: Int.random(in: 1...3), XioIntroTextXio: usier.XioMottoXio, XioAvatarTokenXio: "", XioIsFocusedXio: false)
         
         XioHeaderRackXio.addSubview(XioRetreatBtnXio)
+        XioHeaderRackXio.addSubview(AcccTopersonCou)
+        
         XioHeaderRackXio.addSubview(XioOptionBtnXio)
         XioRetreatBtnXio.translatesAutoresizingMaskIntoConstraints = false
         XioOptionBtnXio.translatesAutoresizingMaskIntoConstraints = false
@@ -134,6 +158,7 @@ class XioPeerPortalPalaceXio: UIViewController {
         view.addSubview(XioActionDockXio)
         XioActionDockXio.translatesAutoresizingMaskIntoConstraints = false
         XioActionDockXio.addSubview(XioConnectBtnXio)
+        AcccTopersonCou.translatesAutoresizingMaskIntoConstraints = false
         XioConnectBtnXio.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -153,6 +178,12 @@ class XioPeerPortalPalaceXio: UIViewController {
             
             XioRetreatBtnXio.leadingAnchor.constraint(equalTo: XioHeaderRackXio.leadingAnchor, constant: 15),
             XioRetreatBtnXio.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
+            
+            
+            AcccTopersonCou.leadingAnchor.constraint(equalTo: XioRetreatBtnXio.trailingAnchor, constant: 15),
+            AcccTopersonCou.widthAnchor.constraint(equalToConstant: 30),
+            AcccTopersonCou.heightAnchor.constraint(equalToConstant: 30),
+            AcccTopersonCou.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
             
             XioOptionBtnXio.trailingAnchor.constraint(equalTo: XioHeaderRackXio.trailingAnchor, constant: -15),
             XioOptionBtnXio.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
@@ -260,24 +291,40 @@ class XioPeerPortalPalaceXio: UIViewController {
     }
     
     @objc private func XioEnterChatPortalXio() {
-        let XioChatXio = XioWhisperPortalXio() // Replace with your XioWhisperPortalXio
-        XioChatXio.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(XioChatXio, animated: true)
+        if let useDiolog = XioInboxPalaceXio.XioChatBufferXio.first(where: { Diolodlisr in
+            Diolodlisr.Xiouser.XioBadgeIDXio == self.usier.XioBadgeIDXio
+        }){
+            let XioChatXio = XioWhisperPortalXio(usiersd: useDiolog)
+            XioChatXio.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(XioChatXio, animated: true)
+        }else{
+            
+            let XioChatXio = XioWhisperPortalXio(usiersd: Diolodlisr.init(Xiouser: self.usier, dilog: []))
+            XioChatXio.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(XioChatXio, animated: true)
+        }
+        
+        
     }
     
     @objc private func XioLaunchVisualCallXio() {
-        let XioCallXio = XioVerdeoCabyllPortalXio()
+        let XioCallXio = XioVerdeoCabyllPortalXio(usiersd: self.usier)
         XioCallXio.hidesBottomBarWhenPushed = true// Replace with your XioVideoCallPortalXio
         self.navigationController?.pushViewController(XioCallXio, animated: true)
     }
     
     @objc private func XioInvokePolicyMenuXio() {
         let XioSheetXio = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        XioSheetXio.addAction(UIAlertAction(title: "Block", style: .destructive))
-        XioSheetXio.addAction(UIAlertAction(title: "Report", style: .default))
+        XioSheetXio.addAction(UIAlertAction(title: "Block", style: .default, handler: { action in
+            XioGovernanceHubXio.XioPrincipalXio.XioUpdateExileStatusXio(target: self.usier, xAdd: true)
+        }))
+        XioSheetXio.addAction(UIAlertAction(title: "Report", style: .default, handler: { action in
+            self.navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
+        }))
         XioSheetXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(XioSheetXio, animated: true)
     }
+  
 }
 
 
@@ -286,6 +333,8 @@ class XioPeerPortalPalaceXio: UIViewController {
 // MARK: - Post View Item
 
 class XioPartyViewXio: UIView {
+   
+    
     
     private let XioCardBaseXio = UIImageView(image: UIImage(named: "XioCardBaseXio"))
      let XioMainVisualXio = UIImageView()
@@ -463,6 +512,9 @@ class XioPartyViewXio: UIView {
             XioAudienceStackXio.addArrangedSubview(XioMiniAvatarXio)
         }
     }
+    
+    
+       
 }
 
 
@@ -514,10 +566,8 @@ class XioVisualPostCellXio: UIView {
         XioCaptionXio.textColor = .lightGray
         XioCaptionXio.numberOfLines = 2
         
-        XioGreetBtnXio.setTitle("Greet", for: .normal)
-        XioGreetBtnXio.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        XioGreetBtnXio.backgroundColor = .systemPurple
-        XioGreetBtnXio.layer.cornerRadius = 15
+     XioGreetBtnXio.setBackgroundImage(UIImage(named: "nevertGrest"), for: .normal)
+        
         
         XioPlayBtnXio.tintColor = .white
         XioLikeBtnXio.tintColor = .white
@@ -585,5 +635,13 @@ class XioVisualPostCellXio: UIView {
         XioCaptionXio.text = data.XioMoiveTitle
         
         XioAvatarXio.image = UIImage(named: data.XioAvatarXio)
+        
+        XioVisualMediaPilotXio.XioExtractFrameXio(from: data.XioMoivepath) { [weak self] sxnioImg in
+            guard let self = self else { return }
+           
+            if let sxnioFinalImg = sxnioImg {
+                self.XioHeroImageXio.image = sxnioFinalImg
+            }
+        }
     }
 }

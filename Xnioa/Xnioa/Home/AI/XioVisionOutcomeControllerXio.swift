@@ -105,7 +105,12 @@ class XioVisionOutcomeControllerXio: UIViewController {
     }
     
     private func XioLoadSampleArtXio() {
-        XioPrimeDisplayXio.image = UIImage(named: "prtystylexio\(Int.random(in: 0...3))")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+            self.XioPrimeDisplayXio.image = UIImage(named: "prtystylexio\(Int.random(in: 0...3))")
+        }
+       
     }
     
     @objc private func XioReverseFlowXio() {

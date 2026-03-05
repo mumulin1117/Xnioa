@@ -8,13 +8,34 @@
 import UIKit
 import AVFoundation
 
-class XioMotionInsightPilotXio: XioResilienceAnchorXio {
+
+class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolXio{
+    var XioCinemaPlayerXio: AVPlayer?
+    private let XioLikeBtnXio = UIButton.init()
+   
+    var XioCinemaLayerXio: AVPlayerLayer?
+    var XioIsCinemaPlayingXio: Bool = false
+    
+    
+    var pagedex:Int
+    
     var usier: XioGalaEntryXio
-    init(usiersd:XioGalaEntryXio) {
+    init(usiersd:XioGalaEntryXio,indexXIO:Int) {
        
         self.usier = usiersd
+        self.pagedex = indexXIO
+        let item = [
+            XioCommentEntityXio(XioUserXio: "Master", XioContentXio: "The lighting in this video is absolutely cinematic! How did you do that?", XioIsOwnerXio: false, XIoimage: "avarieou8"),
+            XioCommentEntityXio(XioUserXio: "Dreamer", XioContentXio: "This track is fire! Is it an AI-generated melody or a retro classic?", XioIsOwnerXio: false, XIoimage: "avarieou7"),
+            XioCommentEntityXio(XioUserXio: "Mary", XioContentXio: "I'm so glad you guys like the atmosphere of this party! Stay tuned for more.", XioIsOwnerXio: true, XIoimage: "avarieou6"),
+            XioCommentEntityXio(XioUserXio: "Knight", XioContentXio: "Just sent you a Greet! Hope we can chat in the next live gala.", XioIsOwnerXio: false, XIoimage: "avarieou5"),
+            XioCommentEntityXio(XioUserXio: "XioSystem", XioContentXio: "Your video has reached 1,000 views! Keep up the great work.", XioIsOwnerXio: false, XIoimage: "avarieou4")
+        ][indexXIO]
         
+        self.XioChatBufferXio = [item]
+     
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     @MainActor required init?(coder: NSCoder) {
@@ -42,21 +63,23 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio {
     private let XioRatioWXio = UIScreen.main.bounds.width / 375
     private let XioRatioHXio = UIScreen.main.bounds.height / 812
     
-    private var XioChatBufferXio: [XioCommentEntityXio] = [
-        XioCommentEntityXio(XioUserXio: "Mary", XioContentXio: "I think I'm in love with you", XioIsOwnerXio: true),
-        XioCommentEntityXio(XioUserXio: "Mary", XioContentXio: "I think I'm in love with you", XioIsOwnerXio: false)
-    ]
     
-    private var XioIsCinemaPlayingXio = false
-
+    private var XioChatBufferXio: [XioCommentEntityXio] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         XioPrepareStageXio()
         XioBuildFoundationXio()
-       
+        AcccTopersonCou.addTarget(self, action: #selector(safetyFire), for: .touchUpInside)
         AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
+        NotificationCenter.default.addObserver(self, selector: #selector(XioDismissSceneXio), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
     }
     
+    
+    @objc func safetyFire()  {
+        let activet = XioPeerPortalPalaceXio.init(usiersd: usier)
+        self.navigationController?.pushViewController(activet, animated: true)
+    }
     private func XioPrepareStageXio() {
         view.backgroundColor = UIColor(white: 0.05, alpha: 1.0)
         XioTheatreScrollXio.backgroundColor = .clear
@@ -164,17 +187,13 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio {
     
     @objc private func XioSubmitChatXio() {
         guard let XioTxtXio = XioDraftFieldXio.text, !XioTxtXio.isEmpty else { return }
-        let XioNewXio = XioCommentEntityXio(XioUserXio: "Me", XioContentXio: XioTxtXio, XioIsOwnerXio: false)
+        let XioNewXio = XioCommentEntityXio(XioUserXio: "Me", XioContentXio: XioTxtXio, XioIsOwnerXio: false, XIoimage: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "")
         XioChatBufferXio.append(XioNewXio)
         XioTheatreScrollXio.reloadData()
         XioDraftFieldXio.text = ""
         XioDraftFieldXio.resignFirstResponder()
     }
     
-    func XioHydrateVideoCell(sxnioPath: String) {
-        
-        
-    }
 }
 
 extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
@@ -196,8 +215,9 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
         XioVisualXio.clipsToBounds = true
         XioVisualXio.contentMode = .scaleAspectFill
         XioVisualXio.isUserInteractionEnabled = true
-        
-        SXNIOVideoTool.sxnioFetchThumbnail(from: usier.XioMoivepath) { [weak self] sxnioImg in
+        XioVisualXio.contentMode = .scaleAspectFill
+        XioVisualXio.layer.masksToBounds = true
+        XioVisualMediaPilotXio.XioExtractFrameXio(from: usier.XioMoivepath) { [weak self] sxnioImg in
             guard let self = self else { return }
            
             if let sxnioFinalImg = sxnioImg {
@@ -208,14 +228,14 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
         let XioPlayBtnXio = UIButton(frame: CGRect(x: 345*XioRatioWXio - 50, y: 345*XioRatioWXio - 50, width: 40, height: 40))
         XioPlayBtnXio.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
         XioPlayBtnXio.tintColor = .white
-        XioPlayBtnXio.addTarget(self, action: #selector(XioToggleVisualXio), for: .touchUpInside)
-        
+       
+        XioInitalizeCinemaXio(in: XioVisualXio, resource: usier.XioMoivepath)
+                
+                
+        XioPlayBtnXio.addTarget(self, action: #selector(XioToggleVisualXio(_:)), for: .touchUpInside)
         let XioGreetXio = UIButton(frame: CGRect(x: 10, y: 345*XioRatioWXio - 50, width: 80, height: 36))
-        XioGreetXio.backgroundColor = .systemPurple
-        XioGreetXio.setTitle("Greet", for: .normal)
-        XioGreetXio.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        XioGreetXio.layer.cornerRadius = 10
-        
+        XioGreetXio.setBackgroundImage(UIImage(named: "nevertGrest"), for: .normal)
+        XioGreetXio.addTarget(self, action: #selector(XioEnterChatPortalXio), for: .touchUpInside)
         XioVisualXio.addSubview(XioPlayBtnXio)
         XioVisualXio.addSubview(XioGreetXio)
         XioHeadXio.addSubview(XioVisualXio)
@@ -229,14 +249,35 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
         
         return XioHeadXio
     }
-    
+    @objc private func XioEnterChatPortalXio() {
+        if let useDiolog = XioInboxPalaceXio.XioChatBufferXio.first(where: { Diolodlisr in
+            Diolodlisr.Xiouser.XioBadgeIDXio == self.usier.XioBadgeIDXio
+        }){
+            let XioChatXio = XioWhisperPortalXio(usiersd: useDiolog)
+            XioChatXio.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(XioChatXio, animated: true)
+        }else{
+            
+            let XioChatXio = XioWhisperPortalXio(usiersd: Diolodlisr.init(Xiouser: self.usier, dilog: []))
+            XioChatXio.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(XioChatXio, animated: true)
+        }
+        
+        
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 450 * XioRatioHXio
     }
     
-    @objc private func XioToggleVisualXio() {
-        XioIsCinemaPlayingXio.toggle()
-        print("Video State: \(XioIsCinemaPlayingXio ? "Playing" : "Paused")")
+    @objc private func XioToggleVisualXio(_ sender: UIButton) {
+            XioToggleMotionStateXio(sender: sender)
+        }
+
+        
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        XioTerminateCinemaXio() // 统一销毁
+        
     }
 }
 
@@ -274,10 +315,10 @@ class XioChatVocalCellXio: UITableViewCell {
         XioBadgeXio.textAlignment = .center
         XioBadgeXio.layer.cornerRadius = 4
         XioBadgeXio.clipsToBounds = true
-        
+        XioBadgeXio.numberOfLines = 0
         XioMsgXio.textColor = .darkGray
         XioMsgXio.font = .systemFont(ofSize: 14)
-        
+        XioMsgXio.numberOfLines = 0
         NSLayoutConstraint.activate([
             XioAvatarXio.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             XioAvatarXio.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
@@ -290,9 +331,10 @@ class XioChatVocalCellXio: UITableViewCell {
             XioBadgeXio.leadingAnchor.constraint(equalTo: XioNameXio.trailingAnchor, constant: 5),
             XioBadgeXio.centerYAnchor.constraint(equalTo: XioNameXio.centerYAnchor),
             XioBadgeXio.widthAnchor.constraint(equalToConstant: 45),
-            XioBadgeXio.heightAnchor.constraint(equalToConstant: 16),
+            XioBadgeXio.heightAnchor.constraint(equalToConstant: 33),
             
             XioMsgXio.leadingAnchor.constraint(equalTo: XioNameXio.leadingAnchor),
+            XioMsgXio.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             XioMsgXio.topAnchor.constraint(equalTo: XioNameXio.bottomAnchor, constant: 4),
             XioMsgXio.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
@@ -302,6 +344,7 @@ class XioChatVocalCellXio: UITableViewCell {
         XioNameXio.text = data.XioUserXio
         XioMsgXio.text = data.XioContentXio
         XioBadgeXio.isHidden = !data.XioIsOwnerXio
+        XioAvatarXio.image = UIImage(named: data.XIoimage) 
     }
 }
 
@@ -309,4 +352,6 @@ struct XioCommentEntityXio {
     let XioUserXio: String
     let XioContentXio: String
     let XioIsOwnerXio: Bool
+    let XIoimage:String
 }
+

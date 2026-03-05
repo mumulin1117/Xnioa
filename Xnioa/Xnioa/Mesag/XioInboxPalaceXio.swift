@@ -9,18 +9,24 @@ import UIKit
 
 // MARK: - Data Core
 struct XioChatEntityXio {
-    let XioPartnerNameXio: String
     let XioSnippetTextXio: String
     let XioTimestampXio: String
-    let XioAvatarTokenXio: String
+    let whosayIsMe:Bool
 }
 
+struct Diolodlisr {
+
+    let Xiouser: XioGalaEntryXio
+    var dilog:Array<XioChatEntityXio>
+    
+    
+}
 // MARK: - Message List Controller
 class XioInboxPalaceXio: UIViewController {
     
     private let XioTitlePlateXio = UILabel()
     private let XioChronicleListXio = UITableView()
-    private var XioChatBufferXio: [XioChatEntityXio] = []
+    static var XioChatBufferXio: [Diolodlisr] = []
     private let XioVoidPlaceholderXio = UIImageView.init(image: UIImage.init(named: "XioVoidPlaceholderXio"))
    
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
@@ -30,7 +36,19 @@ class XioInboxPalaceXio: UIViewController {
         super.viewDidLoad()
         XioAssembleEnvironmentXio()
         XioInvokeNetworkPulseXio()
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+          
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinG), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        
     }
+   @objc func refreshinG()  {
+        
+       XioInvokeNetworkPulseXio() 
+   }
+    
     
     private func XioAssembleEnvironmentXio() {
         view.backgroundColor = UIColor(white: 0.05, alpha: 1.0)
@@ -71,26 +89,21 @@ class XioInboxPalaceXio: UIViewController {
     }
     
     private func XioInvokeNetworkPulseXio() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-            self.XioChatBufferXio = [
-                XioChatEntityXio(XioPartnerNameXio: "Martin Randolph", XioSnippetTextXio: "like your post: New year...", XioTimestampXio: "12.50", XioAvatarTokenXio: "v1"),
-                XioChatEntityXio(XioPartnerNameXio: "Martin Randolph", XioSnippetTextXio: "like your post: New year...", XioTimestampXio: "12.50", XioAvatarTokenXio: "v2")
-            ]
-            self.XioChronicleListXio.reloadData()
-            self.XioVoidPlaceholderXio.isHidden = !(self.XioChatBufferXio.count == 0)
-        }
+        
+        self.XioChronicleListXio.reloadData()
+        self.XioVoidPlaceholderXio.isHidden = !(XioInboxPalaceXio.XioChatBufferXio.count == 0)
     }
 }
 
 // MARK: - List Protocols
 extension XioInboxPalaceXio: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return XioChatBufferXio.count
+        return XioInboxPalaceXio.XioChatBufferXio.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let XioCellXio = tableView.dequeueReusableCell(withIdentifier: "XioChatTomeCellXio", for: indexPath) as! XioChatTomeCellXio
-        XioCellXio.XioHydrateCellXio(XioChatBufferXio[indexPath.row])
+        XioCellXio.XioHydrateCellXio(XioInboxPalaceXio.XioChatBufferXio[indexPath.row])
         return XioCellXio
     }
     
@@ -99,10 +112,10 @@ extension XioInboxPalaceXio: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let XioSubjectXio = XioChatBufferXio[indexPath.row]
-        let XioDetailXio = XioWhisperPortalXio()
+        let XioSubjectXio = XioInboxPalaceXio.XioChatBufferXio[indexPath.row]
+        let XioDetailXio = XioWhisperPortalXio(usiersd: XioSubjectXio)
         XioDetailXio.hidesBottomBarWhenPushed = true
-        XioDetailXio.XioTargetIdentityXio = XioSubjectXio.XioPartnerNameXio
+//        XioDetailXio.XioTargetIdentityXio = XioSubjectXio.XioPartnerNameXio
         navigationController?.pushViewController(XioDetailXio, animated: true)
     }
 }
@@ -162,10 +175,11 @@ class XioChatTomeCellXio: UITableViewCell {
         ])
     }
     
-    func XioHydrateCellXio(_ entity: XioChatEntityXio) {
-        XioPartnerLabelXio.text = entity.XioPartnerNameXio
-        XioSnippetLabelXio.text = entity.XioSnippetTextXio
-        XioTimeLabelXio.text = entity.XioTimestampXio
+    func XioHydrateCellXio(_ entity: Diolodlisr) {
+        XioPartnerLabelXio.text = entity.Xiouser.XioAliasXio
+        XioSnippetLabelXio.text = entity.dilog.first?.XioSnippetTextXio
+        XioTimeLabelXio.text = entity.dilog.first?.XioTimestampXio
+        XioAvatarOrbitXio.image = UIImage(named: entity.Xiouser.XioAvatarXio)
     }
 }
 

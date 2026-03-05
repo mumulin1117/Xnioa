@@ -7,13 +7,6 @@
 
 import UIKit
 
-// MARK: - Models
-//struct XioVideoEntityXio {
-//    let XioIdentiferXio = UUID()
-//    let XioCreatorNameXio: String
-//    let XioIntroTextXio: String
-//    let XioCoverTokenXio: String
-//}
 
 // MARK: - Controller
 class XioVideoPalaceXio: UIViewController {
@@ -24,7 +17,10 @@ class XioVideoPalaceXio: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        freashiNG()
         
+    }
+    @objc func freashiNG()  {
         XioCurrentAvatoDataXio = Array(XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.suffix(3))
         
         XioCurrentVioDataXio = XioGovernanceHubXio.XioPrincipalXio.XioRoomPoolXio.filter {
@@ -36,7 +32,6 @@ class XioVideoPalaceXio: UIViewController {
         }
         
     }
-    
     
     private let XioPrimaryShelfXio = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let XioNavTitleXio = UILabel()
@@ -51,7 +46,12 @@ class XioVideoPalaceXio: UIViewController {
         super.viewDidLoad()
         XioInitialBaseSettingsXio()
         XioAssembleHierarchyXio()
-//        XioTriggerRemotePulseXio()
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Loading...")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            XNioaAppIndicatorMannager.XNioadismiss()
+          
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(freashiNG), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
     }
     
     private func XioInitialBaseSettingsXio() {
@@ -146,11 +146,29 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
             return XioCellXio
         } else {
             let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioPostCellXio", for: indexPath) as! XioPostCellXio
+            XioCellXio.AcccTopersonCou.tag = indexPath.row
+            XioCellXio.AcccTopersonCou.addTarget(self, action: #selector(safetyFire(usief:)), for: .touchUpInside)
+            XioCellXio.AccctoinCou.addTarget(self, action: #selector((XioReportStageXio)), for: .touchUpInside)
+            
+            XioCellXio.XioLikeBtnXio.tag = indexPath.row
+            
+            XioCellXio.XioLikeBtnXio.addTarget(self, action: #selector(headeringBuild(Buis:)), for: .touchUpInside)
+            XioCellXio.AcccTopersonCou.addTarget(self, action: #selector(safetyFire(usief:)), for: .touchUpInside)
+            
+            
             XioCellXio.XioSyncEntityXio(XioCurrentVioDataXio[indexPath.item])
             return XioCellXio
         }
     }
     
+    @objc func headeringBuild(Buis:UIButton) {
+        Buis.isSelected = !Buis.isSelected
+        XioGovernanceHubXio.XioPrincipalXio.XioUpdateVideoLikeStatusXio(target: XioCurrentVioDataXio[Buis.tag], xLike: Buis.isSelected)
+    }
+    
+    @objc private func XioReportStageXio() {
+        navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let XioHeadXio = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "XioHeaderGadgetXio", for: indexPath) as! XioHeaderGadgetXio
         XioHeadXio.XioTitleLabelXio.text = "Recommend"
@@ -163,10 +181,37 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
             detailuser.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(detailuser, animated: true)
         } else {
-            let detailuser  = XioMotionInsightPilotXio(usiersd: XioCurrentVioDataXio[indexPath.row])
+            let detailuser  = XioMotionInsightPilotXio(usiersd: XioCurrentVioDataXio[indexPath.row], indexXIO: indexPath.row)
+            
             detailuser.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(detailuser, animated: true)
         }
+    }
+    
+    @objc func safetyFire(usief:UIButton)  {
+       let papiow = XioCurrentVioDataXio[usief.tag]
+       
+        let activet = XioPeerPortalPalaceXio.init(usiersd: papiow )
+        self.navigationController?.pushViewController(activet, animated: true)
+    }
+    
+    
+    @objc private func XioEnterChatPortalXio(ToWho:UIButton) {
+       let dio =  self.XioCurrentVioDataXio[ToWho.tag]
+        if let useDiolog = XioInboxPalaceXio.XioChatBufferXio.first(where: { Diolodlisr in
+            Diolodlisr.Xiouser.XioBadgeIDXio == dio.XioBadgeIDXio
+        }){
+            let XioChatXio = XioWhisperPortalXio(usiersd: useDiolog)
+            XioChatXio.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(XioChatXio, animated: true)
+        }else{
+            
+            let XioChatXio = XioWhisperPortalXio(usiersd: Diolodlisr.init(Xiouser: dio, dilog: []))
+            XioChatXio.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(XioChatXio, animated: true)
+        }
+        
+        
     }
 }
 

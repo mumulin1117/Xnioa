@@ -8,7 +8,17 @@
 import UIKit
 //video
 class XioVerdeoCabyllPortalXio: UIViewController {
+    var usier: XioGalaEntryXio
+    init(usiersd:XioGalaEntryXio) {
+       
+        self.usier = usiersd
+        
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    @MainActor required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     private let XioRemoteVibeViewXio = UIImageView()
     private let XioLocalVibeViewXio = UIImageView()
     private let XioVisualOverlayXio = UIView()
@@ -16,7 +26,7 @@ class XioVerdeoCabyllPortalXio: UIViewController {
     private let XioHeaderRackXio = UIView()
     private let XioRetreatTriggerXio = UIButton()
     private let XioPartnerTitleXio = UILabel()
-    private let XioFollowActionXio = UIButton()
+//    private let XioFollowActionXio = UIButton()
     private let XioExtraServiceXio = UIButton()
     
     private let XioTerminateTriggerXio = UIButton()
@@ -29,7 +39,13 @@ class XioVerdeoCabyllPortalXio: UIViewController {
         XioPrepareStageXio()
         XioForgeArchitectureXio()
         XioInjectFakeDynamicXio()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinG), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        
     }
+   @objc func refreshinG()  {
+        
+       self.navigationController?.popViewController(animated: true)
+   }
     
     private func XioPrepareStageXio() {
         view.backgroundColor = .black
@@ -38,7 +54,7 @@ class XioVerdeoCabyllPortalXio: UIViewController {
     
     private func XioForgeArchitectureXio() {
         XioRemoteVibeViewXio.contentMode = .scaleAspectFill
-        XioRemoteVibeViewXio.image = UIImage(named: "XioRemoteUserProxyXio")
+        XioRemoteVibeViewXio.image = UIImage(named: usier.XioAvatarXio)
         XioRemoteVibeViewXio.backgroundColor = .darkGray
         
         XioVisualOverlayXio.backgroundColor = UIColor.black.withAlphaComponent(0.2)
@@ -48,21 +64,26 @@ class XioVerdeoCabyllPortalXio: UIViewController {
         XioLocalVibeViewXio.clipsToBounds = true
         XioLocalVibeViewXio.layer.borderWidth = 1
         XioLocalVibeViewXio.layer.borderColor = UIColor.white.withAlphaComponent(0.3).cgColor
-        XioLocalVibeViewXio.image = UIImage(named: "XioLocalUserProxyXio")
+        let avo = XioGovernanceHubXio.XioPrincipalXio.XioAUsedCachePhotoio
+        
+         
+        XioLocalVibeViewXio.image = (avo == nil) ? UIImage(named: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "") : avo
         XioLocalVibeViewXio.backgroundColor = .lightGray
         
-        XioPartnerTitleXio.text = "Holt Hamlet"
+        XioPartnerTitleXio.text = usier.XioAliasXio
+        
         XioPartnerTitleXio.textColor = .white
         XioPartnerTitleXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
         XioRetreatTriggerXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         XioRetreatTriggerXio.tintColor = .white
         
-        XioFollowActionXio.setImage(UIImage(systemName: "person.badge.plus"), for: .normal)
-        XioFollowActionXio.tintColor = .white
-        
+//        XioFollowActionXio.setImage(UIImage(systemName: "person.badge.plus"), for: .normal)
+//        XioFollowActionXio.tintColor = .white
+//        
         XioExtraServiceXio.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         XioExtraServiceXio.tintColor = .white
+        XioExtraServiceXio.addTarget(self, action: #selector(XioInvokePolicyMenuXio), for: .touchUpInside)
         
         XioTerminateTriggerXio.backgroundColor = UIColor(red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0)
         XioTerminateTriggerXio.layer.cornerRadius = 14 * XioWidthRatioXio
@@ -75,7 +96,7 @@ class XioVerdeoCabyllPortalXio: UIViewController {
             view.addSubview($0)
         }
         
-        [XioRetreatTriggerXio, XioPartnerTitleXio, XioFollowActionXio, XioExtraServiceXio].forEach {
+        [XioRetreatTriggerXio, XioPartnerTitleXio, XioExtraServiceXio].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             XioHeaderRackXio.addSubview($0)
         }
@@ -102,9 +123,9 @@ class XioVerdeoCabyllPortalXio: UIViewController {
             XioPartnerTitleXio.leadingAnchor.constraint(equalTo: XioRetreatTriggerXio.trailingAnchor, constant: 15 * XioWidthRatioXio),
             XioPartnerTitleXio.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
             
-            XioFollowActionXio.leadingAnchor.constraint(equalTo: XioPartnerTitleXio.trailingAnchor, constant: 8 * XioWidthRatioXio),
-            XioFollowActionXio.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
-            
+//            XioFollowActionXio.leadingAnchor.constraint(equalTo: XioPartnerTitleXio.trailingAnchor, constant: 8 * XioWidthRatioXio),
+//            XioFollowActionXio.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
+//            
             XioExtraServiceXio.trailingAnchor.constraint(equalTo: XioHeaderRackXio.trailingAnchor, constant: -20 * XioWidthRatioXio),
             XioExtraServiceXio.centerYAnchor.constraint(equalTo: XioHeaderRackXio.centerYAnchor),
             
@@ -119,7 +140,17 @@ class XioVerdeoCabyllPortalXio: UIViewController {
             XioTerminateTriggerXio.heightAnchor.constraint(equalToConstant: 65 * XioHeightRatioXio)
         ])
     }
-    
+    @objc private func XioInvokePolicyMenuXio() {
+        let XioSheetXio = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        XioSheetXio.addAction(UIAlertAction(title: "Block", style: .default, handler: { action in
+            XioGovernanceHubXio.XioPrincipalXio.XioUpdateExileStatusXio(target: self.usier, xAdd: true)
+        }))
+        XioSheetXio.addAction(UIAlertAction(title: "Report", style: .default, handler: { action in
+            self.navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
+        }))
+        XioSheetXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(XioSheetXio, animated: true)
+    }
     private func XioInjectFakeDynamicXio() {
         XioLocalVibeViewXio.alpha = 0
         UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveEaseIn) {

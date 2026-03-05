@@ -70,7 +70,7 @@ class XioSystemTerminalXio: UIViewController {
         
         XioDiamondIconXio.image = UIImage(systemName: "suit.diamond.fill")
         XioDiamondIconXio.tintColor = .white
-        XioBalanceTagXio.text = "400"
+        XioBalanceTagXio.text = "\(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)"
         XioBalanceTagXio.textColor = .white
         XioBalanceTagXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
@@ -153,30 +153,92 @@ class XioSystemTerminalXio: UIViewController {
     }
     
     private func XioPopulateTerminalItemsXio() {
-        let XioLabelsXio = ["Personal Information", "User Agreement", "Privacy Agreement", "Clear cache", "About us"]
-        XioLabelsXio.forEach { XioTextXio in
+        let XioLabelsXio = ["User Agreement", "Privacy Agreement", "Clear cache", "About us"]
+        for (i,XioTextXio) in XioLabelsXio.enumerated() {
             let XioItemXio = XioTerminalItemViewXio()
             XioItemXio.XioSyncTextXio(XioTextXio)
+            XioItemXio.isUserInteractionEnabled = true
             XioItemXio.translatesAutoresizingMaskIntoConstraints = false
             XioItemXio.heightAnchor.constraint(equalToConstant: 60 * XioHeightRatioXio).isActive = true
+            XioItemXio.tag = 1000 + i
+            XioItemXio.addTarget(self, action: #selector(XiotermiNgatXio(piz:)), for: .touchUpInside)
             XioMenuStackXio.addArrangedSubview(XioItemXio)
         }
+        
     }
     
+    
+    
+    
+    @objc private func XiotermiNgatXio(piz:UIButton) {
+        let piao = piz.tag
+        switch piao {
+        case 1000:
+            XioTriggerLegalFlowXio(from: self, XioCategoryXio: .XioTermsXio)
+            
+        case 1001:
+            XioTriggerLegalFlowXio(from: self, XioCategoryXio: .XioPrivacyXio)
+        case 1002:
+            
+            XioClearCacheTappedXio()
+                    // 震动反馈
+        case 1003:
+            self.navigationController?.pushViewController(XioChroniclePortalXio(), animated: true)
+       
+        
+            
+        default:
+            break
+        }
+    }
     @objc private func XioPerformRetreatXio() {
         navigationController?.popViewController(animated: true)
     }
     
 
-    
+    @objc private func XioClearCacheTappedXio() {
+          
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+            
+            
+            let alert = UIAlertController(
+                title: "Clear Cache",
+                message: "Are you sure you want to clear the cache? This will free up storage space.",
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { _ in
+               
+                    let notificationGenerator = UINotificationFeedbackGenerator()
+                    notificationGenerator.notificationOccurred(.success)
+                
+            }))
+            
+            present(alert, animated: true)
+       
+    }
     private func XioLoadLocalVibeXio() {
-        XioBalanceTagXio.text = "400"
+        XioBalanceTagXio.text = "\(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)"
     }
     
     @objc private func XioExecuteLogoutXio() {
         let XioPopupXio = XioSecurityShieldXio(XioFrameXio: view.bounds, XioModeXio: .XioAbandonSessionXio)
         XioPopupXio.XioOnConfirmationXio = {
-            // Logic for cleaning user session
+            XioGovernanceHubXio.XioPrincipalXio.XioTerminateSessionXio() 
+            guard let XioActiveWinXio = UIApplication.shared.connectedScenes
+                    .filter({ $0.activationState == .foregroundActive })
+                    .compactMap({ $0 as? UIWindowScene })
+                    .first?.windows
+                    .filter({ $0.isKeyWindow }).first else { return }
+                
+                if let XioDelegateXio = XioActiveWinXio.windowScene?.delegate as? SceneDelegate {
+                    let XIOLobbyVCXIO = XioMainCoordinatorXio()
+                   
+                    let XIONavXIO = XioEmailAuthPortalXio()
+                    XioDelegateXio.window?.rootViewController = XIONavXIO
+                }
         }
         XioPopupXio.XioPresentInStageXio(view)
     }
@@ -184,14 +246,26 @@ class XioSystemTerminalXio: UIViewController {
     @objc private func XioExecuteObliterationXio() {
         let XioPopupXio = XioSecurityShieldXio(XioFrameXio: view.bounds, XioModeXio: .XioEraseIdentityXio)
         XioPopupXio.XioOnConfirmationXio = {
-            // Logic for account deletion
+            XioGovernanceHubXio.XioPrincipalXio.XioTerminateSessionXio()
+            guard let XioActiveWinXio = UIApplication.shared.connectedScenes
+                    .filter({ $0.activationState == .foregroundActive })
+                    .compactMap({ $0 as? UIWindowScene })
+                    .first?.windows
+                    .filter({ $0.isKeyWindow }).first else { return }
+                
+                if let XioDelegateXio = XioActiveWinXio.windowScene?.delegate as? SceneDelegate {
+                    let XIOLobbyVCXIO = XioMainCoordinatorXio()
+                   
+                    let XIONavXIO = XioEmailAuthPortalXio()
+                    XioDelegateXio.window?.rootViewController = XIONavXIO
+                }
         }
         XioPopupXio.XioPresentInStageXio(view)
     }
 }
 
-class XioTerminalItemViewXio: UIView {
-    private let XioVesselXio = UIView()
+class XioTerminalItemViewXio: UIButton {
+    
     private let XioTitleLabelXio = UILabel()
     private let XioArrowIconXio = UIImageView()
     
@@ -203,8 +277,8 @@ class XioTerminalItemViewXio: UIView {
     required init?(coder: NSCoder) { fatalError() }
     
     private func XioBuildXio() {
-        XioVesselXio.backgroundColor = UIColor(white: 0.12, alpha: 1.0)
-        XioVesselXio.layer.cornerRadius = 10
+        self.backgroundColor = UIColor(white: 0.12, alpha: 1.0)
+        self.layer.cornerRadius = 10
         
         XioTitleLabelXio.textColor = .white
         XioTitleLabelXio.font = .systemFont(ofSize: 16)
@@ -213,22 +287,18 @@ class XioTerminalItemViewXio: UIView {
         XioArrowIconXio.tintColor = .gray
         XioArrowIconXio.contentMode = .scaleAspectFit
         
-        [XioVesselXio, XioTitleLabelXio, XioArrowIconXio].forEach {
+        [ XioTitleLabelXio, XioArrowIconXio].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
         
         NSLayoutConstraint.activate([
-            XioVesselXio.topAnchor.constraint(equalTo: topAnchor),
-            XioVesselXio.leadingAnchor.constraint(equalTo: leadingAnchor),
-            XioVesselXio.trailingAnchor.constraint(equalTo: trailingAnchor),
-            XioVesselXio.bottomAnchor.constraint(equalTo: bottomAnchor),
+           
+            XioTitleLabelXio.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            XioTitleLabelXio.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
-            XioTitleLabelXio.leadingAnchor.constraint(equalTo: XioVesselXio.leadingAnchor, constant: 15),
-            XioTitleLabelXio.centerYAnchor.constraint(equalTo: XioVesselXio.centerYAnchor),
-            
-            XioArrowIconXio.trailingAnchor.constraint(equalTo: XioVesselXio.trailingAnchor, constant: -15),
-            XioArrowIconXio.centerYAnchor.constraint(equalTo: XioVesselXio.centerYAnchor),
+            XioArrowIconXio.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            XioArrowIconXio.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             XioArrowIconXio.widthAnchor.constraint(equalToConstant: 12),
             XioArrowIconXio.heightAnchor.constraint(equalToConstant: 12)
         ])

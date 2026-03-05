@@ -2,10 +2,11 @@
 //  XioGovernanceHubXio.swift
 //  Xnioa
 //
-//  Created by mumu on 2026/2/26.
+//  Created by Xnioa on 2026/2/26.
 //
 
 import Foundation
+import UIKit
 
 class XioGovernanceHubXio {
     
@@ -16,11 +17,19 @@ class XioGovernanceHubXio {
     private let XioTreasuryKeyXio = "XioGoldenReserveKeyXio"
     
      var XioActiveProfileXio: XioGalaEntryXio?
-    
+    var XioAUsedCachePhotoio: UIImage?
     private init() {
         
         XioRoomPoolXio =  sxnioLoadRegistryFromLocal()
         XioRestoreSessionXio()
+        if XioVaultXio.object(forKey: XioIdentityTokenXio) as? String  == "32112345677"{
+            XioInboxPalaceXio.XioChatBufferXio = [
+                Diolodlisr.init(Xiouser: XioRoomPoolXio[0], dilog: [XioChatEntityXio.init(XioSnippetTextXio: "like your post: New year...", XioTimestampXio: "12.50", whosayIsMe: false)]),
+                
+                Diolodlisr.init(Xiouser: XioRoomPoolXio[2], dilog: [XioChatEntityXio.init(XioSnippetTextXio: "Hello...", XioTimestampXio: "15.50", whosayIsMe: true)])
+                
+            ]
+        }
     }
  
     var XioIsAuthorizedXio: Bool {
@@ -28,9 +37,15 @@ class XioGovernanceHubXio {
     }
     
     func XioAuthenticateXio(uid: String, secret: String) -> Bool {
-        if (uid == "XioTester@gmial.com" && secret == "888888") || (uid.count >= 4 && secret.count >= 6) {
-            let XioTokenXio = "XTK_" + UUID().uuidString.prefix(8)
-            XioVaultXio.set(XioTokenXio, forKey: XioIdentityTokenXio)
+        if (uid == "tester@gmial.com" && secret == "888888") || (uid.count >= 4 && secret.count >= 6) {
+            
+            if uid == "tester@gmial.com" {
+                XioVaultXio.set("32112345677", forKey: XioIdentityTokenXio)
+            }else{
+                let XioTokenXio = "XTK_" + UUID().uuidString.prefix(8)
+                XioVaultXio.set(XioTokenXio, forKey: XioIdentityTokenXio)
+            }
+            
             XioInitializeLocalProfileXio(name: uid)
             return true
         }
@@ -41,13 +56,15 @@ class XioGovernanceHubXio {
     func XioTerminateSessionXio() {
         XioVaultXio.removeObject(forKey: XioIdentityTokenXio)
         XioActiveProfileXio = nil
+        XioVaultXio.removeObject(forKey: XioTreasuryKeyXio)
+        XioInboxPalaceXio.XioChatBufferXio.removeAll()
+        XioAUsedCachePhotoio = nil
+        XioRoomPoolXio.removeAll()
+        XioVideoLikeListXio.removeAll()
+        XioExileListXio.removeAll()
+        XioAdoreListXio.removeAll()
     }
     
-    func XioEraseAccountXio() {
-        XioTerminateSessionXio()
-        XioVaultXio.removeObject(forKey: XioTreasuryKeyXio)
-        XioVaultXio.removeObject(forKey: "XioProfileCacheXio")
-    }
     
     private func XioRestoreSessionXio() {
         if XioIsAuthorizedXio {
@@ -65,17 +82,16 @@ class XioGovernanceHubXio {
                                                    XioSubjectXio: "",
                                                    XioRoomCover: "", XioRoomScene: "",
                                                    XioHeatValueXio: "",
-                                                   XioRoomTItle: "")
-//        XioGalaEntryXio.init(XioAliasXio: name,
-//                                                   XioBadgeIDXio: "3456789",
-//                                                   XioAvatarXio: "meHEiaudo",
-//                                                   XioMottoXio: "Oka,show",
-//                                                   XioMoiveTitle: "",
-//                                                   XioMoivepath: "",
-//                                                   XioSubjectXio: "",
-//                                                   XioRoomCover: "",
-//                                                   XioHeatValueXio: "",
-//                                                   XioRoomTItle: "")
+                                   XioRoomTItle: "")
+        
+        if name == "tester@gmial.com" {
+            XioInboxPalaceXio.XioChatBufferXio = [
+                Diolodlisr.init(Xiouser: XioRoomPoolXio[0], dilog: [XioChatEntityXio.init(XioSnippetTextXio: "like your post: New year...", XioTimestampXio: "12.50", whosayIsMe: false)]),
+                
+                Diolodlisr.init(Xiouser: XioRoomPoolXio[2], dilog: [XioChatEntityXio.init(XioSnippetTextXio: "Hello...", XioTimestampXio: "15.50", whosayIsMe: true)])
+                
+            ]
+        }
     }
 
     // 本地 mock 数据：派对房间
@@ -101,7 +117,7 @@ class XioGovernanceHubXio {
     var XioCurrentReserveXio: Int {
         get {
             let XioValXio = XioVaultXio.integer(forKey: XioTreasuryKeyXio)
-            return XioValXio == 0 ? 500 : XioValXio
+            return XioValXio
         }
         set { XioVaultXio.set(newValue, forKey: XioTreasuryKeyXio) }
     }
@@ -118,30 +134,60 @@ class XioGovernanceHubXio {
         XioCurrentReserveXio += gain
     }
 
-    // MARK: - Social & Relation (Exile / Adore)
-    var XioExileListXio: [String] = Array<String>()
+    // MARK: - 精准 ID 匹配逻辑
+    var XioVideoLikeListXio: [XioGalaEntryXio] = []
+    var XioExileListXio: [XioGalaEntryXio] = []
+    var XioAdoreListXio: [XioGalaEntryXio] = []
+
     
-    
-    func XioUpdateExileStatusXio(target: String, xAdd: Bool) {
+    func XioUpdateExileStatusXio(target: XioGalaEntryXio, xAdd: Bool) {
         if xAdd {
-            if !XioExileListXio.contains(target) {
+          
+            if !XioExileListXio.contains(where: { $0.XioBadgeIDXio == target.XioBadgeIDXio }) {
                 XioExileListXio.append(target)
+                
+               
+                XioUpdateAdoreStatusXio(target: target, xLike: false)
+                XioRoomPoolXio.removeAll{ $0.XioBadgeIDXio == target.XioBadgeIDXio }
+                XioInboxPalaceXio.XioChatBufferXio.removeAll{ $0.Xiouser.XioBadgeIDXio == target.XioBadgeIDXio }
+                NotificationCenter.default.post(name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
             }
         } else {
-           XioExileListXio.removeAll { $0 == target }
+            
+            XioExileListXio.removeAll { $0.XioBadgeIDXio == target.XioBadgeIDXio }
         }
+       
     }
     
-    
-    var XioAdoreListXio: [String] = Array<String>()
-    func XioUpdateAdoreStatusXio(target: String, xLike: Bool) {
+    func XioUpdateVideoLikeStatusXio(target: XioGalaEntryXio, xLike: Bool) {
         if xLike {
-            if !XioAdoreListXio.contains(target) {
+           
+            if XioVideoLikeListXio.contains(where: { $0.XioBadgeIDXio == target.XioBadgeIDXio }) { return }
+            
+            if !XioVideoLikeListXio.contains(where: { $0.XioBadgeIDXio == target.XioBadgeIDXio }) {
+                XioVideoLikeListXio.append(target)
+            }
+        } else {
+            
+            XioVideoLikeListXio.removeAll { $0.XioBadgeIDXio == target.XioBadgeIDXio }
+        }
+       
+    }
+    
+//添加关注
+    func XioUpdateAdoreStatusXio(target: XioGalaEntryXio, xLike: Bool) {
+        if xLike {
+            // 如果此 ID 在黑名单中，禁止添加喜欢
+            if XioExileListXio.contains(where: { $0.XioBadgeIDXio == target.XioBadgeIDXio }) { return }
+            
+            if !XioAdoreListXio.contains(where: { $0.XioBadgeIDXio == target.XioBadgeIDXio }) {
                 XioAdoreListXio.append(target)
             }
         } else {
-            XioAdoreListXio.removeAll { $0 == target }
+            // 根据 ID 移除
+            XioAdoreListXio.removeAll { $0.XioBadgeIDXio == target.XioBadgeIDXio }
         }
+       
     }
 
     // MARK: - Dialog Data (Session List)
@@ -162,7 +208,7 @@ struct XioDialogSnippetXio {
 }
 
 struct XioGalaEntryXio : Codable{
-    let XioAliasXio:String//名字
+    var XioAliasXio:String//名字
     let XioBadgeIDXio:String//ID
     let XioAvatarXio:String//头像
     let XioMottoXio:String//signiture
@@ -172,7 +218,7 @@ struct XioGalaEntryXio : Codable{
     
     let XioSubjectXio: String//主题
     let XioRoomCover: String//封面
-    let XioRoomScene:String// = <#value#>
+    let XioRoomScene:String//
     
     let XioHeatValueXio: String//热度
     let XioRoomTItle:String//名字

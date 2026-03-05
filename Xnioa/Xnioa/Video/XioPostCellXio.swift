@@ -11,7 +11,7 @@ class XioPostCellXio: UICollectionViewCell {
     private let XioMainFrameXio = UIImageView()
     private let XioAvatarXio = UIImageView()
     private let XioHandleXio = UILabel()
-    private let AcccTopersonCou = UIButton()//personto
+     let AcccTopersonCou = UIButton()//personto
     
     let AccctoinCou = UIButton()//more
     
@@ -19,15 +19,21 @@ class XioPostCellXio: UICollectionViewCell {
     
     private let XioHeroImageXio = UIImageView()
     private let XioCaptionXio = UILabel()
-    private let XioLikeBtnXio = UIImageView(image: UIImage(systemName: "heart"))
+     let XioLikeBtnXio =  UIButton()
     private let XioChatBtnXio = UIImageView(image: UIImage(systemName: "message"))
     private let XioGreetBtnXio = UIButton()
     private let XioPlayBtnXio = UIImageView(image: UIImage(systemName: "play.circle.fill"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        XioHeroImageXio.contentMode = .scaleAspectFill
+        XioHeroImageXio.layer.masksToBounds = true
         XioSetupVisualsXio()
+        XioLikeBtnXio.setImage(UIImage(systemName: "heart"), for: .normal)
+        XioLikeBtnXio.setImage(UIImage(named: "aixin"), for: .selected)
+       
     }
+    
     
     private func XioSetupVisualsXio() {
         XioMainFrameXio.backgroundColor = UIColor(white: 0.12, alpha: 1.0)
@@ -54,10 +60,7 @@ class XioPostCellXio: UICollectionViewCell {
         XioCaptionXio.textColor = .lightGray
         XioCaptionXio.numberOfLines = 2
         
-        XioGreetBtnXio.setTitle("Greet", for: .normal)
-        XioGreetBtnXio.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        XioGreetBtnXio.backgroundColor = .systemPurple
-        XioGreetBtnXio.layer.cornerRadius = 15
+        XioGreetBtnXio.setBackgroundImage(UIImage(named: "nevertGrest"), for: .normal)
         
         XioPlayBtnXio.tintColor = .white
         XioLikeBtnXio.tintColor = .white
@@ -135,15 +138,19 @@ class XioPostCellXio: UICollectionViewCell {
         
         XioAvatarXio.image = UIImage(named: data.XioAvatarXio)
         self.XioHydrateVideoCell(sxnioPath: data.XioMoivepath)
+        
+        XioLikeBtnXio.isSelected =   XioGovernanceHubXio.XioPrincipalXio.XioVideoLikeListXio.contains(where: { XioGalaEntryXio in
+            XioGalaEntryXio.XioBadgeIDXio == data.XioBadgeIDXio
+        })
     }
     
     func XioHydrateVideoCell(sxnioPath: String) {
         
-        SXNIOVideoTool.sxnioFetchThumbnail(from: sxnioPath) { [weak self] sxnioImg in
+        XioVisualMediaPilotXio.XioExtractFrameXio(from: sxnioPath) { [weak self] sxnioImg in
             guard let self = self else { return }
            
             if let sxnioFinalImg = sxnioImg {
-                self.XioMainFrameXio.image = sxnioFinalImg
+                self.XioHeroImageXio.image = sxnioFinalImg
             }
         }
     }
