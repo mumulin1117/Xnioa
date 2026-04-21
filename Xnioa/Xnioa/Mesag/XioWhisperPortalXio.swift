@@ -173,8 +173,7 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
     }
     
    @objc func sssXioVerdeoCabyllPortalXio()  {
-        
-       self.navigationController?.pushViewController(XioVerdeoCabyllPortalXio(usiersd: self.usier.Xiouser), animated: true)
+       XioPushVisualOrbitXio(target: self.usier.Xiouser)
     }
     
     @objc private func XioInvokePolicyMenuXio() {

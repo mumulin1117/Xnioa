@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//setting
+
 class XioSystemTerminalXio: UIViewController {
     
     private let XioTerminalScrollXio = UIScrollView()

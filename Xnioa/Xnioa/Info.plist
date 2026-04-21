@@ -7,6 +7,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Xnioa uses the camera so you can capture your profile photo.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Xnioa uses your photo library so you can choose a profile photo.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

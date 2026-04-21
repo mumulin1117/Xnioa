@@ -113,10 +113,7 @@ extension XioInboxPalaceXio: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let XioSubjectXio = XioInboxPalaceXio.XioChatBufferXio[indexPath.row]
-        let XioDetailXio = XioWhisperPortalXio(usiersd: XioSubjectXio)
-        XioDetailXio.hidesBottomBarWhenPushed = true
-//        XioDetailXio.XioTargetIdentityXio = XioSubjectXio.XioPartnerNameXio
-        navigationController?.pushViewController(XioDetailXio, animated: true)
+        XioPushWhisperOrbitXio(target: XioSubjectXio.Xiouser)
     }
 }
 
@@ -182,4 +179,3 @@ class XioChatTomeCellXio: UITableViewCell {
         XioAvatarOrbitXio.image = UIImage(named: entity.Xiouser.XioAvatarXio)
     }
 }
-

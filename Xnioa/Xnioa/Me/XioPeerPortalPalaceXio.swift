@@ -7,7 +7,7 @@
 
 import UIKit
 import PhotosUI
-//他人主页
+
 // MARK: - Data Architecture
 struct XioPeerProfileEntityXio {
     let XioPartnerNameXio: String
@@ -86,6 +86,7 @@ class XioPeerPortalPalaceXio: UIViewController {
         toUset.isSelected = !toUset.isSelected
         
         XioGovernanceHubXio.XioPrincipalXio.XioUpdateAdoreStatusXio(target: usier, xLike: toUset.isSelected)
+        XioTriggerDataPulseXio()
     }
     private func XioSetupBaseThemeXio() {
         view.backgroundColor = UIColor(white: 0.05, alpha: 1.0)
@@ -146,7 +147,7 @@ class XioPeerPortalPalaceXio: UIViewController {
             $0.translatesAutoresizingMaskIntoConstraints = false
             XioCanvasXio.addSubview($0)
         }
-        XioPartnerDataXio = XioPeerProfileEntityXio(XioPartnerNameXio: usier.XioAliasXio, XioFanCountXio: Int.random(in: 0...3), XioFocusCountXio: Int.random(in: 1...3), XioIntroTextXio: usier.XioMottoXio, XioAvatarTokenXio: "", XioIsFocusedXio: false)
+        XioPartnerDataXio = XioPeerProfileEntityXio(XioPartnerNameXio: usier.XioAliasXio, XioFanCountXio: 0, XioFocusCountXio: 0, XioIntroTextXio: usier.XioMottoXio, XioAvatarTokenXio: "", XioIsFocusedXio: false)
         
         XioHeaderRackXio.addSubview(XioRetreatBtnXio)
         XioHeaderRackXio.addSubview(AcccTopersonCou)
@@ -265,6 +266,11 @@ class XioPeerPortalPalaceXio: UIViewController {
     private func XioTriggerDataPulseXio() {
         XioFeedShelfXio.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
+        let XioPeerFollowerTotalXio = XioGovernanceHubXio.XioPrincipalXio.XioPeerFollowerCountXio(target: usier)
+        let XioPeerFollowingTotalXio = XioGovernanceHubXio.XioPrincipalXio.XioPeerFollowingCountXio(target: usier)
+        let XioPeerFocusedXio = XioGovernanceHubXio.XioPrincipalXio.XioHasAdoreForTargetXio(target: usier)
+        XioPartnerDataXio = XioPeerProfileEntityXio(XioPartnerNameXio: usier.XioAliasXio, XioFanCountXio: XioPeerFollowerTotalXio, XioFocusCountXio: XioPeerFollowingTotalXio, XioIntroTextXio: usier.XioMottoXio, XioAvatarTokenXio: "", XioIsFocusedXio: XioPeerFocusedXio)
+        AcccTopersonCou.isSelected = XioPeerFocusedXio
         
         XioHandleLabelXio.text = XioPartnerDataXio?.XioPartnerNameXio
         XioSocialMetricsLabelXio.text = "\(XioPartnerDataXio?.XioFanCountXio ?? 0) Followers   \(XioPartnerDataXio?.XioFocusCountXio ?? 0) Following"
@@ -291,26 +297,11 @@ class XioPeerPortalPalaceXio: UIViewController {
     }
     
     @objc private func XioEnterChatPortalXio() {
-        if let useDiolog = XioInboxPalaceXio.XioChatBufferXio.first(where: { Diolodlisr in
-            Diolodlisr.Xiouser.XioBadgeIDXio == self.usier.XioBadgeIDXio
-        }){
-            let XioChatXio = XioWhisperPortalXio(usiersd: useDiolog)
-            XioChatXio.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(XioChatXio, animated: true)
-        }else{
-            
-            let XioChatXio = XioWhisperPortalXio(usiersd: Diolodlisr.init(Xiouser: self.usier, dilog: []))
-            XioChatXio.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(XioChatXio, animated: true)
-        }
-        
-        
+        XioPushWhisperOrbitXio(target: usier)
     }
     
     @objc private func XioLaunchVisualCallXio() {
-        let XioCallXio = XioVerdeoCabyllPortalXio(usiersd: self.usier)
-        XioCallXio.hidesBottomBarWhenPushed = true// Replace with your XioVideoCallPortalXio
-        self.navigationController?.pushViewController(XioCallXio, animated: true)
+        XioPushVisualOrbitXio(target: usier)
     }
     
     @objc private func XioInvokePolicyMenuXio() {

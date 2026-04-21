@@ -150,7 +150,7 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
             XioMoreActionXio.trailingAnchor.constraint(equalTo: XioApexDeckXio.trailingAnchor, constant: -15),
             XioMoreActionXio.centerYAnchor.constraint(equalTo: XioApexDeckXio.centerYAnchor),
             
-            XioTheatreScrollXio.topAnchor.constraint(equalTo: XioApexDeckXio.bottomAnchor),
+            XioTheatreScrollXio.topAnchor.constraint(equalTo: XioApexDeckXio.bottomAnchor,constant: 70),
             XioTheatreScrollXio.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             XioTheatreScrollXio.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             XioTheatreScrollXio.bottomAnchor.constraint(equalTo: XioInputQuayXio.topAnchor),
@@ -209,7 +209,7 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let XioHeadXio = UIView()
-        let XioVisualXio = UIImageView(frame: CGRect(x: 15, y: 10, width: 345 * XioRatioWXio, height: 345 * XioRatioWXio))
+        let XioVisualXio = UIImageView(frame: CGRect(x: 15, y: 10, width: 345 * XioRatioWXio, height: 345 * XioRatioWXio ))
         XioVisualXio.backgroundColor = .darkGray
         XioVisualXio.layer.cornerRadius = 15
         XioVisualXio.clipsToBounds = true
@@ -240,8 +240,8 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
         XioVisualXio.addSubview(XioGreetXio)
         XioHeadXio.addSubview(XioVisualXio)
         
-        let XioDescXio = UILabel(frame: CGRect(x: 15, y: 345*XioRatioWXio + 20, width: 345 * XioRatioWXio, height: 60))
-        XioDescXio.text = "Tonight, I dived into a retrowonderland. The old tunes playing, I'm lost in pure bliss."
+        let XioDescXio = UILabel(frame: CGRect(x: 15, y: XioVisualXio.frame.maxY + 12, width: 345 * XioRatioWXio, height: 60))
+        XioDescXio.text = usier.XioMoiveTitle
         XioDescXio.textColor = .lightGray
         XioDescXio.numberOfLines = 0
         XioDescXio.font = .systemFont(ofSize: 15)
@@ -250,23 +250,10 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
         return XioHeadXio
     }
     @objc private func XioEnterChatPortalXio() {
-        if let useDiolog = XioInboxPalaceXio.XioChatBufferXio.first(where: { Diolodlisr in
-            Diolodlisr.Xiouser.XioBadgeIDXio == self.usier.XioBadgeIDXio
-        }){
-            let XioChatXio = XioWhisperPortalXio(usiersd: useDiolog)
-            XioChatXio.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(XioChatXio, animated: true)
-        }else{
-            
-            let XioChatXio = XioWhisperPortalXio(usiersd: Diolodlisr.init(Xiouser: self.usier, dilog: []))
-            XioChatXio.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(XioChatXio, animated: true)
-        }
-        
-        
+        XioPushWhisperOrbitXio(target: usier)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 450 * XioRatioHXio
+        return 450 * XioRatioHXio + 40
     }
     
     @objc private func XioToggleVisualXio(_ sender: UIButton) {
@@ -354,4 +341,3 @@ struct XioCommentEntityXio {
     let XioIsOwnerXio: Bool
     let XIoimage:String
 }
-

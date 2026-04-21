@@ -220,8 +220,8 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
             
             alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
                 guard let newName = alertController.textFields?.first?.text, !newName.isEmpty else { return }
-                self.XioMasterNameXio.text = newName
-                XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAliasXio = newName
+                XioGovernanceHubXio.XioPrincipalXio.XioUpdateActiveAliasXio(newName)
+                self.XioMasterNameXio.text = XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAliasXio
               
                 
                 self.XioShowAlertXio(message: "Nickname modification successful", isSuccess: true)
@@ -375,7 +375,7 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "uploading...")
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
-            XioGovernanceHubXio.XioPrincipalXio.XioAUsedCachePhotoio = image
+            XioGovernanceHubXio.XioPrincipalXio.XioUpdateActiveAvatarXio(image)
             self.XioMasterAvatarXio.setBackgroundImage(image, for: .normal)
             
             self.XioShowAlertXio(message: "Avatar uploaded successfully", isSuccess: true)

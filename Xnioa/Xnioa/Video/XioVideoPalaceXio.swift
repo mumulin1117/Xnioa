@@ -198,20 +198,6 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
     
     @objc private func XioEnterChatPortalXio(ToWho:UIButton) {
        let dio =  self.XioCurrentVioDataXio[ToWho.tag]
-        if let useDiolog = XioInboxPalaceXio.XioChatBufferXio.first(where: { Diolodlisr in
-            Diolodlisr.Xiouser.XioBadgeIDXio == dio.XioBadgeIDXio
-        }){
-            let XioChatXio = XioWhisperPortalXio(usiersd: useDiolog)
-            XioChatXio.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(XioChatXio, animated: true)
-        }else{
-            
-            let XioChatXio = XioWhisperPortalXio(usiersd: Diolodlisr.init(Xiouser: dio, dilog: []))
-            XioChatXio.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(XioChatXio, animated: true)
-        }
-        
-        
+        XioPushWhisperOrbitXio(target: dio)
     }
 }
-
