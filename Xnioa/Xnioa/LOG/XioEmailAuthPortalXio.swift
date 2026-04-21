@@ -49,7 +49,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     private let XioWidthRhythmXio = UIScreen.main.bounds.width / 375
     private let XioHeightRhythmXio = UIScreen.main.bounds.height / 812
     private let XioAccentMintXio = UIColor(red: 182/255, green: 240/255, blue: 156/255, alpha: 1)
-    private let XioAppleBundleVerseXio = "6749229477"
+    private let XioAppleBundleVerseXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaEhu58nzsaXNAj7CaI3TzIPUQ==")
     
     private var XioHeroHeightConstraintXio: NSLayoutConstraint?
     private var XioPortalModeXio: XioPortalModeVerseXio = .XioLoginLoungeXio
@@ -184,13 +184,13 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     private func XioDressRetroStageXio() {
         XioRetroBackdropXio.backgroundColor = UIColor(red: 12/255, green: 15/255, blue: 18/255, alpha: 1)
         
-        XioReturnTriggerXio.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+        XioReturnTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeq1SHs0UPSgNhZzAjLW+njqAQ==")), for: .normal)
         XioReturnTriggerXio.tintColor = .white
         
         XioHeaderTitleXio.font = .systemFont(ofSize: 28 * XioWidthRhythmXio, weight: .semibold)
         XioHeaderTitleXio.textColor = .white
         
-        XioGramophoneArtXio.image = UIImage(named: "Xio_Retro_Player_Asset")
+        XioGramophoneArtXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWYUr8gm/KxxgGxZYssKQ3mc2y5fEWdXbEWXDBw79A=="))
         XioGramophoneArtXio.contentMode = .scaleAspectFit
         
         XioAvatarFrameXio.backgroundColor = UIColor(white: 1, alpha: 0.06)
@@ -200,38 +200,38 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         XioAvatarPreviewXio.contentMode = .scaleAspectFill
         XioAvatarPreviewXio.backgroundColor = UIColor(white: 1, alpha: 0.02)
         
-        XioAvatarGlyphXio.text = "+"
+        XioAvatarGlyphXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXSErHDdxq54UA==")
         XioAvatarGlyphXio.textColor = UIColor(white: 1, alpha: 0.55)
         XioAvatarGlyphXio.font = .systemFont(ofSize: 44 * XioWidthRhythmXio, weight: .light)
         
-        XioDressCaptionXio(XioNameCaptionXio, text: "Name")
-        XioDressCaptionXio(XioEmailCaptionXio, text: "Email")
-        XioDressCaptionXio(XioPassCaptionXio, text: "Password")
-        XioDressCaptionXio(XioBirthCaptionXio, text: "Birth Month")
+        XioDressCaptionXio(XioNameCaptionXio, text: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRVblOosZXuWluonIg=="))
+        XioDressCaptionXio(XioEmailCaptionXio, text: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTDBdndB45piPfPXGms="))
+        XioDressCaptionXio(XioPassCaptionXio, text: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYZlNDaJ2EW16rir/q95Mao="))
+        XioDressCaptionXio(XioBirthCaptionXio, text: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc4WfKEc7/3BsjJYC9GG0Q1Lqc0="))
         
         XioDressInputXio(XioNameInputXio,
-                         placeholder: "Enter your name",
+                         placeholder: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUgVtCTW1gQ0JUcjC46iP31xEuJRgYrQ"),
                          secure: false,
                          keyboardType: .default,
                          contentType: .name,
                          capitalization: .words,
                          returnKey: .next)
         XioDressInputXio(XioEmailInputXio,
-                         placeholder: "Enter your email",
+                         placeholder: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMek/0nOJ141tle9jbHuek1P/YoRgP1hXNw=="),
                          secure: false,
                          keyboardType: .emailAddress,
                          contentType: .emailAddress,
                          capitalization: .none,
                          returnKey: .next)
         XioDressInputXio(XioPassInputXio,
-                         placeholder: "Enter password",
+                         placeholder: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMecNLRAZdcqDvUALeDuVw5v6kXFgw3c="),
                          secure: true,
                          keyboardType: .default,
                          contentType: .password,
                          capitalization: .none,
                          returnKey: .go)
         XioDressInputXio(XioBirthInputXio,
-                         placeholder: "Select your birth month",
+                         placeholder: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf7fwPtigUgKbwo+gwHvirxkIoP4jSMkRNuHN1Ukpwo="),
                          secure: false,
                          keyboardType: .default,
                          contentType: nil,
@@ -239,7 +239,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                          returnKey: .done)
         
         XioBirthInputXio.tintColor = .clear
-        XioBirthInputXio.rightView = UIImageView(image: UIImage(systemName: "calendar"))
+        XioBirthInputXio.rightView = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMacujVv0DUc6nvoT+ysqH58=")))
         XioBirthInputXio.rightViewMode = .always
         XioBirthInputXio.inputView = XioBirthWheelXio
         XioBirthInputXio.inputAccessoryView = XioBirthAccessoryVerseXio()
@@ -248,7 +248,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         XioBirthWheelXio.maximumDate = Date()
         XioBirthWheelXio.preferredDatePickerStyle = .wheels
         
-        XioBirthFormatterXio.dateFormat = "yyyy-MM"
+        XioBirthFormatterXio.dateFormat = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMR2ZR2SFaeMDSJpwwxrBfw==")
         
         XioSwitchPromptXio.setAttributedTitle(XioSwitchPromptVerseXio(), for: .normal)
         XioSwitchPromptXio.contentHorizontalAlignment = .center
@@ -256,7 +256,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         XioAppleTriggerXio.backgroundColor = .white
         XioAppleTriggerXio.layer.cornerRadius = 23 * XioWidthRhythmXio
         XioAppleTriggerXio.tintColor = .black
-        XioAppleTriggerXio.setImage(UIImage(systemName: "applelogo"), for: .normal)
+        XioAppleTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf7pCjDdVRe/j7rVV3ijG94H")), for: .normal)
         XioAppleTriggerXio.imageView?.contentMode = .scaleAspectFit
         
         XioPrimaryTriggerXio.backgroundColor = XioAccentMintXio
@@ -294,7 +294,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
             $0.heightAnchor.constraint(equalToConstant: 1).isActive = true
         }
         
-        XioWordLabelXio.text = "or"
+        XioWordLabelXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcIcs31myaISX6A=")
         XioWordLabelXio.textColor = UIColor(white: 1, alpha: 0.5)
         XioWordLabelXio.font = .systemFont(ofSize: 13 * XioWidthRhythmXio, weight: .regular)
         XioWordLabelXio.setContentCompressionResistancePriority(.required, for: .horizontal)
@@ -341,17 +341,17 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         let XioAccessoryBarXio = UIToolbar()
         XioAccessoryBarXio.sizeToFit()
         let XioFlexVerseXio = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let XioDoneVerseXio = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(XioSealBirthVerseXio))
+        let XioDoneVerseXio = UIBarButtonItem(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcNMe4HxuXhNxWA/iQ=="), style: .done, target: self, action: #selector(XioSealBirthVerseXio))
         XioAccessoryBarXio.items = [XioFlexVerseXio, XioDoneVerseXio]
         return XioAccessoryBarXio
     }
 
     private func XioSwitchPromptVerseXio() -> NSAttributedString {
-        let XioPromptVerseXio = NSMutableAttributedString(string: "Don't have an account? ", attributes: [
+        let XioPromptVerseXio = NSMutableAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVzXuyHRGLgeDdhSiINthfAbAAoVajafiIuQ1LaUxB4="), attributes: [
             .foregroundColor: UIColor(white: 1, alpha: 0.75),
             .font: UIFont.systemFont(ofSize: 14 * XioWidthRhythmXio, weight: .regular)
         ])
-        XioPromptVerseXio.append(NSAttributedString(string: "Sign Up", attributes: [
+        XioPromptVerseXio.append(NSAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMetDrXty0jA+qyJUFwlF6w=="), attributes: [
             .foregroundColor: XioAccentMintXio,
             .font: UIFont.systemFont(ofSize: 14 * XioWidthRhythmXio, weight: .bold)
         ]))
@@ -361,8 +361,8 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     private func XioApplyPortalModeXio(animated: Bool) {
         let XioIsSignupXio = XioPortalModeXio == .XioSignupLoungeXio
         
-        XioHeaderTitleXio.text = XioIsSignupXio ? "Sign Up" : "Log in"
-        XioPrimaryTriggerXio.setTitle(XioIsSignupXio ? "Sign Up" : "Log in", for: .normal)
+        XioHeaderTitleXio.text = XioIsSignupXio ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMetDrXty0jA+qyJUFwlF6w==") : XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRBK7jKY1uxJw2v0mnAy")
+        XioPrimaryTriggerXio.setTitle(XioIsSignupXio ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMetDrXty0jA+qyJUFwlF6w==") : XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRBK7jKY1uxJw2v0mnAy"), for: .normal)
         XioGramophoneArtXio.isHidden = XioIsSignupXio
         XioAvatarFrameXio.isHidden = !XioIsSignupXio
         XioNameLaneXio.isHidden = !XioIsSignupXio
@@ -407,7 +407,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
 
     private func XioPerformLoginVerseXio(mail: String, secret: String) {
         XioSetPortalEnabledXio(false)
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Log in...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWXZhmN1BsTorFN8HvvLmqMi"))
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) { [weak self] in
             guard let XioSelfXio = self else {
@@ -420,14 +420,14 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                 XioEmailAuthPortalXio.XioTransitionToMainStageXio()
             } else {
                 XioSelfXio.XioFeedbackErrXio()
-                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Log in failed")
+                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTAcyq9lpfBlYZIrc2N6yteMCNNLCg=="))
             }
         }
     }
 
     private func XioPerformSignupVerseXio(name: String, mail: String, secret: String, birthVerse: String) {
         XioSetPortalEnabledXio(false)
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Sign Up...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZno7u/BWVZ9vpT0WxLxHoatzw=="))
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in
             guard let XioSelfXio = self else {
@@ -451,7 +451,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                 XioEmailAuthPortalXio.XioTransitionToMainStageXio()
             } else {
                 XioSelfXio.XioFeedbackErrXio()
-                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Sign Up failed")
+                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMR4/zDyUdxHGmgBQm/H9w/8D4C7fyGM="))
             }
         }
     }
@@ -473,35 +473,35 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     }
 
     private func XioDisplayNameVerseXio(from mail: String) -> String {
-        let XioFrontVerseXio = mail.components(separatedBy: "@").first?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Xnioa"
-        return XioFrontVerseXio.isEmpty ? "Xnioa" : XioFrontVerseXio
+        let XioFrontVerseXio = mail.components(separatedBy: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTUsXDd5ql4eQ==")).first?.trimmingCharacters(in: .whitespacesAndNewlines) ?? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMadPi1PiJ7d8iUXH2oc=")
+        return XioFrontVerseXio.isEmpty ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMadPi1PiJ7d8iUXH2oc=") : XioFrontVerseXio
     }
 
     private func XioRequestAppleVerseXio(identityToken: String) {
-        guard let XioApiVerseXio = URL(string: "http://www.t6x9m3z8k2v7a.xyz/vse/user/appleSsoLogin") else {
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple login unavailable")
+        guard let XioApiVerseXio = URL(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeXNhs0hKp7McKAekpE1RcjgxKonO7VP46W0S25Q5P1R4zJyPXH2fyBuoMvg6woHhxCoqI1LUYYoEEJs")) else {
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUl/gPJvUb1c7RqqsBe9PrRnysMmL5LCJ/86obOrYag="))
             return
         }
         
         let XioBodyVerseXio: [String: String] = [
-            "identityToken": identityToken,
-            "bundleId": XioAppleBundleVerseXio,
-            "equipmentNo": XioGovernanceHubXio.XioPrincipalXio.XioEquipmentNoXio()
+            XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQgCP9rWkqCJOGeB0YiOoghmYoe4gw=="): identityToken,
+            XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXgEL+2qjI4XESXqoffLtNI="): XioAppleBundleVerseXio,
+            XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQ0KPC1xoHRaraOf0FHDxD0BSYM="): XioGovernanceHubXio.XioPrincipalXio.XioEquipmentNoXio()
         ]
         
         guard let XioBodyArchiveXio = try? JSONSerialization.data(withJSONObject: XioBodyVerseXio) else {
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple login unavailable")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUl/gPJvUb1c7RqqsBe9PrRnysMmL5LCJ/86obOrYag="))
             return
         }
         
         var XioRequestVerseXio = URLRequest(url: XioApiVerseXio)
-        XioRequestVerseXio.httpMethod = "POST"
+        XioRequestVerseXio.httpMethod = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTEv30jKoJbJWQ/l6Q==")
         XioRequestVerseXio.timeoutInterval = 20
-        XioRequestVerseXio.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        XioRequestVerseXio.setValue(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQpafGBBsIt0dytaF8JYV4jX4qGSk4i7wA=="), forHTTPHeaderField: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZYTwHOG40AI92tgD0eAuDIm6j15"))
         XioRequestVerseXio.httpBody = XioBodyArchiveXio
         
         XioSetPortalEnabledXio(false)
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Apple log in...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeUIJuNriLOyC+dauNsVs3Ml8FMTOioB"))
         
         URLSession.shared.dataTask(with: XioRequestVerseXio) { [weak self] XioDataVerseXio, _, XioErrorVerseXio in
             DispatchQueue.main.async {
@@ -514,7 +514,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                 
                 if XioErrorVerseXio != nil {
                     XioSelfXio.XioFeedbackErrXio()
-                    XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple log in failed")
+                    XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSwsLgIXVfqTF896r4QdmE1/hl+nxUunoJTlsw=="))
                     return
                 }
                 
@@ -523,14 +523,14 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                       XioEnvelopeXio.code == 200000,
                       let XioMirrorVerseXio = XioEnvelopeXio.data else {
                     XioSelfXio.XioFeedbackErrXio()
-                    XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple log in failed")
+                    XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSwsLgIXVfqTF896r4QdmE1/hl+nxUunoJTlsw=="))
                     return
                 }
                 
                 let XioRemoteBadgeXio = XioMirrorVerseXio.userId.map { String($0) }
                 let XioEchoMailXio = XioSelfXio.XioNormalizeMailXio(XioMirrorVerseXio.userEmail)
                 let XioDisplayVibeXio = (XioMirrorVerseXio.userName ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-                let XioSeedNameXio = XioDisplayVibeXio.isEmpty ? XioSelfXio.XioDisplayNameVerseXio(from: XioEchoMailXio.isEmpty ? "xnioa@apple" : XioEchoMailXio) : XioDisplayVibeXio
+                let XioSeedNameXio = XioDisplayVibeXio.isEmpty ? XioSelfXio.XioDisplayNameVerseXio(from: XioEchoMailXio.isEmpty ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRt09KtZSUJHQwKwReUd2dvzi8A=") : XioEchoMailXio) : XioDisplayVibeXio
                 
                 if XioGovernanceHubXio.XioPrincipalXio.XioAcceptApplePassportXio(
                     email: XioEchoMailXio,
@@ -544,7 +544,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                     XioEmailAuthPortalXio.XioTransitionToMainStageXio()
                 } else {
                     XioSelfXio.XioFeedbackErrXio()
-                    XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple log in failed")
+                    XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSwsLgIXVfqTF896r4QdmE1/hl+nxUunoJTlsw=="))
                 }
             }
         }.resume()
@@ -556,9 +556,9 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         let XioEchoMailXio = XioNormalizeMailXio(XioEmailInputXio.text)
         let XioSecretVerseXio = (XioPassInputXio.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard XioEchoMailXio.contains("@"), XioSecretVerseXio.count >= 6 else {
+        guard XioEchoMailXio.contains(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTUsXDd5ql4eQ==")), XioSecretVerseXio.count >= 6 else {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Your email or password format is error")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWogMdBL/qa4q0o8f8+Kg8Svs9iQkQIrWndMNPosMVYFN7SP4EDzdBC6sFjri9c="))
             return
         }
         
@@ -569,7 +569,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
                 XioPrepareSignupDraftXio(mail: XioEchoMailXio, secret: XioSecretVerseXio)
                 XioPortalModeXio = .XioSignupLoungeXio
                 XioApplyPortalModeXio(animated: true)
-                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "First visit detected. Complete Sign Up.")
+                XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfecEc7wzJV1DSWjs1mFe3NAqos+ksuvoJekL2i9ps7oTaFt3680KovgE8fWaSVC"))
             }
             return
         }
@@ -579,32 +579,32 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         
         guard !XioDisplayVibeXio.isEmpty else {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Enter your name")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUgVtCTW1gQ0JUcjC46iP31xEuJRgYrQ"))
             return
         }
         
         guard XioSignupPortraitXio != nil else {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Choose a profile photo")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcLZWnSDLfBQwcJye5vLbsGs4+GTQwZ1mRPF8Azwbw=="))
             return
         }
         
         guard !XioBirthVerseXio.isEmpty else {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Select your birth month")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf7fwPtigUgKbwo+gwHvirxkIoP4jSMkRNuHN1Ukpwo="))
             return
         }
         
-        guard XioEchoMailXio != "tester@gmial.com" else {
+        guard XioEchoMailXio != XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaxYylhHsR9si3wFHMOHJ0hVFdu7ygOaqw==") else {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "This account is reserved")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTFF8mF/GJ7Ae5vH7rbj/8ArQZCRuhWnVZQopAPFDGCI"))
             return
         }
         
         if XioGovernanceHubXio.XioPrincipalXio.XioShouldRouteDirectEntryXio(email: XioEchoMailXio) {
             XioPortalModeXio = .XioLoginLoungeXio
             XioApplyPortalModeXio(animated: true)
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "This account already exists. Log in instead.")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRRr9MIWQ7sB6+zytnLPhEL3O3gvkmYqDktjTL0Liu8W1k21eSLoDeYxGnPhOTY5Q3i6jho="))
             return
         }
         
@@ -632,13 +632,13 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     @objc private func XioHandleAvatarPulseXio() {
         let XioAvatarVerseXio = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        XioAvatarVerseXio.addAction(UIAlertAction(title: "Photo", style: .default) { [weak self] _ in
+        XioAvatarVerseXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVOourPm1ZF7sdGLZ4I="), style: .default) { [weak self] _ in
             self?.XioOpenRetroCameraXio()
         })
-        XioAvatarVerseXio.addAction(UIAlertAction(title: "Album", style: .default) { [weak self] _ in
+        XioAvatarVerseXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWQB63OXZXWbqYg5eHA="), style: .default) { [weak self] _ in
             self?.XioOpenRetroAlbumXio()
         })
-        XioAvatarVerseXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        XioAvatarVerseXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
         
         if let XioPopoverVerseXio = XioAvatarVerseXio.popoverPresentationController {
             XioPopoverVerseXio.sourceView = XioAvatarFrameXio
@@ -701,7 +701,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
 
     private func XioOpenRetroCameraXio() {
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Camera is unavailable")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSZa+i5prdN6PvAvUPMLBQNrLjI5PZsY69LQg2BY"))
             return
         }
         
@@ -766,7 +766,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
               let XioIdentityVerseXio = String(data: XioIdentityArchiveXio, encoding: .utf8),
               !XioIdentityVerseXio.isEmpty else {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple log in failed")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSwsLgIXVfqTF896r4QdmE1/hl+nxUunoJTlsw=="))
             return
         }
         
@@ -777,7 +777,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
         XioAppleAuthBridgeXio = nil
         if (error as NSError).code != ASAuthorizationError.canceled.rawValue {
             XioFeedbackErrXio()
-            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple log in failed")
+            XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSwsLgIXVfqTF896r4QdmE1/hl+nxUunoJTlsw=="))
         }
     }
 
@@ -799,13 +799,13 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     }
 
     private func XioFeedbackErrXio() {
-        let XioShakeVerseXio = CABasicAnimation(keyPath: "position")
+        let XioShakeVerseXio = CABasicAnimation(keyPath: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTNr73O1MzJcH4FD8Mirsyc="))
         XioShakeVerseXio.duration = 0.05
         XioShakeVerseXio.repeatCount = 4
         XioShakeVerseXio.autoreverses = true
         XioShakeVerseXio.fromValue = NSValue(cgPoint: CGPoint(x: XioPrimaryTriggerXio.center.x - 5, y: XioPrimaryTriggerXio.center.y))
         XioShakeVerseXio.toValue = NSValue(cgPoint: CGPoint(x: XioPrimaryTriggerXio.center.x + 5, y: XioPrimaryTriggerXio.center.y))
-        XioPrimaryTriggerXio.layer.add(XioShakeVerseXio, forKey: "shake")
+        XioPrimaryTriggerXio.layer.add(XioShakeVerseXio, forKey: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTIIHFbm8CES19Q30kg="))
     }
 }
 

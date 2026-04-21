@@ -6,15 +6,15 @@ class XioGovernanceHubXio {
     static let XioPrincipalXio = XioGovernanceHubXio()
     
     private let XioVaultXio = UserDefaults.standard
-    private let XioIdentityTokenXio = "XioAccessPermitKeyXio"
-    private let XioTreasuryKeyXio = "XioGoldenReserveKeyXio"
-    private let XioPassportHarborKeyXio = "XioRetroPassportHarborKeyXio"
-    private let XioSessionMailKeyXio = "XioCurrentEchoMailKeyXio"
-    private let XioEquipmentNoKeyXio = "XioCurrentEquipmentNoKeyXio"
-    private let XioTesterMailXio = "tester@gmial.com"
-    private let XioTesterSecretXio = "888888"
-    private let XioTesterTokenXio = "32112345677"
-    private let XioFallbackAvatarKeyXio = "mortMinimalistic"
+    private let XioIdentityTokenXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaT1f0V27MxwmeDbvcgYINpCmOfayzivYXOk2vBN")
+    private let XioTreasuryKeyXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMS/OLiIVNb3m2brPGcIPNKDGERjbGBl8S/mANOKJVA==")
+    private let XioPassportHarborKeyXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXMXXph9oJThAepDY7oAIiS2SqDC0fH3rllCgACVDJ7Sd18uOA==")
+    private let XioSessionMailKeyXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfX0wh123AR1ZmKq3/K7s6F0IT+StRsY80mjD2hNNa/9")
+    private let XioEquipmentNoKeyXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTLmuP+KvOYa9uxfwNcf20xl8td7JRMW80ivBjEceIglSG77")
+    private let XioTesterMailXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaxYylhHsR9si3wFHMOHJ0hVFdu7ygOaqw==")
+    private let XioTesterSecretXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRs9TLJXejS14tLimkF+")
+    private let XioTesterTokenXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYxxXHQZKtlwz/O370ISYv/OvtY=")
+    private let XioFallbackAvatarKeyXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZhqpki5ffKgnRrDtIIQAyNQMJTcu0pQYg==")
     
     var XioActiveProfileXio: XioGalaEntryXio?
     var XioAUsedCachePhotoio: UIImage?
@@ -69,7 +69,7 @@ class XioGovernanceHubXio {
                                      remoteBadge: String? = nil,
                                      sessionToken: String? = nil,
                                      briefVerse: String? = nil,
-                                     sourceLane: String = "email",
+                                     sourceLane: String = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdqrNSoKhswod4Cx3dM="),
                                      remoteImageLink: String? = nil) -> Bool {
         let XioEchoMailXio = XioNormalizeMailXio(email)
         let XioDisplayVibeXio = displayName.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -88,7 +88,7 @@ class XioGovernanceHubXio {
         
         let XioPortraitArchiveXio = avatar?.jpegData(compressionQuality: 0.82)
         let XioBadgeVerseXio = remoteBadge ?? String(Int(Date().timeIntervalSince1970 * 1000))
-        let XioSessionVerseXio = sessionToken ?? "XTK_" + String(UUID().uuidString.replacingOccurrences(of: "-", with: "").prefix(12))
+        let XioSessionVerseXio = sessionToken ?? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcdxKqJ6OFxduw0n0A==") + String(UUID().uuidString.replacingOccurrences(of: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbQorHDdBq14Vg=="), with: "").prefix(12))
         
         XioPassportHarborXio[XioEchoMailXio] = XioRetroPassportArchiveXio(
             XioEchoMailXio: XioEchoMailXio,
@@ -122,7 +122,7 @@ class XioGovernanceHubXio {
                                    remoteImageLink: String?) -> Bool {
         var XioEchoMailXio = XioNormalizeMailXio(email)
         if XioEchoMailXio.isEmpty, let XioRemoteBadgeXio = remoteBadge, !XioRemoteBadgeXio.isEmpty {
-            XioEchoMailXio = "apple_\(XioRemoteBadgeXio)@xnioa.apple"
+            XioEchoMailXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQuwZvvcdICd5rsI97sR") + XioRemoteBadgeXio + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZQnmzAwlLY1N//6couyBXgbc3PI")
         }
         
         let XioDisplayVibeXio = displayName.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -133,7 +133,7 @@ class XioGovernanceHubXio {
         var XioPassportHarborXio = XioFetchPassportHarborXio()
         var XioPassportXio = XioPassportHarborXio[XioEchoMailXio] ?? XioRetroPassportArchiveXio(
             XioEchoMailXio: XioEchoMailXio,
-            XioSecretRhythmXio: "XIO_APPLE_" + String(UUID().uuidString.replacingOccurrences(of: "-", with: "").prefix(10)),
+            XioSecretRhythmXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZg7NiH0ZO8Zg6CZu8g7qxpFsw==") + String(UUID().uuidString.replacingOccurrences(of: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbQorHDdBq14Vg=="), with: "").prefix(10)),
             XioDisplayVibeXio: XioDisplayVibeXio.isEmpty ? XioDisplayNameFromMailXio(XioEchoMailXio) : XioDisplayVibeXio,
             XioBirthVerseXio: "",
             XioPortraitArchiveXio: nil,
@@ -143,7 +143,7 @@ class XioGovernanceHubXio {
             XioBadgeVerseXio: remoteBadge ?? String(Int(Date().timeIntervalSince1970 * 1000)),
             XioSessionVerseXio: sessionToken,
             XioBriefVerseXio: briefVerse,
-            XioSourceLaneXio: "apple",
+            XioSourceLaneXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYOQZHzI9wZieifSAMM="),
             XioRemoteImageLinkXio: remoteImageLink,
             XioFollowingBadgeDeckXio: [],
             XioFollowerBadgeDeckXio: []
@@ -171,13 +171,13 @@ class XioGovernanceHubXio {
             XioPassportXio.XioRemoteImageLinkXio = XioRemoteImageLinkXio
         }
         if XioPassportXio.XioSecretRhythmXio.isEmpty {
-            XioPassportXio.XioSecretRhythmXio = "XIO_APPLE_" + String(UUID().uuidString.replacingOccurrences(of: "-", with: "").prefix(10))
+            XioPassportXio.XioSecretRhythmXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZg7NiH0ZO8Zg6CZu8g7qxpFsw==") + String(UUID().uuidString.replacingOccurrences(of: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbQorHDdBq14Vg=="), with: "").prefix(10))
         }
         if XioPassportXio.XioAvatarFallbackXio.isEmpty {
             XioPassportXio.XioAvatarFallbackXio = XioFallbackAvatarKeyXio
         }
         if XioPassportXio.XioSourceLaneXio.isEmpty {
-            XioPassportXio.XioSourceLaneXio = "apple"
+            XioPassportXio.XioSourceLaneXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYOQZHzI9wZieifSAMM=")
         }
         
         XioPassportHarborXio[XioEchoMailXio] = XioPassportXio
@@ -293,7 +293,7 @@ class XioGovernanceHubXio {
             XioPassportXio.XioBadgeVerseXio = XioPassportXio.XioRemoteBadgeXio ?? String(Int(Date().timeIntervalSince1970 * 1000))
         }
         if XioPassportXio.XioSessionVerseXio?.isEmpty ?? true {
-            XioPassportXio.XioSessionVerseXio = mailKey == XioTesterMailXio ? XioTesterTokenXio : "XTK_" + String(UUID().uuidString.replacingOccurrences(of: "-", with: "").prefix(12))
+            XioPassportXio.XioSessionVerseXio = mailKey == XioTesterMailXio ? XioTesterTokenXio : XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcdxKqJ6OFxduw0n0A==") + String(UUID().uuidString.replacingOccurrences(of: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbQorHDdBq14Vg=="), with: "").prefix(12))
         }
         
         XioPassportHarborXio[mailKey] = XioPassportXio
@@ -318,8 +318,8 @@ class XioGovernanceHubXio {
             XioRemoteBadgeXio: XioTesterTokenXio,
             XioBadgeVerseXio: XioTesterTokenXio,
             XioSessionVerseXio: XioTesterTokenXio,
-            XioBriefVerseXio: "Nothing...",
-            XioSourceLaneXio: "tester",
+            XioBriefVerseXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe2/FUc38l0tiRcE28t+3YsKxw=="),
+            XioSourceLaneXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRMEBtTPXNo0fPCj/zg7"),
             XioRemoteImageLinkXio: nil,
             XioFollowingBadgeDeckXio: [],
             XioFollowerBadgeDeckXio: []
@@ -354,7 +354,7 @@ class XioGovernanceHubXio {
         
         let XioDisplayVibeXio = passport.XioDisplayVibeXio.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? XioDisplayNameFromMailXio(mailKey) : passport.XioDisplayVibeXio
         let XioBadgeVerseXio = passport.XioBadgeVerseXio ?? passport.XioRemoteBadgeXio ?? String(Int(Date().timeIntervalSince1970 * 1000))
-        let XioBriefVerseXio = passport.XioBriefVerseXio?.isEmpty == false ? passport.XioBriefVerseXio! : "Nothing..."
+        let XioBriefVerseXio = passport.XioBriefVerseXio?.isEmpty == false ? passport.XioBriefVerseXio! : XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe2/FUc38l0tiRcE28t+3YsKxw==")
         
         XioActiveProfileXio = XioGalaEntryXio(
             XioAliasXio: XioDisplayVibeXio,
@@ -388,10 +388,10 @@ class XioGovernanceHubXio {
         if mailKey == XioTesterMailXio, XioRoomPoolXio.count > 2 {
             XioInboxPalaceXio.XioChatBufferXio = [
                 Diolodlisr(Xiouser: XioRoomPoolXio[0], dilog: [
-                    XioChatEntityXio(XioSnippetTextXio: "like your post: New year...", XioTimestampXio: "12.50", whosayIsMe: false)
+                    XioChatEntityXio(XioSnippetTextXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQsEOTcihLc8sK3YOGJwW0DSfvpdbww5SuE7Q14kQsscbXeA"), XioTimestampXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaKuyZVccL60OucSGuI="), whosayIsMe: false)
                 ]),
                 Diolodlisr(Xiouser: XioRoomPoolXio[2], dilog: [
-                    XioChatEntityXio(XioSnippetTextXio: "Hello...", XioTimestampXio: "15.50", whosayIsMe: true)
+                    XioChatEntityXio(XioSnippetTextXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMca1knN93V/90RcSQvfCoxs="), XioTimestampXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdaeWFtU9/XCmprzV5I="), whosayIsMe: true)
                 ])
             ]
         }
@@ -408,8 +408,8 @@ class XioGovernanceHubXio {
     }
     
     private func XioDisplayNameFromMailXio(_ mail: String) -> String {
-        let XioFrontVerseXio = mail.components(separatedBy: "@").first?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Xnioa"
-        return XioFrontVerseXio.isEmpty ? "Xnioa" : XioFrontVerseXio
+        let XioFrontVerseXio = mail.components(separatedBy: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTUsXDd5ql4eQ==")).first?.trimmingCharacters(in: .whitespacesAndNewlines) ?? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMadPi1PiJ7d8iUXH2oc=")
+        return XioFrontVerseXio.isEmpty ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMadPi1PiJ7d8iUXH2oc=") : XioFrontVerseXio
     }
     
     private func XioFetchPassportHarborXio() -> [String: XioRetroPassportArchiveXio] {
@@ -482,7 +482,7 @@ class XioGovernanceHubXio {
     lazy var XioRoomPoolXio: [XioGalaEntryXio] = []
     
     func sxnioLoadRegistryFromLocal() -> [XioGalaEntryXio] {
-        guard let sxnioUrl = Bundle.main.url(forResource: "xnioainfoda", withExtension: "plist"),
+        guard let sxnioUrl = Bundle.main.url(forResource: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbtWPnB75ewuQ7ritmeoQwgTEkM="), withExtension: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbiKGbnYWoNFjwOSHAA=")),
               let sxnioRawData = try? Data(contentsOf: sxnioUrl) else {
             return []
         }
@@ -491,7 +491,7 @@ class XioGovernanceHubXio {
             let sxnioResult = try PropertyListDecoder().decode([XioGalaEntryXio].self, from: sxnioRawData)
             return sxnioResult
         } catch {
-            print("sxnio error: \(error)")
+            print(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRoNyCvT3cDSKnDgqH5xs3H1eYv/7A==") + String(describing: error))
             return []
         }
     }
@@ -531,7 +531,7 @@ class XioGovernanceHubXio {
                 XioSyncRelationCachesToPassportXio()
                 XioRoomPoolXio.removeAll { $0.XioBadgeIDXio == target.XioBadgeIDXio }
                 XioInboxPalaceXio.XioChatBufferXio.removeAll { $0.Xiouser.XioBadgeIDXio == target.XioBadgeIDXio }
-                NotificationCenter.default.post(name: NSNotification.Name("XioUpdateExileStatusXio"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
             }
         } else {
             XioExileListXio.removeAll { $0.XioBadgeIDXio == target.XioBadgeIDXio }
@@ -572,8 +572,8 @@ class XioGovernanceHubXio {
     
     func XioFetchNexusDialogsXio() -> [XioDialogSnippetXio] {
         [
-            XioDialogSnippetXio(XioPeerXio: "XioVibeMaster", XioSnippetXio: "Welcome to the Jazz Hall!", XioStampXio: "10:30"),
-            XioDialogSnippetXio(XioPeerXio: "XioSystem", XioSnippetXio: "Your AI Style is ready.", XioStampXio: "09:15")
+            XioDialogSnippetXio(XioPeerXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd6LA1uuU/aym0xha/VkVN2MmCChOg=="), XioSnippetXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd5gGWE8Zc/j52H6IfcuyjoI6EV/5VrOQ8q3qMMUIxC95w=="), XioStampXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTU6/CHVavGBP2GJ89s=")),
+            XioDialogSnippetXio(XioPeerXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV1u1HgQ293ernBj2xX7Shhw"), XioSnippetXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbe00xh91Sr/b4OnhRr2eG64MdwLyRsPlQJ9L034OD0="), XioStampXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVcthdIWkcpnCoVSHQA="))
         ]
     }
 }
@@ -642,7 +642,7 @@ final class XioPrivateOrbitPromptPilotXio: UIViewController {
     }
     
     @MainActor required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe5fdxbqHBVvx/qiA3qwo0+F80GKWt0gRuIrT9fzqFBBrP/+qIVj/Gz5uLVIMg=="))
     }
     
     override func viewDidLoad() {
@@ -711,7 +711,7 @@ final class XioPrivateOrbitPromptPilotXio: UIViewController {
         XioPromptCardXio.clipsToBounds = true
         
         XioAlertGlyphWrapXio.backgroundColor = .clear
-        XioAlertGlyphXio.image = UIImage(systemName: "exclamationmark.triangle.fill")
+        XioAlertGlyphXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT6JbBxd5A2WmwG37VCFt3jb2AFYx8P7FUeOOpMemXUj5DeT/wA="))
         XioAlertGlyphXio.contentMode = .scaleAspectFit
         XioAlertGlyphXio.tintColor = UIColor(red: 255/255, green: 103/255, blue: 110/255, alpha: 1)
         
@@ -724,7 +724,7 @@ final class XioPrivateOrbitPromptPilotXio: UIViewController {
         XioPromptBodyXio.numberOfLines = 0
         
         XioPromptActionXio.backgroundColor = UIColor(red: 182/255, green: 240/255, blue: 156/255, alpha: 1)
-        XioPromptActionXio.setTitle("OK", for: .normal)
+        XioPromptActionXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), for: .normal)
         XioPromptActionXio.setTitleColor(.black, for: .normal)
         XioPromptActionXio.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         XioPromptActionXio.layer.cornerRadius = 10
@@ -732,11 +732,11 @@ final class XioPrivateOrbitPromptPilotXio: UIViewController {
         
         switch XioOrbitStatusXio {
         case .XioNeedAdoreOrbitXio:
-            XioPromptTitleXio.text = "Mutual Follow to Chat"
-            XioPromptBodyXio.text = "Message only after you both follow each other. Follow them first, then wait for their follow back!"
+            XioPromptTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMedfoequ3yhleXOgqW9iCt9H9Tg9lI1NYwKDc9lE")
+            XioPromptBodyXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQj89djdJpKMtahza8eKb9ZfC6ttTcjY1esdNtAGBCyA5yWMkkdMzNv3sK64IUDaZ/dBbaFD/kIDmEhY13SucoJa9638lNYUfZLiq/ri+z7Tc0NjJq2JPponE3+Tv9MgPKXcFKWcEActAtI=")
         case .XioWaitingEchoOrbitXio:
-            XioPromptTitleXio.text = "Wait for Follow Back"
-            XioPromptBodyXio.text = "Hang tight until they follow you back, then the chat will unlock!"
+            XioPromptTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYj0XbDCJW2kX2bTsxHIMPIQMP+YQNQt3/v6je4=")
+            XioPromptBodyXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbZu401sroSXMbMiNBf/mAJ7K9IoAFqD84Ics5jiW+Skdbf7qgFX9f1+H7GcUItRGutGGJDoA3cojylaRGkgEd4E2hUED21NBw4=")
         case .XioUnlockedOrbitXio:
             XioPromptTitleXio.text = ""
             XioPromptBodyXio.text = ""

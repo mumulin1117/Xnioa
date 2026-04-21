@@ -112,7 +112,7 @@ class XNioaAppIndicatorMannager {
     }
     
     class func XNioashowSuccess(XNioawithStatus message: String) {
-        shared.XNioapresent(XNioamessage: message, XNioaicon: UIImage(systemName: "checkmark.circle.fill"), XNioaisLoading: false)
+        shared.XNioapresent(XNioamessage: message, XNioaicon: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMezPv+7QU5QEiRo/cgLDF8c+J4cT6Pvi6Eqzy+fY")), XNioaisLoading: false)
     }
     
     class func XNioadismiss() {

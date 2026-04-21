@@ -46,12 +46,12 @@ class XioVideoPalaceXio: UIViewController {
         super.viewDidLoad()
         XioInitialBaseSettingsXio()
         XioAssembleHierarchyXio()
-        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Loading...")
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfhMDE+4YN8a8GG/gZ3DBbvjjw=="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
           
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(freashiNG), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(freashiNG), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
     }
     
     private func XioInitialBaseSettingsXio() {
@@ -65,11 +65,11 @@ class XioVideoPalaceXio: UIViewController {
         self.navigationController?.pushViewController(aicrrwte, animated: true)
     }
     private func XioAssembleHierarchyXio() {
-        XioNavTitleXio.text = "Trending"
+        XioNavTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMToESmpqqOPXPAuff+Bo4+I=")
         XioNavTitleXio.font = .systemFont(ofSize: 28, weight: .bold)
         XioNavTitleXio.textColor = .white
         
-        XioStreamToggleXio.setBackgroundImage(UIImage.init(named: "videoill.badge.plus"), for: .normal)
+        XioStreamToggleXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcuzAn3eAuJfm50OiIhFrSCcepKn24Ipagl9nw==")), for: .normal)
         
         XioStreamToggleXio.addTarget(self, action: #selector(createXIOXioStreamToggleXio), for: .touchUpInside)
         let XioLayoutXio = UICollectionViewCompositionalLayout { (sectionIndex, _) -> NSCollectionLayoutSection? in
@@ -80,9 +80,9 @@ class XioVideoPalaceXio: UIViewController {
         XioPrimaryShelfXio.backgroundColor = .clear
         XioPrimaryShelfXio.delegate = self
         XioPrimaryShelfXio.dataSource = self
-        XioPrimaryShelfXio.register(XioOrbitCellXio.self, forCellWithReuseIdentifier: "XioOrbitCellXio")
-        XioPrimaryShelfXio.register(XioPostCellXio.self, forCellWithReuseIdentifier: "XioPostCellXio")
-        XioPrimaryShelfXio.register(XioHeaderGadgetXio.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "XioHeaderGadgetXio")
+        XioPrimaryShelfXio.register(XioOrbitCellXio.self, forCellWithReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcleVOskfydd6bpTzWsfbxe0nYtzuXv9"))
+        XioPrimaryShelfXio.register(XioPostCellXio.self, forCellWithReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMecZoqKU0LuIexqzz+uzurV7HYN2I7E="))
+        XioPrimaryShelfXio.register(XioHeaderGadgetXio.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaLuvygicrgm2aA/OetdmnE62UAXk1u1T4v9"))
         
         [XioNavTitleXio, XioStreamToggleXio, XioPrimaryShelfXio].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -141,11 +141,11 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioOrbitCellXio", for: indexPath) as! XioOrbitCellXio
+            let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcleVOskfydd6bpTzWsfbxe0nYtzuXv9"), for: indexPath) as! XioOrbitCellXio
             XioCellXio.XioSyncEntityXio(XioCurrentAvatoDataXio[indexPath.item])
             return XioCellXio
         } else {
-            let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioPostCellXio", for: indexPath) as! XioPostCellXio
+            let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMecZoqKU0LuIexqzz+uzurV7HYN2I7E="), for: indexPath) as! XioPostCellXio
             XioCellXio.AcccTopersonCou.tag = indexPath.row
             XioCellXio.AcccTopersonCou.addTarget(self, action: #selector(safetyFire(usief:)), for: .touchUpInside)
             XioCellXio.AccctoinCou.addTarget(self, action: #selector((XioReportStageXio)), for: .touchUpInside)
@@ -170,8 +170,8 @@ extension XioVideoPalaceXio: UICollectionViewDelegate, UICollectionViewDataSourc
         navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let XioHeadXio = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "XioHeaderGadgetXio", for: indexPath) as! XioHeaderGadgetXio
-        XioHeadXio.XioTitleLabelXio.text = "Recommend"
+        let XioHeadXio = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaLuvygicrgm2aA/OetdmnE62UAXk1u1T4v9"), for: indexPath) as! XioHeaderGadgetXio
+        XioHeadXio.XioTitleLabelXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWh72sOMdkguIuWT86PN+DuA")
         return XioHeadXio
     }
     

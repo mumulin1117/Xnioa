@@ -38,11 +38,11 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
     
-    private let XioPartyClassesXio = ["Court Ball", "Jazz", "Rock", "Disco", "Country"]
-    private let XioStylesDataXio = ["XioStyle1","XioStyle2","XioStyle3","XioStyle4"]
+    private let XioPartyClassesXio = [XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYu4h3C0CQksLhI/AzCjgUAo8w=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaVdp9Q69X17pGIbOQ=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMayzOFGmtMQh6cOAAA=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYoEM8nYNz5j3VATDXM="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWlrnKE6qe585UDzmSPzVw==")]
+    private let XioStylesDataXio = [XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMa/L+S9cz50YYTsRcyvYIECK"),XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMY8U+S9cb5wYiYK/A8DTw2lV"),XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe9e+S9cD5wYAcCp1JNhDfr6"),XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc9u/i9cr50YYRLxsbmLW10M")]
     
     private var XioCurrentSelectionIndexXio: Int?
-    private var XioActiveTypeXio = "Court Ball"
+    private var XioActiveTypeXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYu4h3C0CQksLhI/AzCjgUAo8w==")
 
     
     private var XioUserBalanceXio: Int  {
@@ -65,14 +65,14 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         let sxnioInputName = XioPromptFieldXio.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         
         if sxnioInputName.isEmpty {
-            sxnioShowAlert(sxnioMsg: "Please enter the keyboard words!")
+            sxnioShowAlert(sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYqjJ7V9fujLz4i3tV/qXY0t439TOBwjk4oDX8hYRRhkA9g3T/V8ghg="))
             return
             
         }
         
         if XioCurrentSelectionIndexXio == nil {
             
-            sxnioShowAlert(sxnioMsg: "Please pick your clothing style at first!")
+            sxnioShowAlert(sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfp0+zh0WBg3YdmPjOe48usLsBM4dXFjH4p4w29z4eOXQFOcDeSL7gDW++LbaCs/Rxg="))
             
             return
         }
@@ -104,7 +104,7 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         }
     private func sxnioShowAlert(sxnioMsg: String) {
         let sxnioAlert = UIAlertController(title: nil, message: sxnioMsg, preferredStyle: .alert)
-        sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        sxnioAlert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default))
         present(sxnioAlert, animated: true)
     }
         private func XioShowInsufficientAlertXio() {
@@ -117,7 +117,7 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         
         private func XioTriggerSuccessFeedbackXio() {
             // Logic for generating AI result
-            print("Payment Successful. Remaining: \(XioUserBalanceXio)")
+            print(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRsHUejJ36sNMdZj88ywY2+JMLC4G79kB+9LFmtkUNXJpZWt/GZRxg==") + String(XioUserBalanceXio))
             
             self.navigationController?.pushViewController(XioVisionOutcomeControllerXio(), animated: true)
         }
@@ -133,7 +133,7 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         XioCoutureGridXio.dataSource = self
         XioCoutureGridXio.backgroundColor = .clear
         XioCoutureGridXio.isScrollEnabled = false
-        XioCoutureGridXio.register(XioCoutureCellXio.self, forCellWithReuseIdentifier: "XioCoutureCellXio")
+        XioCoutureGridXio.register(XioCoutureCellXio.self, forCellWithReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUISTsUMJLdpMyyblQtTUrv7LcDIkgN90hk="))
     }
     
     private func XioArchitectLayoutXio() {
@@ -145,36 +145,36 @@ class XioAIVisualPilotXio: XioResilienceAnchorXio {
         XioVortexScrollXio.addSubview(XioCanvasRackXio)
         XioCanvasRackXio.translatesAutoresizingMaskIntoConstraints = false
         
-        XioRetreatBtnXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioPopActionXio), for: .touchUpInside)
         
-        XioHeaderTitleXio.text = "AI Party Style"
+        XioHeaderTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZeE3pV9kRTFzomC72rHwogxacgk0So=")
         XioHeaderTitleXio.textColor = .white
         XioHeaderTitleXio.font = .systemFont(ofSize: 20 * XioWScaleXio, weight: .bold)
         
         XioPromptTerminalXio.backgroundColor = UIColor(white: 0.16, alpha: 1.0)
         XioPromptTerminalXio.layer.cornerRadius = 12 * XioWScaleXio
         
-        XioGlyphIconXio.image = UIImage(systemName: "pencil")
+        XioGlyphIconXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTrnBW7upMp9yHbbr23/"))
         XioGlyphIconXio.tintColor = .white
         
-        XioPromptFieldXio.attributedPlaceholder = NSAttributedString(string: "Please enter the keywords you want", attributes: [.foregroundColor: UIColor.gray])
+        XioPromptFieldXio.attributedPlaceholder = NSAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQTW4Gvkt6OFGWWak3vQcbFgnTUzLJ9Q4ZlsO8l0YLh3pHNnCDqKLI5KZQ=="), attributes: [.foregroundColor: UIColor.gray])
         XioPromptFieldXio.textColor = .white
         XioPromptFieldXio.textAlignment = .center
         XioPromptFieldXio.font = .systemFont(ofSize: 15 * XioWScaleXio)
         
-        XioClassTitleXio.text = "Types of party"
+        XioClassTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf1UNchu6HIhoSLrA0NPzREeC18PBP8=")
         XioClassTitleXio.textColor = .darkGray
         XioClassTitleXio.font = .systemFont(ofSize: 17 * XioWScaleXio, weight: .semibold)
         
-        XioCoutureTitleXio.text = "Clothing Style"
+        XioCoutureTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTyVWQ36gpTquA1yF+u+kfWZWdCHapI=")
         XioCoutureTitleXio.textColor = .darkGray
         XioCoutureTitleXio.font = .systemFont(ofSize: 17 * XioWScaleXio, weight: .semibold)
         
         // Gradient Button Logic
         XioForgeTriggerXio.backgroundColor = .clear
-        XioForgeTriggerXio.setTitle("400 💎 Generate", for: .normal)
+        XioForgeTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYxK45LATR3OA3pfaW1YLU0iH4eBN2M3w+s="), for: .normal)
         XioForgeTriggerXio.titleLabel?.font = .systemFont(ofSize: 18 * XioWScaleXio, weight: .bold)
         XioForgeTriggerXio.layer.cornerRadius = 10 * XioWScaleXio
         XioForgeTriggerXio.clipsToBounds = true
@@ -314,7 +314,7 @@ extension XioAIVisualPilotXio: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return XioStylesDataXio.count }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let xCell = collectionView.dequeueReusableCell(withReuseIdentifier: "XioCoutureCellXio", for: indexPath) as! XioCoutureCellXio
+        let xCell = collectionView.dequeueReusableCell(withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUISTsUMJLdpMyyblQtTUrv7LcDIkgN90hk="), for: indexPath) as! XioCoutureCellXio
         let item = XioStylesDataXio[indexPath.item]
         xCell.XioHydrateCellXio( img: item, xSelected: XioCurrentSelectionIndexXio == indexPath.item)
         return xCell

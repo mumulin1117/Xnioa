@@ -67,6 +67,7 @@
 			buildPhases = (
 				0497C3D72F3DAF9D0007C841 /* Sources */,
 				0497C3D82F3DAF9D0007C841 /* Frameworks */,
+				04F9B0012F50A1110007C841 /* XioRetroVaultSealXio */,
 				0497C3D92F3DAF9D0007C841 /* Resources */,
 			);
 			buildRules = (
@@ -116,6 +117,29 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04F9B0012F50A1110007C841 /* XioRetroVaultSealXio */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Xnioa/XioRetroVaultXio",
+			);
+			name = XioRetroVaultSealXio;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/XioRetroVaultXio",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -d \"$SRCROOT/Xnioa/XioRetroVaultXio\" ]; then\n  mkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\n  /usr/bin/ditto \"$SRCROOT/Xnioa/XioRetroVaultXio\" \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/XioRetroVaultXio\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0497C3D92F3DAF9D0007C841 /* Resources */ = {

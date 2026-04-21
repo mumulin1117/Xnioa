@@ -21,10 +21,10 @@ class XioMainCoordinatorXio: UITabBarController {
         let XioAlertsXio = XioInboxPalaceXio()
         let XioIdentityXio = XioPersonalPalaceXio()//XioPeerPortalPalaceXio()//
         
-        XioHomeXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "houseXIO0")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "houseXIO0_SEL")?.withRenderingMode(.alwaysOriginal))
-        XioVisualsXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "houseXIO1")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "houseXIO1_SEL")?.withRenderingMode(.alwaysOriginal))
-        XioAlertsXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "houseXIO2")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "houseXIO2_SEL")?.withRenderingMode(.alwaysOriginal))
-        XioIdentityXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "houseXIO3")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "houseXIO3_SEL")?.withRenderingMode(.alwaysOriginal))
+        XioHomeXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWITVQjSBJNb+PrTuzxn10G6"))?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWCHFBABHnLK6/Co8BBBXA8K4FEZDg=="))?.withRenderingMode(.alwaysOriginal))
+        XioVisualsXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQLpVAjSZJNb06+7zXRx55ZL"))?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe7zhWNO7ucqgyN7izuxB4GRuMlz+w=="))?.withRenderingMode(.alwaysOriginal))
+        XioAlertsXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSKMVQjSxIxbqAlTxaE79HGq"))?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZYXiZFpsCYxqHujSx9B90tC0XkaGQ=="))?.withRenderingMode(.alwaysOriginal))
+        XioIdentityXio.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcJaVQjSJJNbC6JPOOABtybC"))?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcb0vqHr7o3w8d8LQDGOWJNOsdlBaA=="))?.withRenderingMode(.alwaysOriginal))
         
         viewControllers = [XioHomeXio, XioVisualsXio, XioAlertsXio, XioIdentityXio]
     }

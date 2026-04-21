@@ -50,7 +50,7 @@ class XioSecurityShieldXio: UIView {
             if $0 != XioSheetVesselXio { XioSheetVesselXio.addSubview($0) } else { addSubview($0) }
         }
         
-        XioNegateTriggerXio.setTitle("No, Cancel", for: .normal)
+        XioNegateTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfFUbgoHx40DsaAgCZF1Ibr3lQ=="), for: .normal)
         XioNegateTriggerXio.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         XioNegateTriggerXio.layer.cornerRadius = 12 * XioWidthScaleXio
         XioNegateTriggerXio.addTarget(self, action: #selector(XioDismissShieldXio), for: .touchUpInside)
@@ -64,18 +64,18 @@ class XioSecurityShieldXio: UIView {
         XioPromptBodyXio.textAlignment = .left
         
         if XioModeXio == .XioAbandonSessionXio {
-            XioStatusIconXio.image = UIImage(named: "door.right.hand.o")
+            XioStatusIconXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUWsjoliD4tZGUgx38Of3VLCGwkGSyDyOWc="))
             XioStatusIconXio.tintColor = .systemOrange
-            XioPromptTitleXio.text = "Log out?"
-            XioPromptBodyXio.text = "Are you sure you want to log out of your account? Please confirm to proceed."
-            XioConfirmTriggerXio.setTitle("Log Out", for: .normal)
+            XioPromptTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaaLgkOTBjI6xGNfWmO40tA=")
+            XioPromptBodyXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXj2Yf8CRsz+Lj8KRlhDo+c4QEmwBo2jBdJE/nzny7dNoYcxxycY4uIe76C+m1zQSOKQrVJjErGkH8qZgJfzXGmyiYJ8gjD4/YKT8wu76/PzkGBlfg==")
+            XioConfirmTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV6OO/NXn1EDaRvyV3Hr+w=="), for: .normal)
             XioConfirmTriggerXio.backgroundColor = .systemOrange
         } else {
-            XioStatusIconXio.image = UIImage(named: "heart.break.fill") // Use asset "XioBrokenHeartAssetXio"
+            XioStatusIconXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQHUR87OcbpGU6GnpYH32QvF5esqWIuQ5w==")) // Use asset "XioBrokenHeartAssetXio"
             XioStatusIconXio.tintColor = .systemRed
-            XioPromptTitleXio.text = "Delete your account?"
-            XioPromptBodyXio.text = "Are you sure you want to delete your account? This action is permanent and cannot be undone. If you're certain, please confirm your decision."
-            XioConfirmTriggerXio.setTitle("Yes Delete", for: .normal)
+            XioPromptTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTvXU/MMUnyepfn1JLvFfM33fRGL88i75V9wfSk=")
+            XioPromptBodyXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMX/sq3QsFdH8l5OavtFNKhTTOgCYQcSZRSr8G+f0mpS/md8r3NJd5f+rA0RrdGIAQhj7COj8GLabyzW940MvUJyX2Ue2AURf/MWVO/j7Qq3TY4BKZujvFLM8V4GTW2p32mQXt6E0rKjRO5hALEQwOgC4Sw4JlUOSnzBVHIvMOsMaH53INA4cLdiHdYwGatA3myNNk4vl")
+            XioConfirmTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMduJGhv3otsfUAvVweO64vBLMg=="), for: .normal)
             XioConfirmTriggerXio.backgroundColor = .systemRed
         }
         

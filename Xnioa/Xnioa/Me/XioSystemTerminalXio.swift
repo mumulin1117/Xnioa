@@ -47,11 +47,11 @@ class XioSystemTerminalXio: UIViewController {
         view.addSubview(XioTerminalScrollXio)
         XioTerminalScrollXio.addSubview(XioMasterRackXio)
         
-        XioBackTriggerXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioBackTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioBackTriggerXio.tintColor = .white
         XioBackTriggerXio.addTarget(self, action: #selector(XioPerformRetreatXio), for: .touchUpInside)
         
-        XioTitleTagXio.text = "Setting"
+        XioTitleTagXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMawfpy5Q4jbZp9nua/0jGw==")
         XioTitleTagXio.textColor = .white
         XioTitleTagXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
@@ -64,13 +64,13 @@ class XioSystemTerminalXio: UIViewController {
         XioGradiantXio.endPoint = CGPoint(x: 1, y: 0.5)
         XioWalletBadgeXio.layer.insertSublayer(XioGradiantXio, at: 0)
         
-        XioWalletTitleXio.text = "My wallet"
+        XioWalletTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMY488wk3KqHstBJBOADyhpTK")
         XioWalletTitleXio.textColor = .white
         XioWalletTitleXio.font = .italicSystemFont(ofSize: 20 * XioWidthRatioXio)
         
-        XioDiamondIconXio.image = UIImage(systemName: "suit.diamond.fill")
+        XioDiamondIconXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZhobrD/WO+FErgnH00Ln2pTEMMYUHa0WLE="))
         XioDiamondIconXio.tintColor = .white
-        XioBalanceTagXio.text = "\(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)"
+        XioBalanceTagXio.text = String(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)
         XioBalanceTagXio.textColor = .white
         XioBalanceTagXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
@@ -79,12 +79,12 @@ class XioSystemTerminalXio: UIViewController {
         XioPopulateTerminalItemsXio()
         
         XioExitTriggerXio.backgroundColor = .systemOrange
-        XioExitTriggerXio.setTitle("Log out", for: .normal)
+        XioExitTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWwtyHVLUVETIXOghrJT0g=="), for: .normal)
         XioExitTriggerXio.layer.cornerRadius = 10 * XioWidthRatioXio
         XioExitTriggerXio.addTarget(self, action: #selector(XioExecuteLogoutXio), for: .touchUpInside)
         
         XioObliterateTriggerXio.backgroundColor = .systemRed
-        XioObliterateTriggerXio.setTitle("Delete account", for: .normal)
+        XioObliterateTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbR5gYz5e+sp2bDbNMBir6RALJudiKw="), for: .normal)
         XioObliterateTriggerXio.layer.cornerRadius = 10 * XioWidthRatioXio
         XioObliterateTriggerXio.addTarget(self, action: #selector(XioExecuteObliterationXio), for: .touchUpInside)
         
@@ -153,7 +153,7 @@ class XioSystemTerminalXio: UIViewController {
     }
     
     private func XioPopulateTerminalItemsXio() {
-        let XioLabelsXio = ["User Agreement", "Privacy Agreement", "Clear cache", "About us"]
+        let XioLabelsXio = [XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaJJFMd5b5k4EUlvK7EmEIMXE6uyomQ="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZo5yGiAwz/Un2uf8Lf4sKGEK4IbM3ubCQQ="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd5850Kw2trfbrGKVM4WdPvj/5A="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMW1P38CAEQyujz+IwIv9SGM=")]
         for (i,XioTextXio) in XioLabelsXio.enumerated() {
             let XioItemXio = XioTerminalItemViewXio()
             XioItemXio.XioSyncTextXio(XioTextXio)
@@ -203,13 +203,13 @@ class XioSystemTerminalXio: UIViewController {
             
             
             let alert = UIAlertController(
-                title: "Clear Cache",
-                message: "Are you sure you want to clear the cache? This will free up storage space.",
+                title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXdHX4wttRHCCJfpB9axc1sMW2o="),
+                message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWkkU9wI9+zbIYvfLppziGxIbUmATkgZXCNP4HzDYpJW+IQFJ8d0x3XCgC1gUIHNYKjTXiOL2BAXOOvIm/2kislQuJjjLw9P3b+Kx1t7ryLrEyM="),
                 preferredStyle: .alert
             )
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { _ in
+            alert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
+            alert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcBqtu+gFgbacVl/NNU="), style: .destructive, handler: { _ in
                
                     let notificationGenerator = UINotificationFeedbackGenerator()
                     notificationGenerator.notificationOccurred(.success)
@@ -220,7 +220,7 @@ class XioSystemTerminalXio: UIViewController {
        
     }
     private func XioLoadLocalVibeXio() {
-        XioBalanceTagXio.text = "\(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)"
+        XioBalanceTagXio.text = String(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)
     }
     
     @objc private func XioExecuteLogoutXio() {
@@ -283,7 +283,7 @@ class XioTerminalItemViewXio: UIButton {
         XioTitleLabelXio.textColor = .white
         XioTitleLabelXio.font = .systemFont(ofSize: 16)
         
-        XioArrowIconXio.image = UIImage(systemName: "chevron.right")
+        XioArrowIconXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXJZUiFjdX7+l/MPX3XbRDuqo+mblQ=="))
         XioArrowIconXio.tintColor = .gray
         XioArrowIconXio.contentMode = .scaleAspectFit
         

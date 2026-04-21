@@ -27,9 +27,9 @@ class XioSafetyAuditPilotXio: UIViewController {
     
     private var XioSelectedOffenseXio: String?
     private let XioViolationLexiconXio = [
-        "Harassment", "Malicious fraud",
-        "Pornography", "Malicious insults",
-        "Country"
+        XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVY3Ad80Ex/hqcK09ZSBS93GyQ=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWLyt3Tp13tRGQKY9DSo23IHmFN5YC0L"),
+        XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYn7twXbsNUJ+1NjL3MdeBxQOLM="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYXNQ/+X9e7r6/J4eeG6Y9IrQDMz6l0yDuw="),
+        XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWlrnKE6qe585UDzmSPzVw==")
     ]
     
     private var XioTagNodesXio: [UIButton] = []
@@ -51,11 +51,11 @@ class XioSafetyAuditPilotXio: UIViewController {
             view.addSubview($0)
         }
         
-        XioRetreatBtnXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioExitProtocolXio), for: .touchUpInside)
         
-        XioAuditTitleXio.text = "Report"
+        XioAuditTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdtkeSi+8mjMXcy1my1J")
         XioAuditTitleXio.textColor = .white
         XioAuditTitleXio.font = .systemFont(ofSize: 20 * XioUnitWXio, weight: .bold)
         
@@ -77,14 +77,14 @@ class XioSafetyAuditPilotXio: UIViewController {
         XioInputTerminalXio.layer.cornerRadius = 8 * XioUnitWXio
         XioInputTerminalXio.textContainerInset = UIEdgeInsets(top: 15, left: 12, bottom: 15, right: 12)
         
-        XioPlaceholderXio.text = "Please enter"
+        XioPlaceholderXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTdsjt36SpkDoPUh7NcKZYnm6cD6")
         XioPlaceholderXio.textColor = .darkGray
         XioPlaceholderXio.font = .systemFont(ofSize: 15 * XioUnitWXio)
         XioPlaceholderXio.translatesAutoresizingMaskIntoConstraints = false
         XioInputTerminalXio.addSubview(XioPlaceholderXio)
         
         XioSubmitTriggerXio.backgroundColor = UIColor(red: 0.72, green: 0.95, blue: 0.55, alpha: 1.0)
-        XioSubmitTriggerXio.setTitle("Submit", for: .normal)
+        XioSubmitTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcW6QqRuwBFaL5VAAisn"), for: .normal)
         XioSubmitTriggerXio.setTitleColor(.black, for: .normal)
         XioSubmitTriggerXio.titleLabel?.font = .systemFont(ofSize: 16 * XioUnitWXio, weight: .bold)
         XioSubmitTriggerXio.layer.cornerRadius = 10 * XioUnitWXio
@@ -173,8 +173,8 @@ class XioSafetyAuditPilotXio: UIViewController {
     
     @objc private func XioExecuteDispatchXio() {
         guard XioSelectedOffenseXio != nil else { return }
-        let XioSuccessXio = UIAlertController(title: "Success", message: "Report has been filed", preferredStyle: .alert)
-        XioSuccessXio.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+        let XioSuccessXio = UIAlertController(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVJU3Ke/xCjeE5Ro0xKgcw=="), message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWyb6k0iPy2nktyqG6B4HbBp03THsyMxJkhbaeC7"), preferredStyle: .alert)
+        XioSuccessXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default, handler: { _ in
             self.XioExitProtocolXio()
         }))
         present(XioSuccessXio, animated: true)

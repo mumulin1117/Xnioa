@@ -30,7 +30,7 @@ class XioPeerPortalPalaceXio: UIViewController {
     }
     private let XioEditNameBtnXio = UIButton()
     @MainActor required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe5fdxbqHBVvx/qiA3qwo0+F80GKWt0gRuIrT9fzqFBBrP/+qIVj/Gz5uLVIMg=="))
     }
     
     
@@ -69,13 +69,13 @@ class XioPeerPortalPalaceXio: UIViewController {
             XioGalaEntryXio.XioBadgeIDXio == self.usier.XioBadgeIDXio
         })
         AcccTopersonCou.addTarget(self, action: #selector(safetyFire(toUset:)), for: .touchUpInside)
-        AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
-        AcccTopersonCou.setImage(UIImage.init(named: "AllRounded"), for: .selected)
+        AcccTopersonCou.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbz0TlJ313AQueSnsasjTYxSIKubP1Em")), for: .normal)
+        AcccTopersonCou.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMabHfchOqTSveEp2c5PKcASCWA==")), for: .selected)
         XioSetupBaseThemeXio()
         XioForgeArchitectureXio()
         XioTriggerDataPulseXio()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(abpihd), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(abpihd), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
     }
     
     @objc func abpihd()  {
@@ -99,17 +99,17 @@ class XioPeerPortalPalaceXio: UIViewController {
         view.addSubview(XioMainScrollerXio)
         XioMainScrollerXio.addSubview(XioCanvasXio)
         
-        XioRetreatBtnXio.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+        XioRetreatBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeq1SHs0UPSgNhZzAjLW+njqAQ==")), for: .normal)
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioPerformRetreatXio), for: .touchUpInside)
         
         
         
         
-        XioOptionBtnXio.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        XioOptionBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUROWtYiBQVr3SWo7GEbehg=")), for: .normal)
         XioOptionBtnXio.tintColor = .white
         XioOptionBtnXio.addTarget(self, action: #selector(XioInvokePolicyMenuXio), for: .touchUpInside)
-        XioFaceOrbitXio.setImage(UIImage.init(named: "mortMinimalistic"), for: .normal)
+        XioFaceOrbitXio.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZhqpki5ffKgnRrDtIIQAyNQMJTcu0pQYg==")), for: .normal)
         
         XioFaceOrbitXio.layer.cornerRadius = 35 * XioWFactorXio
         XioFaceOrbitXio.clipsToBounds = true
@@ -122,7 +122,7 @@ class XioPeerPortalPalaceXio: UIViewController {
         XioSocialMetricsLabelXio.font = .systemFont(ofSize: 14)
         XioSocialMetricsLabelXio.textColor = .lightGray
         
-        XioVideoCallTriggerXio.setImage(UIImage(systemName: "video.fill"), for: .normal)
+        XioVideoCallTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaEszPJYwwpl/ASoI5a6bAOziw==")), for: .normal)
         XioVideoCallTriggerXio.tintColor = .white
         XioVideoCallTriggerXio.backgroundColor = .systemPurple
         XioVideoCallTriggerXio.layer.cornerRadius = 20 * XioWFactorXio
@@ -133,14 +133,14 @@ class XioPeerPortalPalaceXio: UIViewController {
         XioSwitchDockXio.layer.borderWidth = 1
         XioSwitchDockXio.layer.borderColor = UIColor.init(red: 182/255, green: 240/255, blue: 156/255, alpha: 1).cgColor
         
-        XioSetupTabXio(XioRoomTabXio, title: "Room", tag: 0)
-        XioSetupTabXio(XioVideoTabXio, title: "Video", tag: 1)
+        XioSetupTabXio(XioRoomTabXio, title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWJ/3gGmdCT7x9GIWA=="), tag: 0)
+        XioSetupTabXio(XioVideoTabXio, title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcCRyvtzVVAwP5pauK8="), tag: 1)
         
         XioFeedShelfXio.axis = .vertical
         XioFeedShelfXio.spacing = 15
         
         XioActionDockXio.backgroundColor = UIColor(white: 0.05, alpha: 0.9)
-        XioConnectBtnXio.setBackgroundImage(UIImage.init(named: "connnectedMani"), for: .normal)
+        XioConnectBtnXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMb0nyMRYimmY9nvzeItbA3eoqidjEAM=")), for: .normal)
         XioConnectBtnXio.addTarget(self, action: #selector(XioEnterChatPortalXio), for: .touchUpInside)
         
         [XioHeaderRackXio, XioFaceOrbitXio, XioHandleLabelXio, XioSocialMetricsLabelXio, XioVideoCallTriggerXio, XioSwitchDockXio, XioFeedShelfXio].forEach {
@@ -273,7 +273,7 @@ class XioPeerPortalPalaceXio: UIViewController {
         AcccTopersonCou.isSelected = XioPeerFocusedXio
         
         XioHandleLabelXio.text = XioPartnerDataXio?.XioPartnerNameXio
-        XioSocialMetricsLabelXio.text = "\(XioPartnerDataXio?.XioFanCountXio ?? 0) Followers   \(XioPartnerDataXio?.XioFocusCountXio ?? 0) Following"
+        XioSocialMetricsLabelXio.text = String(XioPartnerDataXio?.XioFanCountXio ?? 0) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQQe2ZL9gzj2woSfT3nBYwvgYbxj9Q==") + String(XioPartnerDataXio?.XioFocusCountXio ?? 0) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc4eigOuOS2Xhp/LoG8zU1jjgQ==")
         XioFaceOrbitXio.setImage(UIImage.init(named: usier.XioAvatarXio), for: .normal)
         if XioCurrentTabXio == 0 {
             
@@ -306,13 +306,13 @@ class XioPeerPortalPalaceXio: UIViewController {
     
     @objc private func XioInvokePolicyMenuXio() {
         let XioSheetXio = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        XioSheetXio.addAction(UIAlertAction(title: "Block", style: .default, handler: { action in
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRCunm7pDGxVGAhJPJ8="), style: .default, handler: { action in
             XioGovernanceHubXio.XioPrincipalXio.XioUpdateExileStatusXio(target: self.usier, xAdd: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Report", style: .default, handler: { action in
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdtkeSi+8mjMXcy1my1J"), style: .default, handler: { action in
             self.navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
         present(XioSheetXio, animated: true)
     }
   
@@ -327,7 +327,7 @@ class XioPartyViewXio: UIView {
    
     
     
-    private let XioCardBaseXio = UIImageView(image: UIImage(named: "XioCardBaseXio"))
+    private let XioCardBaseXio = UIImageView(image: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTb+n22uX948+Or4527FNFRsU/ZAMk=")))
      let XioMainVisualXio = UIImageView()
     
     private let XioStatusBadgeXio = UIView()
@@ -337,11 +337,11 @@ class XioPartyViewXio: UIView {
     private let XioInfoBarXio = UIView()
     private let XioUserThumbXio = UIImageView()
     private let XioUserNameXio = UILabel()
-    private let XioSparkleIconXio = UIImageView(image: UIImage(systemName: "sparkles"))
+    private let XioSparkleIconXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMU7E/S2TrkfXoIs3o28XKKg=")))
     private let XioThemeTitleXio = UILabel()
     
     private let XioHotPanelXio = UIView()
-    private let XioFireIconXio = UIImageView(image: UIImage(systemName: "flame.fill"))
+    private let XioFireIconXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc1G15rA6p3OplqCCTivwOPItQ==")))
     private let XioHotCountXio = UILabel()
     private let XioAudienceStackXio = UIStackView()
     
@@ -486,7 +486,7 @@ class XioPartyViewXio: UIView {
     func XioConfigureWithDataXio(jai:XioGalaEntryXio) {
         XioUserNameXio.text = jai.XioAliasXio
         XioThemeTitleXio.text = jai.XioRoomTItle
-        XioOnlineLabelXio.text = "\(3) Online"
+        XioOnlineLabelXio.text = String(3) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMboSASmwGBMS0kNreMHHnw==")
         XioHotCountXio.text = jai.XioHeatValueXio
         XioUserThumbXio.image = UIImage(named: jai.XioAvatarXio)
         XioAudienceStackXio.arrangedSubviews.forEach { $0.removeFromSuperview() }
@@ -499,7 +499,7 @@ class XioPartyViewXio: UIView {
             XioMiniAvatarXio.layer.borderColor = UIColor.white.cgColor
             XioMiniAvatarXio.translatesAutoresizingMaskIntoConstraints = false
             XioMiniAvatarXio.widthAnchor.constraint(equalToConstant: 15).isActive = true
-            XioMiniAvatarXio.image = UIImage.init(named: "avarieou\(Int.random(in: 0...8))")
+            XioMiniAvatarXio.image = UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd/Rp2Og4ZWUeYQ7c1C7E7k=") + String(Int.random(in: 0...8)))
             XioAudienceStackXio.addArrangedSubview(XioMiniAvatarXio)
         }
     }
@@ -526,10 +526,10 @@ class XioVisualPostCellXio: UIView {
     
     private let XioHeroImageXio = UIImageView()
     private let XioCaptionXio = UILabel()
-    private let XioLikeBtnXio = UIImageView(image: UIImage(systemName: "heart"))
-    private let XioChatBtnXio = UIImageView(image: UIImage(systemName: "message"))
+    private let XioLikeBtnXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1lMzLJxWO9mOEO4LA=")))
+    private let XioChatBtnXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcAEsBzhmrjsusBjFKOLsg==")))
     private let XioGreetBtnXio = UIButton()
-    private let XioPlayBtnXio = UIImageView(image: UIImage(systemName: "play.circle.fill"))
+    private let XioPlayBtnXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTSjGJC7hMtaeLjQZBNaH7unZf/uA8AQFw==")))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -557,7 +557,7 @@ class XioVisualPostCellXio: UIView {
         XioCaptionXio.textColor = .lightGray
         XioCaptionXio.numberOfLines = 2
         
-     XioGreetBtnXio.setBackgroundImage(UIImage(named: "nevertGrest"), for: .normal)
+     XioGreetBtnXio.setBackgroundImage(UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUSvHJ6m7hR3PdwYadhH4bBFSH0=")), for: .normal)
         
         
         XioPlayBtnXio.tintColor = .white

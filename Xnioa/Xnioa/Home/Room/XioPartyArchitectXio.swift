@@ -45,9 +45,9 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
     private let XioHeightRatioXio = UIScreen.main.bounds.height / 812
     
     private var XioSelectedSceneIndexXio = 0
-    private let XioSceneAssetsXio = ["picjkBg0", "picjkBg1", "picjkBg2", "picjkBg3"]
-    private let XioTypeCategoriesXio = ["For you", "Trending", "Fairy tale", "Age"]
-    private var XioCurrentCategoryXio = "For you"
+    private let XioSceneAssetsXio = [XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUveEGf2gfYOgdT9IFLv9b4="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMasBEWf2ofYO59QfobAvHXE="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYtiEGf2wfYO2KTIFRr/71o="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeuUEGf24fYOmArRBZePQlI=")]
+    private let XioTypeCategoriesXio = [XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbROqMBa4rL0y0to/uPFiw=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMToESmpqqOPXPAuff+Bo4+I="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRwWyDR0VzUCUDJs9auv2GJbgA=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTJu9rNv/ICpoTEi")]
+    private var XioCurrentCategoryXio = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbROqMBa4rL0y0to/uPFiw==")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
         
         XioSceneCollectionXio.delegate = self
         XioSceneCollectionXio.dataSource = self
-        XioSceneCollectionXio.register(XioSceneCellXio.self, forCellWithReuseIdentifier: "XioSceneCellXio")
+        XioSceneCollectionXio.register(XioSceneCellXio.self, forCellWithReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeGEbiw360uYCVrJed+YQ5HC5lurMASt"))
         XioSceneCollectionXio.backgroundColor = .clear
     }
     
@@ -73,44 +73,44 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
         XioChronicleScrollerXio.addSubview(XioMasterRackXio)
         
         XioRetreatTriggerXio.isUserInteractionEnabled = true
-        XioRetreatTriggerXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatTriggerXio.tintColor = .white
         XioRetreatTriggerXio.addTarget(self, action: #selector(XioPerformRetreatXio), for: .touchUpInside)
         
-        XioDraftTitleTagXio.text = "Create Vintage party"
+        XioDraftTitleTagXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMajVAmymWscydv8fpeCEqobDPwvtjqP6yINMlrg=")
         XioDraftTitleTagXio.textColor = .white
         XioDraftTitleTagXio.font = .systemFont(ofSize: 22 * XioWidthRatioXio, weight: .bold)
         
-        XioSceneSectionTitleXio.text = "Party scene"
+        XioSceneSectionTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVAaKbV3A47W6SMzSIlly7pB/8g=")
         XioSceneSectionTitleXio.textColor = .darkGray
         XioSceneSectionTitleXio.font = .systemFont(ofSize: 18 * XioWidthRatioXio, weight: .semibold)
         
-        XioTypeSectionTitleXio.text = "Type"
+        XioTypeSectionTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVlbf9UeA49MKUPC9A==")
         XioTypeSectionTitleXio.textColor = .darkGray
         XioTypeSectionTitleXio.font = .systemFont(ofSize: 18 * XioWidthRatioXio, weight: .semibold)
         
         XioCoverVesselXio.layer.cornerRadius = 12 * XioWidthRatioXio
         XioCoverVesselXio.clipsToBounds = true
-        XioCoverDisplayXio.image = UIImage(named: "XioDefaultCoverXio")
+        XioCoverDisplayXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTWex3ek8de28MvXxSBk36hdIYFjl52Ib2I2"))
         XioCoverDisplayXio.contentMode = .scaleAspectFill
         XioCoverDisplayXio.isUserInteractionEnabled = true
         let XioTapXio = UITapGestureRecognizer(target: self, action: #selector(XioTriggerGalleryXio))
         XioCoverDisplayXio.addGestureRecognizer(XioTapXio)
         
-        XioCoverKillTriggerXio.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        XioCoverKillTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVW4PbLGkgeroBUuM+A/mBsLjcs33wMfJ6k=")), for: .normal)
         XioCoverKillTriggerXio.tintColor = .white
         
         XioNamingVesselXio.backgroundColor = UIColor(white: 0.15, alpha: 1.0)
         XioNamingVesselXio.layer.cornerRadius = 12 * XioWidthRatioXio
         
-        XioNameInputXio.attributedPlaceholder = NSAttributedString(string: "Room Name", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        XioNameInputXio.attributedPlaceholder = NSAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfw6qfxm45Ivqli3wA4iNwto"), attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         XioNameInputXio.textColor = .white
         XioNameInputXio.font = .systemFont(ofSize: 16 * XioWidthRatioXio)
-        XioPencilIconXio.image = UIImage(systemName: "pencil")
+        XioPencilIconXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTrnBW7upMp9yHbbr23/"))
         XioPencilIconXio.tintColor = .white
         
         XioFinalizeTriggerXio.backgroundColor = UIColor(red: 0.7, green: 0.9, blue: 0.6, alpha: 1.0)
-        XioFinalizeTriggerXio.setTitle("Create", for: .normal)
+        XioFinalizeTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRw6EUDrE3sNFi5Us+tK"), for: .normal)
         XioFinalizeTriggerXio.setTitleColor(.black, for: .normal)
         XioFinalizeTriggerXio.titleLabel?.font = .systemFont(ofSize: 18 * XioWidthRatioXio, weight: .bold)
         XioFinalizeTriggerXio.layer.cornerRadius = 10 * XioWidthRatioXio
@@ -126,7 +126,7 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
             XioNavigationHeaderXio.addSubview($0)
         }
         
-        XioCoverDisplayXio.image = UIImage(named: "adddCovertw")
+        XioCoverDisplayXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf4Ny/1IiTPHaeKAiZjzsQjr1fo="))
         XioCoverKillTriggerXio.isHidden = true
         
         XioCoverDisplayXio.translatesAutoresizingMaskIntoConstraints = false
@@ -252,14 +252,14 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
     
     @objc private func XioExecuteCreationXio() {
         let sxnioInputName = XioNameInputXio.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let sxnioIsDefaultCover = XioCoverDisplayXio.image == UIImage(named: "adddCovertw")
+        let sxnioIsDefaultCover = XioCoverDisplayXio.image == UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf4Ny/1IiTPHaeKAiZjzsQjr1fo="))
         if sxnioInputName.isEmpty {
-                sxnioShowAlert(sxnioMsg: "Please enter a room name")
+                sxnioShowAlert(sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTpZ82PNtjc+qbjndKNSxXFLcucp/GIYzZtIfyZAIKSk"))
                 return
             }
             
             if sxnioIsDefaultCover {
-                sxnioShowAlert(sxnioMsg: "Please select a party cover")
+                sxnioShowAlert(sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeeSqRVubCJDE3CUNRzIuprqjyAjWO0vvuiwN4x6o3OUNWiN"))
                 return
             }
         
@@ -268,8 +268,8 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
             let XioFeedbackXio = UIImpactFeedbackGenerator(style: .heavy)
             XioFeedbackXio.impactOccurred()
             
-        let sxnioTheaterVC = XioVintageGalaTheaterXio.init(iscreate: true, usiersd: sxnioNewRoom, info: (sxnioInputName,UIImage(named: "picjkBg\(self.XioSelectedSceneIndexXio)")) as? (String, UIImage) )
-        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Creating...")
+        let sxnioTheaterVC = XioVintageGalaTheaterXio.init(iscreate: true, usiersd: sxnioNewRoom, info: (sxnioInputName, UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfL/9fi5XKWMi1JrJdp9lQ==") + String(self.XioSelectedSceneIndexXio))) as? (String, UIImage))
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfWwHtvo4SEonnuv17lS8wXDZ3E="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
             self.navigationController?.pushViewController(sxnioTheaterVC, animated: true)
@@ -283,7 +283,7 @@ class XioPartyArchitectXio: XioResilienceAnchorXio, UIImagePickerControllerDeleg
     
     private func sxnioShowAlert(sxnioMsg: String) {
         let sxnioAlert = UIAlertController(title: nil, message: sxnioMsg, preferredStyle: .alert)
-        sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        sxnioAlert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default))
         present(sxnioAlert, animated: true)
     }
 }
@@ -292,7 +292,7 @@ extension XioPartyArchitectXio: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return 4 }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioSceneCellXio", for: indexPath) as! XioSceneCellXio
+        let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeGEbiw360uYCVrJed+YQ5HC5lurMASt"), for: indexPath) as! XioSceneCellXio
         XioCellXio.XioApplySceneXio(XioSceneAssetsXio[indexPath.item], XioIsChosenXio: indexPath.item == XioSelectedSceneIndexXio)
         return XioCellXio
     }

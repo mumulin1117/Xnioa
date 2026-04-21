@@ -22,7 +22,7 @@ protocol XioCinemaMotionProtocolXio: AnyObject {
 extension XioCinemaMotionProtocolXio where Self: UIViewController {
     
     func XioInitalizeCinemaXio(in container: UIView, resource: String) {
-        guard let XioPathXio = Bundle.main.path(forResource: resource, ofType: "mp4") else { return }
+        guard let XioPathXio = Bundle.main.path(forResource: resource, ofType: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdqSn1JSHbnCwOce")) else { return }
         let XioURLXio = URL(fileURLWithPath: XioPathXio)
         let XioItemXio = AVPlayerItem(url: XioURLXio)
         let XioPlayerXio = AVPlayer(playerItem: XioItemXio)
@@ -51,11 +51,11 @@ extension XioCinemaMotionProtocolXio where Self: UIViewController {
         if XioIsCinemaPlayingXio {
             XioLayerXio.isHidden = false
             XioPlayerXio.play()
-            sender.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+            sender.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMY/G7iCk92wLWyg8k/nfm9/SveO7AlMsYhg=")), for: .normal)
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
         } else {
             XioPlayerXio.pause()
-            sender.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            sender.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTSjGJC7hMtaeLjQZBNaH7unZf/uA8AQFw==")), for: .normal)
         }
     }
     

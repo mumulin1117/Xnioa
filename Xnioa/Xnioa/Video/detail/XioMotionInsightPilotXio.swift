@@ -25,11 +25,11 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
         self.usier = usiersd
         self.pagedex = indexXIO
         let item = [
-            XioCommentEntityXio(XioUserXio: "Master", XioContentXio: "The lighting in this video is absolutely cinematic! How did you do that?", XioIsOwnerXio: false, XIoimage: "avarieou8"),
-            XioCommentEntityXio(XioUserXio: "Dreamer", XioContentXio: "This track is fire! Is it an AI-generated melody or a retro classic?", XioIsOwnerXio: false, XIoimage: "avarieou7"),
-            XioCommentEntityXio(XioUserXio: "Mary", XioContentXio: "I'm so glad you guys like the atmosphere of this party! Stay tuned for more.", XioIsOwnerXio: true, XIoimage: "avarieou6"),
-            XioCommentEntityXio(XioUserXio: "Knight", XioContentXio: "Just sent you a Greet! Hope we can chat in the next live gala.", XioIsOwnerXio: false, XIoimage: "avarieou5"),
-            XioCommentEntityXio(XioUserXio: "XioSystem", XioContentXio: "Your video has reached 1,000 views! Keep up the great work.", XioIsOwnerXio: false, XIoimage: "avarieou4")
+            XioCommentEntityXio(XioUserXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTwvWxEUVa+StTU1N/C0"), XioContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdEIgc7uCrR1ydOXruP2FRIZ5ss4UnOxd3yQsGeKFKhwBzjib466517H4tKjgOwGuOCtq8hwggg9M/vXpqaEmhvYFJMLevC8oOgRvkNoP6hj"), XioIsOwnerXio: false, XIoimage: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTF6F+KdkHUBQUcW88hFfanW")),
+            XioCommentEntityXio(XioUserXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcXpenHB+VJo71Y/Mvurcw=="), XioContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTgCZU3DAA4sa9hAU0YAutDYvYWjj2ZAGAQrHzv5510YcOuo1HlpHJRHMPPYoEMy4yCBH/iAYVIwynBIIi0PeKrs9lRH6qTXKpayf8g="), XioIsOwnerXio: false, XIoimage: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZGtF+KdsHUBGTtuFbHq5dBv")),
+            XioCommentEntityXio(XioUserXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfz3n23XkpdxZWozow=="), XioContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfsX/gz1EJ5gABj35hfbYlDLcAAW/9uP4MtHYwfjpGieoy+4fV6tb54PqANj5eWCalhKtzK1R/Me6twrnGfkg/cKIUiAJ1/zVTCbibFj69K7S/vHkg=="), XioIsOwnerXio: true, XIoimage: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfHXF+KdUHUB4I9GoxWjM6Jv")),
+            XioCommentEntityXio(XioUserXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcz/VZHVYBC64QBcXARg"), XioContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVdLTu3oZuqqPEMrFLbrsEVpKnY9TvpfdXF8dEhEc8vZ/xwv6o/nNQzIAHqoSr5NBpPohS87fVIY2+pnqwWaASlDeI+9cFk="), XioIsOwnerXio: false, XIoimage: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVEZFOKdcHUBWKvj85BgO5nm")),
+            XioCommentEntityXio(XioUserXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV1u1HgQ293ernBj2xX7Shhw"), XioContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTZE1rknYQolUEHLUDorkE+fSzqj5UdqdF+lm8OjayoUuWRxLCq0fOXDuLP+dFgyx4r5wnx4xUeozy4nOCCTlRcanEw="), XioIsOwnerXio: false, XIoimage: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbFAFOKdEHUB0ifvd1oKjcRx"))
         ][indexXIO]
         
         self.XioChatBufferXio = [item]
@@ -39,7 +39,7 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
     }
     
     @MainActor required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe5fdxbqHBVvx/qiA3qwo0+F80GKWt0gRuIrT9fzqFBBrP/+qIVj/Gz5uLVIMg=="))
     }
     
     
@@ -71,8 +71,8 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
         XioPrepareStageXio()
         XioBuildFoundationXio()
         AcccTopersonCou.addTarget(self, action: #selector(safetyFire), for: .touchUpInside)
-        AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
-        NotificationCenter.default.addObserver(self, selector: #selector(XioDismissSceneXio), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        AcccTopersonCou.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbz0TlJ313AQueSnsasjTYxSIKubP1Em")), for: .normal)
+        NotificationCenter.default.addObserver(self, selector: #selector(XioDismissSceneXio), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
     }
     
     
@@ -86,7 +86,7 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
         XioTheatreScrollXio.separatorStyle = .none
         XioTheatreScrollXio.delegate = self
         XioTheatreScrollXio.dataSource = self
-        XioTheatreScrollXio.register(XioChatVocalCellXio.self, forCellReuseIdentifier: "XioChatVocalCellXio")
+        XioTheatreScrollXio.register(XioChatVocalCellXio.self, forCellReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc49cjqm7srhoHK4hNBGmi6v48xnV+YLQmvV+g=="))
     }
     
     private func XioBuildFoundationXio() {
@@ -95,7 +95,7 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
             view.addSubview($0)
         }
         
-        XioRetreatBtnXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioDismissSceneXio), for: .touchUpInside)
         
@@ -103,7 +103,7 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
         XioHostNameXio.textColor = .white
         XioHostNameXio.font = .systemFont(ofSize: 18 * XioRatioWXio, weight: .bold)
         
-        XioMoreActionXio.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        XioMoreActionXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUROWtYiBQVr3SWo7GEbehg=")), for: .normal)
         XioMoreActionXio.tintColor = .white
         XioMoreActionXio.addTarget(self, action: #selector(XioInvokeReportXio), for: .touchUpInside)
         
@@ -116,12 +116,12 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
         XioInputQuayXio.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         XioDraftFieldXio.backgroundColor = UIColor(white: 0.2, alpha: 1.0)
         XioDraftFieldXio.layer.cornerRadius = 18 * XioRatioHXio
-        XioDraftFieldXio.placeholder = "Say something"
+        XioDraftFieldXio.placeholder = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcxT6WWOC3rnHoV7zjzxY9BCJ2MLQw==")
         XioDraftFieldXio.textColor = .white
         XioDraftFieldXio.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 1))
         XioDraftFieldXio.leftViewMode = .always
         
-        XioDispatchBtnXio.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+        XioDispatchBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbTMpbjSJRgcmF4mSKtDo6v2olAyC5jz")), for: .normal)
         XioDispatchBtnXio.tintColor = .systemGreen
         XioDispatchBtnXio.addTarget(self, action: #selector(XioSubmitChatXio), for: .touchUpInside)
         
@@ -177,17 +177,17 @@ class XioMotionInsightPilotXio: XioResilienceAnchorXio ,XioCinemaMotionProtocolX
     }
     
     @objc private func XioInvokeReportXio() {
-        let XioSheetXio = UIAlertController(title: "Media Options", message: nil, preferredStyle: .actionSheet)
-        XioSheetXio.addAction(UIAlertAction(title: "Report Video", style: .destructive, handler: { _ in
+        let XioSheetXio = UIAlertController(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbu6FwMtYCkD5cA3zV3qR8/ho3iQiQ=="), message: nil, preferredStyle: .actionSheet)
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRolcv/LID2u0dejrb5Iok0/nfcN"), style: .destructive, handler: { _ in
             self.navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
         present(XioSheetXio, animated: true)
     }
     
     @objc private func XioSubmitChatXio() {
         guard let XioTxtXio = XioDraftFieldXio.text, !XioTxtXio.isEmpty else { return }
-        let XioNewXio = XioCommentEntityXio(XioUserXio: "Me", XioContentXio: XioTxtXio, XioIsOwnerXio: false, XIoimage: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "")
+        let XioNewXio = XioCommentEntityXio(XioUserXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeLu+/9nqROSGQw="), XioContentXio: XioTxtXio, XioIsOwnerXio: false, XIoimage: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "")
         XioChatBufferXio.append(XioNewXio)
         XioTheatreScrollXio.reloadData()
         XioDraftFieldXio.text = ""
@@ -202,7 +202,7 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: "XioChatVocalCellXio", for: indexPath) as! XioChatVocalCellXio
+        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc49cjqm7srhoHK4hNBGmi6v48xnV+YLQmvV+g=="), for: indexPath) as! XioChatVocalCellXio
         XioCellXio.XioRenderEntityXio(XioChatBufferXio[indexPath.row])
         return XioCellXio
     }
@@ -226,7 +226,7 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
             }
         }
         let XioPlayBtnXio = UIButton(frame: CGRect(x: 345*XioRatioWXio - 50, y: 345*XioRatioWXio - 50, width: 40, height: 40))
-        XioPlayBtnXio.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+        XioPlayBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTSjGJC7hMtaeLjQZBNaH7unZf/uA8AQFw==")), for: .normal)
         XioPlayBtnXio.tintColor = .white
        
         XioInitalizeCinemaXio(in: XioVisualXio, resource: usier.XioMoivepath)
@@ -234,7 +234,7 @@ extension XioMotionInsightPilotXio: UITableViewDelegate, UITableViewDataSource {
                 
         XioPlayBtnXio.addTarget(self, action: #selector(XioToggleVisualXio(_:)), for: .touchUpInside)
         let XioGreetXio = UIButton(frame: CGRect(x: 10, y: 345*XioRatioWXio - 50, width: 80, height: 36))
-        XioGreetXio.setBackgroundImage(UIImage(named: "nevertGrest"), for: .normal)
+        XioGreetXio.setBackgroundImage(UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUSvHJ6m7hR3PdwYadhH4bBFSH0=")), for: .normal)
         XioGreetXio.addTarget(self, action: #selector(XioEnterChatPortalXio), for: .touchUpInside)
         XioVisualXio.addSubview(XioPlayBtnXio)
         XioVisualXio.addSubview(XioGreetXio)
@@ -295,7 +295,7 @@ class XioChatVocalCellXio: UITableViewCell {
         XioNameXio.textColor = .white
         XioNameXio.font = .systemFont(ofSize: 14, weight: .bold)
         
-        XioBadgeXio.text = "Author"
+        XioBadgeXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdHLdJya8tYOMOM7ALcH")
         XioBadgeXio.backgroundColor = .systemGreen
         XioBadgeXio.textColor = .black
         XioBadgeXio.font = .systemFont(ofSize: 10, weight: .bold)

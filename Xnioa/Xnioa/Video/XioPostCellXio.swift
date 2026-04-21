@@ -20,17 +20,17 @@ class XioPostCellXio: UICollectionViewCell {
     private let XioHeroImageXio = UIImageView()
     private let XioCaptionXio = UILabel()
      let XioLikeBtnXio =  UIButton()
-    private let XioChatBtnXio = UIImageView(image: UIImage(systemName: "message"))
+    private let XioChatBtnXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcAEsBzhmrjsusBjFKOLsg==")))
     private let XioGreetBtnXio = UIButton()
-    private let XioPlayBtnXio = UIImageView(image: UIImage(systemName: "play.circle.fill"))
+    private let XioPlayBtnXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTSjGJC7hMtaeLjQZBNaH7unZf/uA8AQFw==")))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         XioHeroImageXio.contentMode = .scaleAspectFill
         XioHeroImageXio.layer.masksToBounds = true
         XioSetupVisualsXio()
-        XioLikeBtnXio.setImage(UIImage(systemName: "heart"), for: .normal)
-        XioLikeBtnXio.setImage(UIImage(named: "aixin"), for: .selected)
+        XioLikeBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1lMzLJxWO9mOEO4LA=")), for: .normal)
+        XioLikeBtnXio.setImage(UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQgpEvFm27priipAIGA=")), for: .selected)
        
     }
     
@@ -39,7 +39,7 @@ class XioPostCellXio: UICollectionViewCell {
         XioMainFrameXio.backgroundColor = UIColor(white: 0.12, alpha: 1.0)
         XioMainFrameXio.layer.cornerRadius = 12
         XioMainFrameXio.contentMode = .scaleAspectFill
-        AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
+        AcccTopersonCou.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbz0TlJ313AQueSnsasjTYxSIKubP1Em")), for: .normal)
         
         
         
@@ -49,7 +49,7 @@ class XioPostCellXio: UICollectionViewCell {
         
         XioHandleXio.font = .systemFont(ofSize: 15, weight: .semibold)
         XioHandleXio.textColor = .white
-        AccctoinCou.setImage(UIImage.init(named: "AccctoinCou"), for: .normal)
+        AccctoinCou.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMS6IRfTP95amiHHLTBusQGNowPA=")), for: .normal)
       
         XioHeroImageXio.contentMode = .scaleAspectFill
         XioHeroImageXio.clipsToBounds = true
@@ -60,7 +60,7 @@ class XioPostCellXio: UICollectionViewCell {
         XioCaptionXio.textColor = .lightGray
         XioCaptionXio.numberOfLines = 2
         
-        XioGreetBtnXio.setBackgroundImage(UIImage(named: "nevertGrest"), for: .normal)
+        XioGreetBtnXio.setBackgroundImage(UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUSvHJ6m7hR3PdwYadhH4bBFSH0=")), for: .normal)
         
         XioPlayBtnXio.tintColor = .white
         XioLikeBtnXio.tintColor = .white

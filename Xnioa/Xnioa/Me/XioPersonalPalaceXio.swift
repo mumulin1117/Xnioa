@@ -40,7 +40,7 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
     private let XioVideoTabXio = UIButton()
     private let XioHistoryTabXio = UIButton()
     
-    private let XioVoidPlaceholderXio = UIImageView.init(image: UIImage.init(named: "XioVoidPlaceholderXio"))
+    private let XioVoidPlaceholderXio = UIImageView.init(image: UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe4WxnaRNvfD0DNXK/MNwrwZ1fUq6ynbgi008lzF")))
     
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
@@ -52,11 +52,11 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         XioInitializeCanvasXio()
         XioForgeArchitectureXio()
        
-        XioEditNameBtnXio.setImage(UIImage(named: "PencilxioOutline"), for: .normal)
-        XioMasterAvatarXio.setImage(UIImage.init(named: "mortMinimalistic"), for: .normal)
+        XioEditNameBtnXio.setImage(UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMclo7o8Klt1Pov3BZlDrbcjPAygfG70JyA==")), for: .normal)
+        XioMasterAvatarXio.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZhqpki5ffKgnRrDtIIQAyNQMJTcu0pQYg==")), for: .normal)
         
         XioMasterAvatarXio.addTarget(self, action: #selector(XioAvatarTappedXio), for: .touchUpInside)
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfhMDE+4YN8a8GG/gZ3DBbvjjw=="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
            
@@ -81,7 +81,7 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         view.addSubview(XioRootScrollXio)
         XioRootScrollXio.addSubview(XioContentRackXio)
         XioSettingsTriggerXio.addTarget(self, action: #selector(XioDimonedsiteXio), for: .touchUpInside)
-        XioSettingsTriggerXio.setImage(UIImage(systemName: "gearshape"), for: .normal)
+        XioSettingsTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRokioB1zTA40iqaYFd1pKs/")), for: .normal)
         XioSettingsTriggerXio.tintColor = .white
         
         XioDiamondBadgeXio.layer.cornerRadius = 15 * XioHScaleXio
@@ -93,7 +93,7 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         XioDiamondBadgeXio.layer.insertSublayer(XioGradiantXio, at: 0)
         XioDiamondBadgeXio.clipsToBounds = true
         
-        XioDiamondIconXio.image = UIImage(systemName: "suit.diamond.fill")
+        XioDiamondIconXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZhobrD/WO+FErgnH00Ln2pTEMMYUHa0WLE="))
         XioDiamondIconXio.tintColor = .white
         XioDiamondValueXio.textColor = .white
         XioDiamondValueXio.font = .systemFont(ofSize: 16, weight: .bold)
@@ -112,13 +112,13 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         XioSegmentDockXio.layer.borderWidth = 1
         XioSegmentDockXio.layer.borderColor = UIColor.init(red: 182/255, green: 240/255, blue: 156/255, alpha: 1).cgColor
         
-        XioConfigureTabXio(XioRoomTabXio, title: "Room", tag: 0)
-        XioConfigureTabXio(XioVideoTabXio, title: "Video", tag: 1)
-        XioConfigureTabXio(XioHistoryTabXio, title: "History", tag: 2)
+        XioConfigureTabXio(XioRoomTabXio, title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWJ/3gGmdCT7x9GIWA=="), tag: 0)
+        XioConfigureTabXio(XioVideoTabXio, title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcCRyvtzVVAwP5pauK8="), tag: 1)
+        XioConfigureTabXio(XioHistoryTabXio, title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXaLgXhE9+CdtAxr53/ngw=="), tag: 2)
         XioUpdateTabVisualsXio()
         
         XioVoidPlaceholderXio.contentMode = .scaleAspectFit
-        XioVoidPlaceholderXio.image = UIImage(named: "XioVoidPlaceholderXio")
+        XioVoidPlaceholderXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe4WxnaRNvfD0DNXK/MNwrwZ1fUq6ynbgi008lzF"))
         
         [XioSettingsTriggerXio, XioDiamondBadgeXio, XioMasterAvatarXio, XioMasterNameXio,XioEditNameBtnXio, XioSocialStackXio, XioSegmentDockXio, XioVoidPlaceholderXio].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -128,11 +128,11 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         XioDiamondBadgeXio.addSubview(XioDiamondIconXio)
         XioDiamondBadgeXio.addSubview(XioDiamondValueXio)
         XioFollowerBoxXio.textColor = .white
-        XioFollowerBoxXio.font = UIFont(name: "Inter-Semi Bold", size: 16)
+        XioFollowerBoxXio.font = UIFont(name: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbEFR1xl4Wu8g4j249tqu9pTo2zRr8iN"), size: 16)
         XioFollowerBoxXio.textAlignment = .center
-        XioFollowerBoxXio.text = "0 Fans"
+        XioFollowerBoxXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfQyOKKi+IyBsyYjo1MY")
         XioFollowingBoxXio.textColor = .white
-        XioFollowingBoxXio.font = UIFont(name: "Inter-Semi Bold", size: 16)
+        XioFollowingBoxXio.font = UIFont(name: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbEFR1xl4Wu8g4j249tqu9pTo2zRr8iN"), size: 16)
         XioFollowingBoxXio.textAlignment = .center
         
         
@@ -208,23 +208,23 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
         XioBuildTabStackXio()
     }
     @objc private func XioEditNameTappedXio() {
-            let alertController = UIAlertController(title: "Edit nickname", message: nil, preferredStyle: .alert)
+            let alertController = UIAlertController(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdlyQS75iydzgR0ID9r+sMyjzHjjpw=="), message: nil, preferredStyle: .alert)
             
             alertController.addTextField { textField in
-                textField.placeholder = "Please enter a new nickname"
+                textField.placeholder = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMb0mIsgLb53/Rwm3OVAYAnKOWX8rmrNqqxXoysw7411VY6R5")
                 textField.text = self.XioMasterNameXio.text
                 textField.clearButtonMode = .whileEditing
             }
             
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alertController.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
             
-            alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
+            alertController.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbxU7fYNjm0DpwK6mA=="), style: .default, handler: { _ in
                 guard let newName = alertController.textFields?.first?.text, !newName.isEmpty else { return }
                 XioGovernanceHubXio.XioPrincipalXio.XioUpdateActiveAliasXio(newName)
                 self.XioMasterNameXio.text = XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAliasXio
               
                 
-                self.XioShowAlertXio(message: "Nickname modification successful", isSuccess: true)
+                self.XioShowAlertXio(message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcdDxbf3hpL7MA07UKAl/+jmFqOH24/zu+kcQJ+e5Xt0f4tTtK29kgw="), isSuccess: true)
             }))
             
             present(alertController, animated: true)
@@ -232,8 +232,8 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
     }
     private func XioShowAlertXio(message: String, isSuccess: Bool = false) {
            
-        let alert = UIAlertController(title: isSuccess ? "Success" : "Prompt", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Sure", style: .default))
+        let alert = UIAlertController(title: isSuccess ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVJU3Ke/xCjeE5Ro0xKgcw==") : XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTHbI2/qGPEAxzDziuPP"), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUwAOztMjNPneuMDig=="), style: .default))
         present(alert, animated: true)
        
     }
@@ -279,8 +279,8 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
     
     private func XioRequestProfilePulseXio() {
         self.XioMasterNameXio.text = XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAliasXio
-        self.XioDiamondValueXio.text = "\(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)"
-        XioFollowingBoxXio.text =  "\(XioGovernanceHubXio.XioPrincipalXio.XioExileListXio.count) Following"
+        self.XioDiamondValueXio.text = String(XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio)
+        XioFollowingBoxXio.text = String(XioGovernanceHubXio.XioPrincipalXio.XioExileListXio.count) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc4eigOuOS2Xhp/LoG8zU1jjgQ==")
         
        let avo = XioGovernanceHubXio.XioPrincipalXio.XioAUsedCachePhotoio
        
@@ -302,17 +302,17 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
     
     
     @objc private func XioAvatarTappedXio() {
-           let actionSheet = UIAlertController(title: "Change avatar", message: nil, preferredStyle: .actionSheet)
+           let actionSheet = UIAlertController(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUCHH+VD9JdAL7FoyOjoajiRPBGw6w=="), message: nil, preferredStyle: .actionSheet)
            
-           actionSheet.addAction(UIAlertAction(title: "take a photo", style: .default, handler: { _ in
+           actionSheet.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWWlDkZdWviZm5O5oI95wqPzi2J1"), style: .default, handler: { _ in
                self.XioOpenCameraXio()
            }))
            
-           actionSheet.addAction(UIAlertAction(title: "Select from album", style: .default, handler: { _ in
+           actionSheet.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUk1QPd9rbcykhE90r8Qmnvq0Jcw5ZeXWCk="), style: .default, handler: { _ in
                self.XioOpenPhotoLibraryXio()
            }))
            
-           actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+           actionSheet.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
            
            present(actionSheet, animated: true)
        }
@@ -350,7 +350,7 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
                     if let selectedImage = image as? UIImage {
                         self?.XioUpdateAvatarXio(with: selectedImage)
                     } else if let error = error {
-                        self?.XioShowAlertXio(message: "Image loading failed: \(error.localizedDescription)")
+                        self?.XioShowAlertXio(message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeqwYEhxKMUnCVC3Ksd7Y6MfV5hDo1mzG4tqZyNTfQ==") + error.localizedDescription)
                     }
                 }
             }
@@ -372,13 +372,13 @@ class XioPersonalPalaceXio: UIViewController, PHPickerViewControllerDelegate, UI
     
     private func XioUpdateAvatarXio(with image: UIImage) {
             // 更新UI
-        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "uploading...")
+        XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQcnYHR0EB7Ko2PLglWZjdXvB/Iq"))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
             XioGovernanceHubXio.XioPrincipalXio.XioUpdateActiveAvatarXio(image)
             self.XioMasterAvatarXio.setBackgroundImage(image, for: .normal)
             
-            self.XioShowAlertXio(message: "Avatar uploaded successfully", isSuccess: true)
+            self.XioShowAlertXio(message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMctIV3b/8mj/ceOpe0HUtjlLW6KVMFsKlX/Uu6gyJFEYhHUkdw=="), isSuccess: true)
         }
         
        

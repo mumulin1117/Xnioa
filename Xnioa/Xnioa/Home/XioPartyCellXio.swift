@@ -8,7 +8,7 @@
 import UIKit
 class XioPartyCellXio: UICollectionViewCell {
     
-    private let XioCardBaseXio = UIImageView(image: UIImage(named: "XioCardBaseXio"))
+    private let XioCardBaseXio = UIImageView(image: UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTb+n22uX948+Or4527FNFRsU/ZAMk=")))
      let XioMainVisualXio = UIImageView()
     
     private let XioStatusBadgeXio = UIView()
@@ -18,11 +18,11 @@ class XioPartyCellXio: UICollectionViewCell {
     private let XioInfoBarXio = UIView()
     private let XioUserThumbXio = UIImageView()
     private let XioUserNameXio = UILabel()
-    private let XioSparkleIconXio = UIImageView(image: UIImage(systemName: "sparkles"))
+    private let XioSparkleIconXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMU7E/S2TrkfXoIs3o28XKKg=")))
     private let XioThemeTitleXio = UILabel()
     
     private let XioHotPanelXio = UIView()
-    private let XioFireIconXio = UIImageView(image: UIImage(systemName: "flame.fill"))
+    private let XioFireIconXio = UIImageView(image: UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc1G15rA6p3OplqCCTivwOPItQ==")))
     private let XioHotCountXio = UILabel()
     private let XioAudienceStackXio = UIStackView()
     
@@ -167,7 +167,7 @@ class XioPartyCellXio: UICollectionViewCell {
     func XioConfigureWithDataXio(jai:XioGalaEntryXio) {
         XioUserNameXio.text = jai.XioAliasXio
         XioThemeTitleXio.text = jai.XioRoomTItle
-        XioOnlineLabelXio.text = "\(3) Online"
+        XioOnlineLabelXio.text = String(3) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMboSASmwGBMS0kNreMHHnw==")
         XioHotCountXio.text = jai.XioHeatValueXio
         XioUserThumbXio.image = UIImage(named: jai.XioAvatarXio)
         XioAudienceStackXio.arrangedSubviews.forEach { $0.removeFromSuperview() }
@@ -180,7 +180,7 @@ class XioPartyCellXio: UICollectionViewCell {
             XioMiniAvatarXio.layer.borderColor = UIColor.white.cgColor
             XioMiniAvatarXio.translatesAutoresizingMaskIntoConstraints = false
             XioMiniAvatarXio.widthAnchor.constraint(equalToConstant: 15).isActive = true
-            XioMiniAvatarXio.image = UIImage.init(named: "avarieou\(Int.random(in: 0...8))")
+            XioMiniAvatarXio.image = UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd/Rp2Og4ZWUeYQ7c1C7E7k=") + String(Int.random(in: 0...8)))
             XioAudienceStackXio.addArrangedSubview(XioMiniAvatarXio)
         }
     }

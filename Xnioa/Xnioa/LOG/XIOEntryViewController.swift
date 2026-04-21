@@ -28,14 +28,14 @@ class XIOEntryViewController: UIViewController {
         
 //        self.XIOTermsCheckboxXIO.isSelected = XIOEntryViewController.ifAccept
         XIOTermsCheckboxXIO.backgroundColor = XIOEntryViewController.ifAccept ? .white : .clear
-        XIOTermsCheckboxXIO.setImage(XIOEntryViewController.ifAccept ? UIImage(systemName: "checkmark") : nil, for: .normal)
+        XIOTermsCheckboxXIO.setImage(XIOEntryViewController.ifAccept ? UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQSU2cCH46OJPnP/ohpNKgJo")) : nil, for: .normal)
 //        XIOTermsCheckboxXIO.tintColor = .black
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         XIOEntryViewController.ifAccept = false
-        NotificationCenter.default.addObserver(self, selector: #selector(upadateStatuse), name: NSNotification.Name.init("ifAccept"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(upadateStatuse), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV1zK1IfDWuEpGd1ut+TWwA=")), object: nil)
         XIOStyleBindingXIO()
         XIOLayoutSetupXIO()
         
@@ -103,28 +103,28 @@ class XIOEntryViewController: UIViewController {
     }
 
     private func XIOStyleBindingXIO() {
-        XIOMainBackgroundXIO.image = UIImage(named: "SigngLogi")
+        XIOMainBackgroundXIO.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYDSMbrv+cPLRxo8P5zCd+hy"))
         XIOMainBackgroundXIO.contentMode = .scaleAspectFill
         
         XIOEulaButtonXIO.backgroundColor = UIColor(white: 0.1, alpha: 0.8)
-        XIOEulaButtonXIO.setTitle("EULA", for: .normal)
+        XIOEulaButtonXIO.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMS9KGkc/Og89BZEgAQ=="), for: .normal)
         XIOEulaButtonXIO.setTitleColor(.green, for: .normal)
         XIOEulaButtonXIO.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         XIOEulaButtonXIO.layer.cornerRadius = 4
 
-        XIOHeadlineLabelXIO.text = "SIGN\nIN NOW"
+        XIOHeadlineLabelXIO.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUULXJX1W2WK0eBEadUQoSeLPug=")
         XIOHeadlineLabelXIO.numberOfLines = 0
         XIOHeadlineLabelXIO.textColor = .white
-        XIOHeadlineLabelXIO.font = UIFont(name: "AvenirNext-Heavy", size: 64)
+        XIOHeadlineLabelXIO.font = UIFont(name: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeRxFhFIGlv6I3MZKyhL43Q/M3chgwsVxA=="), size: 64)
         XIOHeadlineLabelXIO.textAlignment = .center
 
-        XIOGoNowLabelXIO.text = "Go now"
+        XIOGoNowLabelXIO.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSXEOOXkYDqDMTheOvYB")
         XIOGoNowLabelXIO.textColor = .white
         XIOGoNowLabelXIO.font = UIFont.systemFont(ofSize: 32, weight: .bold)
 
         XIOArrowButtonXIO.backgroundColor = .white
         XIOArrowButtonXIO.layer.cornerRadius = 35
-        XIOArrowButtonXIO.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        XIOArrowButtonXIO.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXJZUiFjdX7+l/MPX3XbRDuqo+mblQ==")), for: .normal)
         XIOArrowButtonXIO.tintColor = .black
 
         XIOTermsCheckboxXIO.layer.borderWidth = 1
@@ -132,7 +132,7 @@ class XIOEntryViewController: UIViewController {
                 XIOTermsCheckboxXIO.layer.cornerRadius = 4
                 
                 // 修正点 1: 使用更明确的富文本设置
-                let XIORawTextXIO = "By signing up, you agree to the User Agrement & Privacy Policy"
+                let XIORawTextXIO = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUOrMqgEDlZd5RouqNEj8fIrmPUQkZuQmGquAlsDJ9+KmsHMopV11thTy5nz1mFJG3XQyFCXdrFvN06TZDuQLzaYZ8/PcHw=")
                 let XIOLinkTextXIO = NSMutableAttributedString(string: XIORawTextXIO)
                 
                 // 修正点 2: 必须先设置全局字体和颜色，否则可能因为默认黑色而在深色背景下不可见
@@ -141,11 +141,11 @@ class XIOEntryViewController: UIViewController {
                 XIOLinkTextXIO.addAttribute(.foregroundColor, value: UIColor.lightGray, range: XIOFullRangeXIO)
                 
                 // 设置链接
-                let XIOUserRangeXIO = (XIORawTextXIO as NSString).range(of: "User Agrement")
-                let XIOPrivacyRangeXIO = (XIORawTextXIO as NSString).range(of: "Privacy Policy")
+                let XIOUserRangeXIO = (XIORawTextXIO as NSString).range(of: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1tG/+OdOWM5QnBfdoYkaCRszhLyA=="))
+                let XIOPrivacyRangeXIO = (XIORawTextXIO as NSString).range(of: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcNqwDHSD1IUGtvqQ6sJr39ZYXajNfQ="))
                 
-                XIOLinkTextXIO.addAttribute(.link, value: "xio://user", range: XIOUserRangeXIO)
-                XIOLinkTextXIO.addAttribute(.link, value: "xio://privacy", range: XIOPrivacyRangeXIO)
+                XIOLinkTextXIO.addAttribute(.link, value: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMb15PWjg7fWI+Dx7usuc2IMSjw=="), range: XIOUserRangeXIO)
+                XIOLinkTextXIO.addAttribute(.link, value: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe6h2fmxPapbK5IpQTPPgJrYl68CXA=="), range: XIOPrivacyRangeXIO)
                 
                 // 修正点 3: 这里的链接颜色需要单独指定，否则会变成系统默认的蓝色
                 XIOTermsTextViewXIO.linkTextAttributes = [
@@ -180,19 +180,19 @@ class XIOEntryViewController: UIViewController {
     @objc private func XIOTapToggleAgreedXIO() {
         XIOEntryViewController.ifAccept.toggle()
         XIOTermsCheckboxXIO.backgroundColor = XIOEntryViewController.ifAccept ? .white : .clear
-        XIOTermsCheckboxXIO.setImage(XIOEntryViewController.ifAccept ? UIImage(systemName: "checkmark") : nil, for: .normal)
+        XIOTermsCheckboxXIO.setImage(XIOEntryViewController.ifAccept ? UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQSU2cCH46OJPnP/ohpNKgJo")) : nil, for: .normal)
         XIOTermsCheckboxXIO.tintColor = .black
     }
 
     @objc private func XIOTapAuthXIO() {
         guard XIOEntryViewController.ifAccept else {
-            let XIOAnimXIO = CABasicAnimation(keyPath: "position")
+            let XIOAnimXIO = CABasicAnimation(keyPath: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTNr73O1MzJcH4FD8Mirsyc="))
             XIOAnimXIO.duration = 0.07
             XIOAnimXIO.repeatCount = 3
             XIOAnimXIO.autoreverses = true
             XIOAnimXIO.fromValue = NSValue(cgPoint: CGPoint(x: XIOTermsTextViewXIO.center.x - 10, y: XIOTermsTextViewXIO.center.y))
             XIOAnimXIO.toValue = NSValue(cgPoint: CGPoint(x: XIOTermsTextViewXIO.center.x + 10, y: XIOTermsTextViewXIO.center.y))
-            XIOTermsTextViewXIO.layer.add(XIOAnimXIO, forKey: "shake")
+            XIOTermsTextViewXIO.layer.add(XIOAnimXIO, forKey: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTIIHFbm8CES19Q30kg="))
             return
         }
         
@@ -217,10 +217,10 @@ class XIOEntryViewController: UIViewController {
 
 extension XIOEntryViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        if URL.absoluteString == "xio://user" {
+        if URL.absoluteString == XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMb15PWjg7fWI+Dx7usuc2IMSjw==") {
             XioTriggerLegalFlowXio(from: self, XioCategoryXio: .XioTermsXio)
 //            XIOOpenWebXIO(urlStr: "https://xnioa.com/terms")
-        } else if URL.absoluteString == "xio://privacy" {
+        } else if URL.absoluteString == XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe6h2fmxPapbK5IpQTPPgJrYl68CXA==") {
             XioTriggerLegalFlowXio(from: self, XioCategoryXio: .XioPrivacyXio)
         }
         return false

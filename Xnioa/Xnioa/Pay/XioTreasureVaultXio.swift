@@ -21,7 +21,7 @@ class XioTreasureVaultXio: UIViewController {
     private let XioSkyBackdropXio = UIView()
     private let XioRetreatTriggerXio = UIButton()
     
-    private let XioCloudRackXio = UIImageView.init(image: UIImage.init(named: "XioSkyBackdropXiog"))
+    private let XioCloudRackXio = UIImageView.init(image: UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdNKrYFjhn1Rs7A/pt8JC1IqZDYZAA2ic9e6")))
     private let XioCrownOrbitXio = UIImageView()
     private let XioTotalWealthTagXio = UILabel()
     private let XioSubWealthTagXio = UILabel()
@@ -34,16 +34,16 @@ class XioTreasureVaultXio: UIViewController {
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
     
     private let XioInventoryXio: [XioWealthPackageXio] = [
-        XioWealthPackageXio(XioDiamondCountXio: "400", XioPriceLabelXio: "$0.99", XioAisiKeyXio: "tromcinaagnqmdgg"),
-        XioWealthPackageXio(XioDiamondCountXio: "800", XioPriceLabelXio: "$1.99", XioAisiKeyXio: "yspbttiffmabctne"),
-        XioWealthPackageXio(XioDiamondCountXio: "1900", XioPriceLabelXio: "$3.99", XioAisiKeyXio: "jksndhbushegbfssd"),
-        XioWealthPackageXio(XioDiamondCountXio: "2450", XioPriceLabelXio: "$4.99" ,XioAisiKeyXio: "vvanfzakhqnbnhwm"),
-        XioWealthPackageXio(XioDiamondCountXio: "3950", XioPriceLabelXio: "$6.99", XioAisiKeyXio: "isdjczkjnjxunucbd"),
-        XioWealthPackageXio(XioDiamondCountXio: "4900", XioPriceLabelXio: "$9.99", XioAisiKeyXio: "ywmaoopevjkbvtha"),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUI0C0LlSTUhI8Zd"), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRzZtplCuUN+lU47/5I="), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUG0lzhuX0eGhNPTKmRgC5CccxLZA1CfhA==")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbV/bfcjjDVH6AIn"), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeLAIj9os4ThR9qRVKc="), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMW/Yl41L/Lme8/QI61DnkCUGs69vv4rxKw==")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQzuVQ567TEbnxIKQw=="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMS1fAWrQPqnebHqiKlc="), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdwVp+HlQ8rCmluff5rwqoRQKLD7u48XXyE=")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSo7VAPhrUkVQjrr0w=="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTEacFZP+db43Z6ftH8=") ,XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTDTiABxuoQIS+Nvc7jXfxvrIKhN+pUs2Q==")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQH/OOzoDNdvI7Bvxw=="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMajgEJ9BzXN/za/amnk="), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRAWpNvJzom0N4NJFe8AkROeKNRHsvVISUM=")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUQ87jAGZ9yO950iyg=="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaUcHUbp9DZDwVLJEco="), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeddsRfGu+lVQHh3BNrbW/w7Rlv9CtczwA==")),
         
-        XioWealthPackageXio(XioDiamondCountXio: "63700", XioPriceLabelXio: "$19.99", XioAisiKeyXio: "fotlfkowhujakytq"),
-        XioWealthPackageXio(XioDiamondCountXio: "29400", XioPriceLabelXio: "$49.99", XioAisiKeyXio: "topvuawhdgpqhqbk"),
-        XioWealthPackageXio(XioDiamondCountXio: "63700", XioPriceLabelXio: "$99.99", XioAisiKeyXio: "dikvyvsveyssxumn"),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQTlav7hyJxc8u2WNgs="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZxrO2G7fWn+Gv0CMVUC"), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMarpNHAwp5PhDdJjEICQwHCIU1v81wxYqA==")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTOIERB8v4BC1VIssls="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeRSUM6OZ79UZJ9ywzl6"), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdDHkeY8IKB6K9MqI2sD2OrxQyWLGcMfCA==")),
+        XioWealthPackageXio(XioDiamondCountXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQTlav7hyJxc8u2WNgs="), XioPriceLabelXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf8TXB/tTgyWTVeX0x46"), XioAisiKeyXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXljG3yBRmXtSbgZoBXz0/slLKOTZNIC/w==")),
     ]
 
     override func viewDidLoad() {
@@ -66,7 +66,7 @@ class XioTreasureVaultXio: UIViewController {
         XioWealthStreamXio.dataSource = self
         XioWealthStreamXio.backgroundColor = .clear
         XioWealthStreamXio.separatorStyle = .none
-        XioWealthStreamXio.register(XioWealthTokenCellXio.self, forCellReuseIdentifier: "XioWealthTokenCellXio")
+        XioWealthStreamXio.register(XioWealthTokenCellXio.self, forCellReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMW+QPPDmYmocCRD3E5LUwDg/WcOLw2+/NXqdsCE2"))
     }
     
     private func XioAssembleComponentsXio() {
@@ -75,16 +75,16 @@ class XioTreasureVaultXio: UIViewController {
             view.addSubview($0)
         }
         
-        XioRetreatTriggerXio.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+        XioRetreatTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeq1SHs0UPSgNhZzAjLW+njqAQ==")), for: .normal)
         XioRetreatTriggerXio.tintColor = .white
         XioRetreatTriggerXio.addTarget(self, action: #selector(XioExitVaultXio), for: .touchUpInside)
         
-        XioTotalWealthTagXio.text = "\(sxnioCurrentBalance)"
+        XioTotalWealthTagXio.text = String(sxnioCurrentBalance)
         XioTotalWealthTagXio.font = .systemFont(ofSize: 32, weight: .bold)
         XioTotalWealthTagXio.textColor = .black
         
-        XioSubWealthTagXio.text = "My gold coins"
-        XioSubWealthTagXio.font = UIFont(name: "Inter-Medium", size: 20)
+        XioSubWealthTagXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMY0qGm1bVIWW2MPmWgcTrC/ggwgzmg==")
+        XioSubWealthTagXio.font = UIFont(name: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbPISkUnFBt76+9dAAsi7xzhiqvb"), size: 20)
         XioSubWealthTagXio.textColor = UIColor(red: 0.07, green: 0.08, blue: 0.09, alpha: 0.5000)
         
         let XioGradiantXio = CAGradientLayer()
@@ -93,7 +93,7 @@ class XioTreasureVaultXio: UIViewController {
         XioGradiantXio.startPoint = CGPoint(x: 0, y: 0.5)
         XioGradiantXio.endPoint = CGPoint(x: 1, y: 0.5)
         
-        XioExecuteRechargeXio.setBackgroundImage(UIImage.init(named: "XioExecuteRechargeXio"), for: .normal)
+        XioExecuteRechargeXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe7Xjaas/3qJAaCvZJPg65MDSOmobSN3aVObIMFu")), for: .normal)
         XioExecuteRechargeXio.addTarget(self, action: #selector(XioInvokePaymentXio), for: .touchUpInside)
         
         [XioCrownOrbitXio, XioTotalWealthTagXio, XioSubWealthTagXio, XioWealthStreamXio, XioExecuteRechargeXio].forEach {
@@ -147,7 +147,7 @@ class XioTreasureVaultXio: UIViewController {
             sxnioRequest.start()
         } else {
             sxnioShowLoading(false)
-            sxnioPresentAlert(sxnioTitle: "Error", sxnioMsg: "In-app purchases are disabled on this device.")
+            sxnioPresentAlert(sxnioTitle: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQvW7BRGuyjfqAvJwws="), sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfrn2CmxSZEdSSfgoROnpaMRah17ciiTcPFiOEjyo/kHsG80h3hurYo5iIpJ/zXjItVQ0AAa"))
         }
     }
     
@@ -162,7 +162,7 @@ extension XioTreasureVaultXio: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: "XioWealthTokenCellXio", for: indexPath) as! XioWealthTokenCellXio
+        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMW+QPPDmYmocCRD3E5LUwDg/WcOLw2+/NXqdsCE2"), for: indexPath) as! XioWealthTokenCellXio
         XioCellXio.XioHydrateTokenXio(XioInventoryXio[indexPath.row], XioIsActiveXio: XioSelectedIdxXio == indexPath.row)
         return XioCellXio
     }
@@ -198,7 +198,7 @@ class XioWealthTokenCellXio: UITableViewCell {
         XioVesselXio.layer.cornerRadius = 10
         XioVesselXio.layer.borderWidth = 1
         
-        XioIconOrbitXio.image = UIImage(named: "RechargeXio")
+        XioIconOrbitXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeSxLn9kXoCJpm1XKDeTqPyi6tM="))
        
         XioCostTagXio.font = .systemFont(ofSize: 18, weight: .bold)
         
@@ -254,7 +254,7 @@ extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDe
         get { XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio }
         set {
             
-            XioTotalWealthTagXio.text = "\(newValue)" // 实时更新 UI
+            XioTotalWealthTagXio.text = String(newValue)
         }
     }
     
@@ -262,10 +262,10 @@ extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDe
     private func sxnioSetupIAPCore() {
         SKPaymentQueue.default().add(self)
         // 初始化显示余额
-        if UserDefaults.standard.object(forKey: "sxnio_user_wealth_balance") == nil {
+        if UserDefaults.standard.object(forKey: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMf/fYpiAbQpykPKzFEo/i8oNays8oIirptgQu4EndaDT7Q==")) == nil {
             sxnioCurrentBalance = XioGovernanceHubXio.XioPrincipalXio.XioCurrentReserveXio
         } else {
-            XioTotalWealthTagXio.text = "\(sxnioCurrentBalance)"
+            XioTotalWealthTagXio.text = String(sxnioCurrentBalance)
         }
     }
 
@@ -279,7 +279,7 @@ extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDe
                 SKPaymentQueue.default().add(sxnioPayment)
             } else {
                 self.sxnioShowLoading(false)
-                self.sxnioPresentAlert(sxnioTitle: "Failed", sxnioMsg: "Product not found in App Store.")
+                self.sxnioPresentAlert(sxnioTitle: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXHF7HJ4EiDsbZqIyOBI"), sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMb3HC0uePe16Ouhn1xNDy2k+IZJCs8TECwOpUzFiAyyEcnEerObk0Q=="))
             }
         }
     }
@@ -310,8 +310,8 @@ extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDe
             let sxnioAddedCount = Int(self.XioInventoryXio[self.XioSelectedIdxXio].XioDiamondCountXio) ?? 0
 //            self.sxnioCurrentBalance += sxnioAddedCount
             XioGovernanceHubXio.XioPrincipalXio.XioInjectReserveXio(gain:   sxnioAddedCount)
-            self.XioTotalWealthTagXio.text = "\(self.sxnioCurrentBalance)"
-            self.sxnioPresentAlert(sxnioTitle: "Success", sxnioMsg: "You have received \(sxnioAddedCount) gold coins!")
+            self.XioTotalWealthTagXio.text = String(self.sxnioCurrentBalance)
+            self.sxnioPresentAlert(sxnioTitle: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVJU3Ke/xCjeE5Ro0xKgcw=="), sxnioMsg: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSdTP+us2nYAUKdUvniHIfQEXwjl27zYiAX2") + String(sxnioAddedCount) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbj/BgL2uYdKIlqy8FiPjONK0Cku"))
         }
     }
 
@@ -320,7 +320,7 @@ extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDe
         DispatchQueue.main.async {
             self.sxnioShowLoading(false)
             if let sxnioError = sxnioTrans.error as? SKError, sxnioError.code != .paymentCancelled {
-                self.sxnioPresentAlert(sxnioTitle: "Purchase Failed", sxnioMsg: sxnioError.localizedDescription)
+                self.sxnioPresentAlert(sxnioTitle: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXLYdLsoCbzJIcM7KYOEsh2a9J9TkJiA"), sxnioMsg: sxnioError.localizedDescription)
             }
         }
     }
@@ -344,7 +344,7 @@ extension XioTreasureVaultXio: SKPaymentTransactionObserver, SKProductsRequestDe
 
     private func sxnioPresentAlert(sxnioTitle: String, sxnioMsg: String) {
         let sxnioAlert = UIAlertController(title: sxnioTitle, message: sxnioMsg, preferredStyle: .alert)
-        sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        sxnioAlert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default))
         self.present(sxnioAlert, animated: true)
     }
     

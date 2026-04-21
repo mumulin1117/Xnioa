@@ -42,11 +42,11 @@ class XioVisionOutcomeControllerXio: UIViewController {
             view.addSubview($0)
         }
         
-        XioBackAnchorXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioBackAnchorXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioBackAnchorXio.tintColor = .white
         XioBackAnchorXio.addTarget(self, action: #selector(XioReverseFlowXio), for: .touchUpInside)
         
-        XioVerdictTitleXio.text = "Generute results"
+        XioVerdictTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd/PqOmiG71FqPeT+H71skNSIwDWX4eozg==")
         XioVerdictTitleXio.textColor = .white
         XioVerdictTitleXio.font = .systemFont(ofSize: 20 * XioScaleWXio, weight: .bold)
         
@@ -63,7 +63,7 @@ class XioVisionOutcomeControllerXio: UIViewController {
         XioActionDeckXio.spacing = 16 * XioScaleHXio
         XioActionDeckXio.distribution = .fillEqually
         
-        XioCaptureTriggerXio.setTitle("Download", for: .normal)
+        XioCaptureTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdDNaq1NN6oRDdF46x9zHOA="), for: .normal)
         XioCaptureTriggerXio.setTitleColor(.white, for: .normal)
         XioCaptureTriggerXio.titleLabel?.font = .systemFont(ofSize: 16 * XioScaleWXio, weight: .semibold)
         XioCaptureTriggerXio.layer.borderWidth = 1.5
@@ -71,7 +71,7 @@ class XioVisionOutcomeControllerXio: UIViewController {
         XioCaptureTriggerXio.layer.cornerRadius = 8 * XioScaleWXio
 //        XioCaptureTriggerXio.addTarget(self, action: #selector(XioInitiateDownloadXio), for: .touchUpInside)
         
-        XioArchiveTriggerXio.setTitle("Save", for: .normal)
+        XioArchiveTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbxU7fYNjm0DpwK6mA=="), for: .normal)
         XioArchiveTriggerXio.setTitleColor(.black, for: .normal)
         XioArchiveTriggerXio.backgroundColor = UIColor(red: 0.72, green: 0.95, blue: 0.55, alpha: 1.0)
         XioArchiveTriggerXio.titleLabel?.font = .systemFont(ofSize: 16 * XioScaleWXio, weight: .bold)
@@ -105,10 +105,10 @@ class XioVisionOutcomeControllerXio: UIViewController {
     }
     
     private func XioLoadSampleArtXio() {
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfhMDE+4YN8a8GG/gZ3DBbvjjw=="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
-            self.XioPrimeDisplayXio.image = UIImage(named: "prtystylexio\(Int.random(in: 0...3))")
+            self.XioPrimeDisplayXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcO16JAVJv0a5ytECrMLt4PL58tw") + String(Int.random(in: 0...3)))
         }
        
     }
@@ -132,7 +132,7 @@ class XioVisionOutcomeControllerXio: UIViewController {
     
     @objc private func XioTransferFinalizedXio(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         let XioToastXio = UILabel()
-        XioToastXio.text = error == nil ? "Saved to Gallery" : "Storage Error"
+        XioToastXio.text = error == nil ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSMBq7iRYMIXJybo1PGda1NYSSizc1NV4A==") : XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV+CbhmttetYv/sgPX0QZ4dZAOK1Wg==")
         XioToastXio.textColor = .white
         XioToastXio.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         XioToastXio.textAlignment = .center
@@ -144,8 +144,8 @@ class XioVisionOutcomeControllerXio: UIViewController {
         
         UIView.animate(withDuration: 2.0, animations: { XioToastXio.alpha = 0 }) { _ in XioToastXio.removeFromSuperview() }
         
-        let XioAlertXio = UIAlertController(title: "Success", message: "Result has been synced to your profile.", preferredStyle: .alert)
-        XioAlertXio.addAction(UIAlertAction(title: "OK", style: .default))
+        let XioAlertXio = UIAlertController(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVJU3Ke/xCjeE5Ro0xKgcw=="), message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVmk/CzKc27B2t64W7KTWnK4aJIhAw05kNb8ty3HQhtEv1tbd2HPOsdLC9i5sMLS"), preferredStyle: .alert)
+        XioAlertXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default))
         present(XioAlertXio, animated: true)
     }
 }

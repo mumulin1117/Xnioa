@@ -9,10 +9,10 @@ import UIKit
 
 class SXNIODataLoader {
 
-    static func sxnioFetchGalaRegistry(sxnioResourceName: String = "xnioainfoda") -> [XioGalaEntryXio] {
+    static func sxnioFetchGalaRegistry(sxnioResourceName: String = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbtWPnB75ewuQ7ritmeoQwgTEkM=")) -> [XioGalaEntryXio] {
         
       
-        guard let sxnioPath = Bundle.main.path(forResource: sxnioResourceName, ofType: "plist") else {
+        guard let sxnioPath = Bundle.main.path(forResource: sxnioResourceName, ofType: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbiKGbnYWoNFjwOSHAA=")) else {
             return []
         }
         

@@ -67,13 +67,13 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
 
         XioRegisterSensorsXio()
         XioInitDismissGestureXio()
-        refreshBottomData(for: "For you")
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        refreshBottomData(for: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbROqMBa4rL0y0to/uPFiw=="))
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfhMDE+4YN8a8GG/gZ3DBbvjjw=="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
           
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(refrejsh), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refrejsh), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
     }
 
    @objc func refrejsh()  {
@@ -92,7 +92,7 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioGalleryFlowXio.backgroundColor = .clear
         XioGalleryFlowXio.delegate = self
         XioGalleryFlowXio.dataSource = self
-        XioGalleryFlowXio.register(XioPartyCellXio.self, forCellWithReuseIdentifier: "XioPartyCellXio")
+        XioGalleryFlowXio.register(XioPartyCellXio.self, forCellWithReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbt4aoCfawvgW4VPsioTOug3+3MHWJt7"))
 
         
         view.backgroundColor = UIColor(white: 0.08, alpha: 1.0)
@@ -211,14 +211,14 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
     
     private func XioDesignStyleXio() {
     
-        XioPulseSearchXio.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search for anything", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        XioPulseSearchXio.searchTextField.attributedPlaceholder = NSAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT9K6CjMsHgDhh7QW/Rwsr2b0D6oenYwg7lLuw=="), attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         XioPulseSearchXio.barTintColor = .clear
         XioPulseSearchXio.searchTextField.backgroundColor = UIColor(white: 0.15, alpha: 1.0)
         XioPulseSearchXio.searchTextField.textColor = .white
         XioPulseSearchXio.searchTextField.tintColor = .white
         XioPulseSearchXio.delegate = self
         
-        XioNightCaptionXio.text = "For the Night"
+        XioNightCaptionXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbYDLIok2O8HgYN5zxtNEr+TWqizdQ==")
         XioNightCaptionXio.font = .systemFont(ofSize: 18, weight: .bold)
         XioNightCaptionXio.textColor = .lightGray
         
@@ -226,11 +226,11 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioStyleBannerXio.addTarget(self, action: #selector(hhXioStyleBannerXio), for: .touchUpInside)
         
         
-        XioVintageBannerXio.setBackgroundImage(UIImage.init(named: "XioNightCaptionXio"), for: .normal)
+        XioVintageBannerXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWxshAPmOH02iTJXN6EY5TN8QjrBR4GxJ5qI")), for: .normal)
         
-        XioStyleBannerXio.setBackgroundImage(UIImage.init(named: "XioPartyCaptionXio"), for: .normal)
+        XioStyleBannerXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeXBbeSZy3KBI3znz99fMCiqMopHjQiryF9Q")), for: .normal)
         
-        XioPartyCaptionXio.text = "Retro Party"
+        XioPartyCaptionXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfJ5KPA16upKAkkYg6ttybOgb+0=")
         XioPartyCaptionXio.font = .systemFont(ofSize: 20, weight: .bold)
         XioPartyCaptionXio.textColor = .white
         
@@ -238,7 +238,7 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
         XioFilterOrbitXio.spacing = 10
         XioFilterOrbitXio.distribution = .fillProportionally
         
-        let categories = ["For you", "Trending", "Fairy tale", "Age"]
+        let categories = [XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbROqMBa4rL0y0to/uPFiw=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMToESmpqqOPXPAuff+Bo4+I="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRwWyDR0VzUCUDJs9auv2GJbgA=="), XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTJu9rNv/ICpoTEi")]
 
         categories.enumerated().forEach { index, title in
             let XioChipXio = UIButton()
@@ -248,7 +248,7 @@ class XioRetroLobbyXio: UIViewController, UISearchBarDelegate {
             XioChipXio.tag = index // 设置索引，方便后续逻辑
             
             // 初始化颜色状态
-            updateButtonStyle(XioChipXio, isSelected: title == "For you")
+            updateButtonStyle(XioChipXio, isSelected: title == XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbROqMBa4rL0y0to/uPFiw=="))
             
             // 添加点击事件
             XioChipXio.addTarget(self, action: #selector(filterButtonTapped(_:)), for: .touchUpInside)
@@ -337,7 +337,7 @@ extension XioRetroLobbyXio: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: "XioPartyCellXio", for: indexPath) as! XioPartyCellXio
+        let XioCellXio = collectionView.dequeueReusableCell(withReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbt4aoCfawvgW4VPsioTOug3+3MHWJt7"), for: indexPath) as! XioPartyCellXio
         let roromda = XioCurrentDataXio[indexPath.row]
         XioCellXio.XioConfigureWithDataXio(jai: roromda)
         XioCellXio.XioMainVisualXio.image = UIImage.init(named: roromda.XioRoomCover)

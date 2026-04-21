@@ -22,8 +22,8 @@ class XioVisualMediaPilotXio {
             return
         }
         
-        guard let XioBundlePathXio = Bundle.main.path(forResource: XioResourceNameXio, ofType: "mp4") else {
-            print("Xio Trace: Resource not found in bundle - \(XioResourceNameXio)")
+        guard let XioBundlePathXio = Bundle.main.path(forResource: XioResourceNameXio, ofType: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdqSn1JSHbnCwOce")) else {
+            print(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUu3jntouRPz3m0fVr5rD5v1X812aygrp567R5vCpewD++DAnO1BrI1xRgdzqxLYn1vD") + XioResourceNameXio)
             XioResultXio(nil)
             return
         }
@@ -53,7 +53,7 @@ class XioVisualMediaPilotXio {
                     XioResultXio(XioFinalImageXio)
                 }
             } catch {
-                print("Xio Trace: Render failure - \(error.localizedDescription)")
+                print(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfiNZdzULfGI0eSiflELn1hYRp4Z04t+ix6G6MPxxn4RXUtAjw==") + error.localizedDescription)
                 DispatchQueue.main.async { XioResultXio(nil) }
             }
         }

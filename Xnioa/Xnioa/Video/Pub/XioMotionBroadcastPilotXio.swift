@@ -51,11 +51,11 @@ class XioMotionBroadcastPilotXio: UIViewController {
             view.addSubview($0)
         }
         
-        XioRetreatBtnXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioExitProtocolXio), for: .touchUpInside)
         
-        XioTitleBadgeXio.text = "Release video"
+        XioTitleBadgeXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdhds4fh5vMOc8kAVKsj4OH+DajzVw==")
         XioTitleBadgeXio.textColor = .white
         XioTitleBadgeXio.font = .systemFont(ofSize: 18 * XioUnitWXio, weight: .bold)
         
@@ -80,11 +80,11 @@ class XioMotionBroadcastPilotXio: UIViewController {
         XioDashBorderXio.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 335 * XioUnitWXio, height: 335 * XioUnitWXio), cornerRadius: 12 * XioUnitWXio).cgPath
         XioMediaFrameXio.layer.addSublayer(XioDashBorderXio)
         
-        XioUploadGlyphXio.image = UIImage(systemName: "video.badge.plus")
+        XioUploadGlyphXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdX4sx8CRk1npUrIwP7zqCKjFycrax+biA=="))
         XioUploadGlyphXio.tintColor = .white
         XioUploadGlyphXio.contentMode = .scaleAspectFit
         
-        XioUploadHintXio.text = "Upload video"
+        XioUploadHintXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSaLr+8Wt7B6vZPQxQWLHYIToDDd")
         XioUploadHintXio.textColor = .lightGray
         XioUploadHintXio.font = .systemFont(ofSize: 14 * XioUnitWXio)
         
@@ -100,11 +100,11 @@ class XioMotionBroadcastPilotXio: UIViewController {
         XioMediaFrameXio.addGestureRecognizer(XioTapGestureXio)
         
         let XioScribeRowXio = UIView()
-        XioScribeHeaderXio.text = "Copywriter"
+        XioScribeHeaderXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMap/ndP928N9qDsTUGALHZoAMA==")
         XioScribeHeaderXio.textColor = .darkGray
         XioScribeHeaderXio.font = .systemFont(ofSize: 16 * XioUnitWXio, weight: .semibold)
         
-        XioCountBadgeXio.text = "0/350"
+        XioCountBadgeXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWBemiFMkQ3rUmhbuWw=")
         XioCountBadgeXio.textColor = .darkGray
         XioCountBadgeXio.font = .systemFont(ofSize: 14 * XioUnitWXio)
         
@@ -120,7 +120,7 @@ class XioMotionBroadcastPilotXio: UIViewController {
         XioInputTerminalXio.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         
         XioLaunchTriggerXio.backgroundColor = UIColor(red: 0.72, green: 0.95, blue: 0.55, alpha: 1.0)
-        XioLaunchTriggerXio.setTitle("Release", for: .normal)
+        XioLaunchTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSIHeMVaKL0jNf2Ii6oKKg=="), for: .normal)
         XioLaunchTriggerXio.setTitleColor(.black, for: .normal)
         XioLaunchTriggerXio.titleLabel?.font = .systemFont(ofSize: 16 * XioUnitWXio, weight: .bold)
         XioLaunchTriggerXio.layer.cornerRadius = 10 * XioUnitWXio
@@ -190,10 +190,10 @@ class XioMotionBroadcastPilotXio: UIViewController {
     
     @objc private func XioExecuteBroadcastXio() {
         guard XioSelectedVideoPathXio != nil else {
-            XioShowPromptXio("Please upload a video first")
+            XioShowPromptXio(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVC7AVCg6qPGkeUfgP/AZME4C8lav0L9r+crc8N1p9GP13yQ"))
             return
         }
-        XioShowPromptXio("Broadcast successfully initialized")
+        XioShowPromptXio(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWOK+o3RqqImboYig4LQT7MzMMC10EFDnvb7JO/t7vyIvufGBLfTZFyJow=="))
     }
     
     @objc private func XioExitProtocolXio() {
@@ -202,7 +202,7 @@ class XioMotionBroadcastPilotXio: UIViewController {
     
     private func XioShowPromptXio(_ msg: String) {
         let XioAlertXio = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
-        XioAlertXio.addAction(UIAlertAction(title: "Confirm", style: .default))
+        XioAlertXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSGaVTOqAJGMJn/wGxBbBg=="), style: .default))
         present(XioAlertXio, animated: true)
     }
 }
@@ -219,7 +219,7 @@ extension XioMotionBroadcastPilotXio: PHPickerViewControllerDelegate {
                     self?.XioUploadGlyphXio.isHidden = true
                     self?.XioUploadHintXio.isHidden = true
                     self?.XioPreviewLayerXio.isHidden = false
-                    self?.XioPreviewLayerXio.image = UIImage(systemName: "checkmark.circle.fill")
+                    self?.XioPreviewLayerXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMezPv+7QU5QEiRo/cgLDF8c+J4cT6Pvi6Eqzy+fY"))
                     self?.XioPreviewLayerXio.tintColor = .systemGreen
                 }
             }
@@ -230,7 +230,7 @@ extension XioMotionBroadcastPilotXio: PHPickerViewControllerDelegate {
 extension XioMotionBroadcastPilotXio: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let XioLenXio = textView.text.count
-        XioCountBadgeXio.text = "\(XioLenXio)/350"
+        XioCountBadgeXio.text = String(XioLenXio) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVePptHTOFCsb3REfg==")
         XioCountBadgeXio.textColor = XioLenXio > 350 ? .systemRed : .darkGray
     }
 }

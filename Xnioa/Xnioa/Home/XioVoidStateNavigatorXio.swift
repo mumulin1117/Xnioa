@@ -26,15 +26,15 @@ class XioVoidStateNavigatorXio: UIView {
         self.backgroundColor = .black
         
         // 使用系统图标或项目内置的 Xio 图标
-        XioVoidIconXio.image = UIImage(systemName: "magnifyingglass.circle")
+        XioVoidIconXio.image = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeYe10MZrL/SqpYa6sO8MhNbkz9v/YB3ft/KLCsloA=="))
         XioVoidIconXio.tintColor = UIColor(white: 0.3, alpha: 1.0)
         XioVoidIconXio.contentMode = .scaleAspectFit
         
-        XioVoidMessageXio.text = "No results found"
+        XioVoidMessageXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXuzQOXvx9AxlXD612AQMxvxu6oQYOwhtg==")
         XioVoidMessageXio.textColor = .white
         XioVoidMessageXio.font = .systemFont(ofSize: 18 * XioUnitWXio, weight: .bold)
         
-        XioSuggestionLabXio.text = "Try searching for other party keywords"
+        XioSuggestionLabXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVFF9UpXQ/EDyydbbnMdFyNiSoMRU+urU9+XT3wUJeSTJ6MhR1d6JE8nKA+bmDs=")
         XioSuggestionLabXio.textColor = .darkGray
         XioSuggestionLabXio.font = .systemFont(ofSize: 14 * XioUnitWXio)
         XioSuggestionLabXio.numberOfLines = 0

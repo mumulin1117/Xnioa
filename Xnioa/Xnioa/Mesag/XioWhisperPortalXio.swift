@@ -23,7 +23,7 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
     }
     
     @MainActor required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe5fdxbqHBVvx/qiA3qwo0+F80GKWt0gRuIrT9fzqFBBrP/+qIVj/Gz5uLVIMg=="))
     }
     
     
@@ -50,7 +50,7 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
         XioSetupCanvasXio()
         XioForgeLayoutXio()
         XioFetchMusingPulseXio()
-        NotificationCenter.default.addObserver(self, selector: #selector(XioExitPortalXio), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(XioExitPortalXio), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
         
     }
  
@@ -63,7 +63,7 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
         XioTalkStreamXio.separatorStyle = .none
         XioTalkStreamXio.delegate = self
         XioTalkStreamXio.dataSource = self
-        XioTalkStreamXio.register(XioSpeechBubbleCellXio.self, forCellReuseIdentifier: "XioSpeechBubbleCellXio")
+        XioTalkStreamXio.register(XioSpeechBubbleCellXio.self, forCellReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTPohFPrzGXizR/1KVsV/prF9gbA6JrSQciZfJPxQ=="))
 //        XioTalkStreamXio.transform = CGAffineTransform(scaleX: 1, y: -1)
     }
     
@@ -77,7 +77,7 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
         XioTitleTagXio.textColor = .white
         XioTitleTagXio.font = .systemFont(ofSize: 18, weight: .bold)
         
-        XioRetreatBtnXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatBtnXio.tintColor = .white
         XioRetreatBtnXio.addTarget(self, action: #selector(XioExitPortalXio), for: .touchUpInside)
         XioHeaderOrbitXio.image = UIImage(named: self.usier.Xiouser.XioAvatarXio)
@@ -85,7 +85,7 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
         XioHeaderOrbitXio.clipsToBounds = true
         XioHeaderOrbitXio.backgroundColor = .gray
         
-        XioOptionBtnXio.setTitle("•••", for: .normal)
+        XioOptionBtnXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYUrIDFTix9qbCdOQVCkOFXW"), for: .normal)
         XioOptionBtnXio.setTitleColor(.white, for: .normal)
         XioOptionBtnXio.addTarget(self, action: #selector(XioInvokePolicyMenuXio), for: .touchUpInside)
         [XioRetreatBtnXio, XioHeaderOrbitXio, XioTitleTagXio, XioOptionBtnXio].forEach {
@@ -97,15 +97,15 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
         XioFieldBoxXio.backgroundColor = UIColor(white: 0.15, alpha: 1.0)
         XioFieldBoxXio.layer.cornerRadius = 10
         XioFieldBoxXio.textColor = .white
-        XioFieldBoxXio.attributedPlaceholder = NSAttributedString(string: "Say something", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        XioFieldBoxXio.attributedPlaceholder = NSAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcxT6WWOC3rnHoV7zjzxY9BCJ2MLQw=="), attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         let XioPadViewXio = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 1))
         XioFieldBoxXio.leftView = XioPadViewXio
         XioFieldBoxXio.leftViewMode = .always
         
-        XioCamTriggerXio.setBackgroundImage(UIImage.init(named: "XioCamTriggerXio"), for: .normal)
+        XioCamTriggerXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbK8CcatWqGqYbrjndoqhlhKwbfLaHePXg==")), for: .normal)
         
         XioCamTriggerXio.addTarget(self, action: #selector(sssXioVerdeoCabyllPortalXio), for: .touchUpInside)
-        XioDeliverBtnXio.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+        XioDeliverBtnXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbTMpbjSJRgcmF4mSKtDo6v2olAyC5jz")), for: .normal)
         XioDeliverBtnXio.tintColor = .black
         XioDeliverBtnXio.backgroundColor = UIColor(red: 0.7, green: 0.9, blue: 0.6, alpha: 1.0)
         XioDeliverBtnXio.layer.cornerRadius = 10
@@ -178,13 +178,13 @@ class XioWhisperPortalXio: XioResilienceAnchorXio {
     
     @objc private func XioInvokePolicyMenuXio() {
         let XioSheetXio = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        XioSheetXio.addAction(UIAlertAction(title: "Block", style: .default, handler: { action in
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRCunm7pDGxVGAhJPJ8="), style: .default, handler: { action in
             XioGovernanceHubXio.XioPrincipalXio.XioUpdateExileStatusXio(target: self.usier.Xiouser, xAdd: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Report", style: .default, handler: { action in
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdtkeSi+8mjMXcy1my1J"), style: .default, handler: { action in
             self.navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
         present(XioSheetXio, animated: true)
     }
 }
@@ -196,8 +196,8 @@ extension XioWhisperPortalXio: UITableViewDelegate, UITableViewDataSource {
     @objc private func XioBroadcastLyricXio() {
         guard let XioTextXio = XioFieldBoxXio.text, !XioTextXio.isEmpty else {
             
-            let sxnioAlert = UIAlertController(title: nil, message: "Please enter your contetnt at first!", preferredStyle: .alert)
-            sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            let sxnioAlert = UIAlertController(title: nil, message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMabK6hGWVYCHmWWsMWiShXTYf1/R8VcX14rCnTxeabO8zw2gE2/Z0Cj6iOsv"), preferredStyle: .alert)
+            sxnioAlert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default))
             present(sxnioAlert, animated: true)
             return
         }
@@ -221,7 +221,7 @@ extension XioWhisperPortalXio: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: "XioSpeechBubbleCellXio", for: indexPath) as! XioSpeechBubbleCellXio
+        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdTPohFPrzGXizR/1KVsV/prF9gbA6JrSQciZfJPxQ=="), for: indexPath) as! XioSpeechBubbleCellXio
 //        XioCellXio.transform = CGAffineTransform(scaleX: 1, y: -1)
         XioCellXio.XioHydrateBubbleXio(usier.dilog[indexPath.row], useimage: usier.Xiouser.XioAvatarXio)
         return XioCellXio

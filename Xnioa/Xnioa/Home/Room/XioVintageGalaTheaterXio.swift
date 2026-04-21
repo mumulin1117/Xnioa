@@ -29,7 +29,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
     }
     
     @MainActor required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe5fdxbqHBVvx/qiA3qwo0+F80GKWt0gRuIrT9fzqFBBrP/+qIVj/Gz5uLVIMg=="))
     }
     
   
@@ -70,21 +70,21 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioReportAbuseTriggerXio.addTarget(self, action: #selector(XioReportStageXio), for: .touchUpInside)
         self.XioChatHistoryXio = isCreaterr ? [] :  [
             [
-                XioBalladMessageXio(XioOratorNameXio: "Clara", XioOratorAvatarXio: "avarieou7", XioLyricContentXio: "Hello Everyone!", XioIsDivineSelfXio: false),
-                XioBalladMessageXio(XioOratorNameXio: "Henry", XioOratorAvatarXio: "avarieou3", XioLyricContentXio: "Hello", XioIsDivineSelfXio: false),
-                XioBalladMessageXio(XioOratorNameXio: "Evelyn", XioOratorAvatarXio: "avarieou4", XioLyricContentXio: "This Music Feels Like It Belongs To Another Time.", XioIsDivineSelfXio: false),
-                XioBalladMessageXio(XioOratorNameXio: "Arthur", XioOratorAvatarXio: "avarieou2", XioLyricContentXio: "I Can Almost Picture Everyone Dancing In Dim Light.", XioIsDivineSelfXio: false)
+                XioBalladMessageXio(XioOratorNameXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMWZdf77qrORNvvL2vYU="), XioOratorAvatarXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZGtF+KdsHUBGTtuFbHq5dBv"), XioLyricContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQJ1VGh0YBp9IO5bpzs+aCMym44ImLg4"), XioIsDivineSelfXio: false),
+                XioBalladMessageXio(XioOratorNameXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbzIA6REqDE5uSeCPYs="), XioOratorAvatarXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRGKFOKdMHUBgdemg42sE3jC"), XioLyricContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMW6mDydJZqOUiSxgMHs="), XioIsDivineSelfXio: false),
+                XioBalladMessageXio(XioOratorNameXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQq3VjmU/BGJhYDHHcu6"), XioOratorAvatarXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbFAFOKdEHUB0ifvd1oKjcRx"), XioLyricContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRxOlrMz68SSgTHfdCTqczUzjapB57vo3l/mv7NQvpGmaJfx5UpDfSip1SNGCaftcDdeY9QwUKjhpg=="), XioIsDivineSelfXio: false),
+                XioBalladMessageXio(XioOratorNameXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMZ4AVeGwnPDLlh7kajhH"), XioOratorAvatarXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXG8FOKd0HYBx+TCU6f6M2IC"), XioLyricContentXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMXVjku1nuuzt/PYNKarlWcLoOGoHhncMm+f4EEKDTjSrREKUPCyDe0eIQpfbSCn3W4Awn9LCa5CDKj8w"), XioIsDivineSelfXio: false)
             ].randomElement()!
         ]
         XioSetTheStageXio()
         XioForgeArchitectureXio()
         XioIgniteAtmosphereXio()
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfhMDE+4YN8a8GG/gZ3DBbvjjw=="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
             
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(XioRetreatFromStageXio), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(XioRetreatFromStageXio), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
         AcccTopersonCou.addTarget(self, action: #selector(safetyFire), for: .touchUpInside)
         
     }
@@ -92,7 +92,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
   
     private func XioSetTheStageXio() {
         view.backgroundColor = .black
-        XioGrandBackdropXio.image = isCreaterr ?  (paymeIngo?.1 ): UIImage(named: usier?.XioRoomScene ?? "picjkBg0")
+        XioGrandBackdropXio.image = isCreaterr ?  (paymeIngo?.1 ): UIImage(named: usier?.XioRoomScene ?? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUveEGf2gfYOgdT9IFLv9b4="))
         XioGrandBackdropXio.contentMode = .scaleAspectFill
         
         
@@ -101,7 +101,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioLyricStreamXio.separatorStyle = .none
         XioLyricStreamXio.delegate = self
         XioLyricStreamXio.dataSource = self
-        XioLyricStreamXio.register(XioLyricCellXio.self, forCellReuseIdentifier: "XioLyricCellXio")
+        XioLyricStreamXio.register(XioLyricCellXio.self, forCellReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVpeBhycFzCACasf4Nub5VhvCmQn2ENz"))
         XioLyricStreamXio.showsVerticalScrollIndicator = false
     }
     
@@ -118,7 +118,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioAvatarXio.translatesAutoresizingMaskIntoConstraints = false
         XioHandleXio.translatesAutoresizingMaskIntoConstraints = false
         AcccTopersonCou.translatesAutoresizingMaskIntoConstraints = false
-        AcccTopersonCou.setImage(UIImage.init(named: "AcccTopersonCou"), for: .normal)
+        AcccTopersonCou.setImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMbz0TlJ313AQueSnsasjTYxSIKubP1Em")), for: .normal)
         
         AcccTopersonCou.isHidden = isCreaterr ? true : false
         XioAvatarXio.layer.cornerRadius = 20
@@ -133,17 +133,17 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioHostNameTagXio.textColor = .white
         
         
-        XioHandleXio.text = isCreaterr ? "Me" : self.usier?.XioAliasXio ?? ""
+        XioHandleXio.text = isCreaterr ? XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeLu+/9nqROSGQw=") : self.usier?.XioAliasXio ?? ""
         
-        XioExitStageTriggerXio.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+        XioExitStageTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeq1SHs0UPSgNhZzAjLW+njqAQ==")), for: .normal)
         XioExitStageTriggerXio.tintColor = .white
         XioExitStageTriggerXio.addTarget(self, action: #selector(XioRetreatFromStageXio), for: .touchUpInside)
         
-        XioGalaTitleTagXio.text = "Them:  "  + ((isCreaterr ? paymeIngo?.0 : usier?.XioRoomTItle) ?? "")
+        XioGalaTitleTagXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVT0wvtZmfmhEWnUQN8frA==")  + ((isCreaterr ? paymeIngo?.0 : usier?.XioRoomTItle) ?? "")
         XioGalaTitleTagXio.textColor = .white
         XioGalaTitleTagXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
-        XioReportAbuseTriggerXio.setImage(UIImage(systemName: "exclamationmark.circle"), for: .normal)
+        XioReportAbuseTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcv6wW0lfBgi01g98OnLzyoaykiI2PjBmhsqrUiUwg==")), for: .normal)
         XioReportAbuseTriggerXio.tintColor = .white
         
         XioHostPodiumXio.backgroundColor = UIColor.black.withAlphaComponent(0.4)
@@ -152,11 +152,11 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioWhisperInputDockXio.backgroundColor = UIColor(white: 0.2, alpha: 0.8)
         XioWhisperInputDockXio.layer.cornerRadius = 20 * XioHeightRatioXio
         
-        XioLyricFieldXio.placeholder = "Say something"
+        XioLyricFieldXio.placeholder = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcxT6WWOC3rnHoV7zjzxY9BCJ2MLQw==")
         XioLyricFieldXio.textColor = .white
-        XioLyricFieldXio.attributedPlaceholder = NSAttributedString(string: "Say something", attributes: [.foregroundColor: UIColor.lightGray])
+        XioLyricFieldXio.attributedPlaceholder = NSAttributedString(string: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcxT6WWOC3rnHoV7zjzxY9BCJ2MLQw=="), attributes: [.foregroundColor: UIColor.lightGray])
         
-        XioTransmitTriggerXio.setImage(UIImage(named: "Group Plainegreen"), for: .normal)
+        XioTransmitTriggerXio.setImage(UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVlP4pu7mX6AYRMAWJVRHdhyu/Opaydmk+M=")), for: .normal)
         XioTransmitTriggerXio.tintColor = .systemGreen
         XioTransmitTriggerXio.addTarget(self, action: #selector(XioBroadcastLyricXio), for: .touchUpInside)
         
@@ -253,7 +253,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
             XioMiniAvatarXio.layer.borderColor = UIColor.white.cgColor
             XioMiniAvatarXio.translatesAutoresizingMaskIntoConstraints = false
             XioMiniAvatarXio.widthAnchor.constraint(equalToConstant: 15).isActive = true
-            XioMiniAvatarXio.image = UIImage.init(named: "avarieou\(Int.random(in: 0...8))")
+            XioMiniAvatarXio.image = UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd/Rp2Og4ZWUeYQ7c1C7E7k=") + String(Int.random(in: 0...8)))
             XioAudienceStackXio.addArrangedSubview(XioMiniAvatarXio)
         }
     }
@@ -269,7 +269,7 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
         XioFlakeXio.lifetime = 10.0
         XioFlakeXio.velocity = 50
         XioFlakeXio.emissionRange = .pi
-        XioFlakeXio.contents = UIImage(systemName: "sparkle")?.tinted(with: .systemYellow)?.cgImage
+        XioFlakeXio.contents = UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcHwSluq2Gu+g0tZ4xcLGg=="))?.tinted(with: .systemYellow)?.cgImage
         XioFlakeXio.scale = 0.1
         XioFlakeXio.scaleRange = 0.2
         
@@ -280,13 +280,13 @@ class XioVintageGalaTheaterXio: XioResilienceAnchorXio {
     @objc private func XioBroadcastLyricXio() {
         guard let XioTextXio = XioLyricFieldXio.text, !XioTextXio.isEmpty else {
             
-            let sxnioAlert = UIAlertController(title: nil, message: "Please enter your contetnt at first!", preferredStyle: .alert)
-            sxnioAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            let sxnioAlert = UIAlertController(title: nil, message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMabK6hGWVYCHmWWsMWiShXTYf1/R8VcX14rCnTxeabO8zw2gE2/Z0Cj6iOsv"), preferredStyle: .alert)
+            sxnioAlert.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSK7zOJn6ZmUsAM="), style: .default))
             present(sxnioAlert, animated: true)
             return
         }
         
-        let XioNewMessageXio = XioBalladMessageXio(XioOratorNameXio: "Me", XioOratorAvatarXio: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "", XioLyricContentXio: XioTextXio, XioIsDivineSelfXio: true)
+        let XioNewMessageXio = XioBalladMessageXio(XioOratorNameXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeLu+/9nqROSGQw="), XioOratorAvatarXio: XioGovernanceHubXio.XioPrincipalXio.XioActiveProfileXio?.XioAvatarXio ?? "", XioLyricContentXio: XioTextXio, XioIsDivineSelfXio: true)
         XioChatHistoryXio.append(XioNewMessageXio)
         
         XioLyricFieldXio.text =  ""
@@ -321,7 +321,7 @@ extension XioVintageGalaTheaterXio: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: "XioLyricCellXio", for: indexPath) as! XioLyricCellXio
+        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVpeBhycFzCACasf4Nub5VhvCmQn2ENz"), for: indexPath) as! XioLyricCellXio
         XioCellXio.XioSyncLyricXio(XioChatHistoryXio[indexPath.row])
         return XioCellXio
     }
@@ -361,7 +361,7 @@ class XioLyricCellXio: UITableViewCell {
     }
     
     func XioSyncLyricXio(_ XioDataXio: XioBalladMessageXio) {
-        let XioAttrTextXio = NSMutableAttributedString(string: "\(XioDataXio.XioOratorNameXio): ", attributes: [.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor: UIColor.systemOrange])
+        let XioAttrTextXio = NSMutableAttributedString(string: XioDataXio.XioOratorNameXio + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQ2BRAxnCRv7UrY="), attributes: [.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor: UIColor.systemOrange])
         XioAttrTextXio.append(NSAttributedString(string: XioDataXio.XioLyricContentXio))
         XioLyricLabelXio.attributedText = XioAttrTextXio
         XioAvatarOrbitXio.image = UIImage(named: XioDataXio.XioOratorAvatarXio)

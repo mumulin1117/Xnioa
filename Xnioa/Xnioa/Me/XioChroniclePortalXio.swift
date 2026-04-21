@@ -33,26 +33,26 @@ class XioChroniclePortalXio: UIViewController {
     }
     
     private func XioForgeStructureXio() {
-        XioRetreatTriggerXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatTriggerXio.tintColor = .white
         XioRetreatTriggerXio.addTarget(self, action: #selector(XioPerformRetreatXio), for: .touchUpInside)
         
-        XioPortalTitleXio.text = "About us"
+        XioPortalTitleXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMW1P38CAEQyujz+IwIv9SGM=")
         XioPortalTitleXio.textColor = .white
         XioPortalTitleXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
-        XioBrandHaloXio.image = UIImage(named: "suhxioa")
+        XioBrandHaloXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUcDPZPgQMuI0qaigLhbBA=="))
         XioBrandHaloXio.contentMode = .scaleAspectFit
         XioBrandHaloXio.layer.cornerRadius = 45 * XioWidthRatioXio
         XioBrandHaloXio.clipsToBounds = true
         XioBrandHaloXio.backgroundColor = .systemIndigo // Placeholder color for the glow effect
         
-        XioBrandNameTagXio.text = "------"
+        XioBrandNameTagXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTHT7Ho3elkJjf2AAlOX")
         XioBrandNameTagXio.textColor = .white
         XioBrandNameTagXio.font = .systemFont(ofSize: 24 * XioWidthRatioXio, weight: .black)
         XioBrandNameTagXio.textAlignment = .center
         
-        XioEditionTagXio.text = "Version 1.0"
+        XioEditionTagXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeiVEXCdV0glJSh5u9JEwx5Td3g=")
         XioEditionTagXio.textColor = .gray
         XioEditionTagXio.font = .systemFont(ofSize: 14 * XioWidthRatioXio)
         XioEditionTagXio.textAlignment = .center
@@ -93,13 +93,13 @@ class XioChroniclePortalXio: UIViewController {
     }
     
     private func XioApplyPulseEffectXio() {
-        let XioPulseXio = CABasicAnimation(keyPath: "transform.scale")
+        let XioPulseXio = CABasicAnimation(keyPath: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSnCW8zKVFKCrZj/Ry9i5ROfNhO1iMqA"))
         XioPulseXio.duration = 2.0
         XioPulseXio.fromValue = 0.95
         XioPulseXio.toValue = 1.05
         XioPulseXio.autoreverses = true
         XioPulseXio.repeatCount = .infinity
-        XioBrandHaloXio.layer.add(XioPulseXio, forKey: "XioLogoPulseXio")
+        XioBrandHaloXio.layer.add(XioPulseXio, forKey: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfKWK4zaRAvqgRr/l89sXQd7wKOPDatF"))
     }
     
     @objc private func XioPerformRetreatXio() {

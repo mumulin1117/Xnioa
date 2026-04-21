@@ -17,7 +17,7 @@ class XioVerdeoCabyllPortalXio: UIViewController {
     }
     
     @MainActor required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe5fdxbqHBVvx/qiA3qwo0+F80GKWt0gRuIrT9fzqFBBrP/+qIVj/Gz5uLVIMg=="))
     }
     private let XioRemoteVibeViewXio = UIImageView()
     private let XioLocalVibeViewXio = UIImageView()
@@ -39,7 +39,7 @@ class XioVerdeoCabyllPortalXio: UIViewController {
         XioPrepareStageXio()
         XioForgeArchitectureXio()
         XioInjectFakeDynamicXio()
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshinG), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinG), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
         
     }
    @objc func refreshinG()  {
@@ -75,19 +75,19 @@ class XioVerdeoCabyllPortalXio: UIViewController {
         XioPartnerTitleXio.textColor = .white
         XioPartnerTitleXio.font = .systemFont(ofSize: 20 * XioWidthRatioXio, weight: .bold)
         
-        XioRetreatTriggerXio.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        XioRetreatTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRNU2VqsS4ICI/AhX/QUQxNb6vuv")), for: .normal)
         XioRetreatTriggerXio.tintColor = .white
         
 //        XioFollowActionXio.setImage(UIImage(systemName: "person.badge.plus"), for: .normal)
 //        XioFollowActionXio.tintColor = .white
 //        
-        XioExtraServiceXio.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        XioExtraServiceXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUROWtYiBQVr3SWo7GEbehg=")), for: .normal)
         XioExtraServiceXio.tintColor = .white
         XioExtraServiceXio.addTarget(self, action: #selector(XioInvokePolicyMenuXio), for: .touchUpInside)
         
         XioTerminateTriggerXio.backgroundColor = UIColor(red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0)
         XioTerminateTriggerXio.layer.cornerRadius = 14 * XioWidthRatioXio
-        XioTerminateTriggerXio.setImage(UIImage(systemName: "phone.down.fill"), for: .normal)
+        XioTerminateTriggerXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMeI/6JL7r4qTyxvR57dqOjPSbzE5a+va")), for: .normal)
         XioTerminateTriggerXio.tintColor = .white
         XioTerminateTriggerXio.addTarget(self, action: #selector(XioExecuteHangupXio), for: .touchUpInside)
         
@@ -142,13 +142,13 @@ class XioVerdeoCabyllPortalXio: UIViewController {
     }
     @objc private func XioInvokePolicyMenuXio() {
         let XioSheetXio = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        XioSheetXio.addAction(UIAlertAction(title: "Block", style: .default, handler: { action in
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRCunm7pDGxVGAhJPJ8="), style: .default, handler: { action in
             XioGovernanceHubXio.XioPrincipalXio.XioUpdateExileStatusXio(target: self.usier, xAdd: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Report", style: .default, handler: { action in
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdtkeSi+8mjMXcy1my1J"), style: .default, handler: { action in
             self.navigationController?.pushViewController(XioSafetyAuditPilotXio(), animated: true)
         }))
-        XioSheetXio.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        XioSheetXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRFkSwaFjs6DwXoJZeHH"), style: .cancel))
         present(XioSheetXio, animated: true)
     }
     private func XioInjectFakeDynamicXio() {
@@ -159,8 +159,8 @@ class XioVerdeoCabyllPortalXio: UIViewController {
     }
     
     @objc private func XioExecuteHangupXio() {
-        let XioAlertXio = UIAlertController(title: "Call Ended", message: "The video session has finished.", preferredStyle: .alert)
-        XioAlertXio.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+        let XioAlertXio = UIAlertController(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVNBIvUJTQ4sd8XQd176ZY+1YQ=="), message: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdQiix90fLgXrflQLgiIaIjb2T8bSG/TkwCaZVBvRsEQSKTNpAHVMA=="), preferredStyle: .alert)
+        XioAlertXio.addAction(UIAlertAction(title: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMSGaVTOqAJGMJn/wGxBbBg=="), style: .default, handler: { _ in
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(XioAlertXio, animated: true)

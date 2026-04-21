@@ -27,7 +27,7 @@ class XioInboxPalaceXio: UIViewController {
     private let XioTitlePlateXio = UILabel()
     private let XioChronicleListXio = UITableView()
     static var XioChatBufferXio: [Diolodlisr] = []
-    private let XioVoidPlaceholderXio = UIImageView.init(image: UIImage.init(named: "XioVoidPlaceholderXio"))
+    private let XioVoidPlaceholderXio = UIImageView.init(image: UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMe4WxnaRNvfD0DNXK/MNwrwZ1fUq6ynbgi008lzF")))
    
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
@@ -36,12 +36,12 @@ class XioInboxPalaceXio: UIViewController {
         super.viewDidLoad()
         XioAssembleEnvironmentXio()
         XioInvokeNetworkPulseXio()
-        XNioaAppIndicatorMannager.XNioashow(XNioainfo: "Loading...")
+        XNioaAppIndicatorMannager.XNioashow(XNioainfo: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMfhMDE+4YN8a8GG/gZ3DBbvjjw=="))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             XNioaAppIndicatorMannager.XNioadismiss()
           
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshinG), name: NSNotification.Name.init("XioUpdateExileStatusXio"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinG), name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT1GkwFLoH/jg4LzC9vzv1h5aHjDw/P3Ntfsl4x4buo=")), object: nil)
         
     }
    @objc func refreshinG()  {
@@ -54,7 +54,7 @@ class XioInboxPalaceXio: UIViewController {
         view.backgroundColor = UIColor(white: 0.05, alpha: 1.0)
         navigationController?.isNavigationBarHidden = true
         
-        XioTitlePlateXio.text = "Message"
+        XioTitlePlateXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMc3GBdOt8/reP/sl9m0BDA==")
         XioTitlePlateXio.font = .systemFont(ofSize: 28, weight: .bold)
         XioTitlePlateXio.textColor = .white
         XioTitlePlateXio.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +64,7 @@ class XioInboxPalaceXio: UIViewController {
         XioChronicleListXio.separatorStyle = .none
         XioChronicleListXio.delegate = self
         XioChronicleListXio.dataSource = self
-        XioChronicleListXio.register(XioChatTomeCellXio.self, forCellReuseIdentifier: "XioChatTomeCellXio")
+        XioChronicleListXio.register(XioChatTomeCellXio.self, forCellReuseIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQcAQZ7mIMst2WqfTzHE0ikPc7AlKRB4J9ol"))
         XioChronicleListXio.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(XioChronicleListXio)
         view.addSubview(XioVoidPlaceholderXio)
@@ -102,7 +102,7 @@ extension XioInboxPalaceXio: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: "XioChatTomeCellXio", for: indexPath) as! XioChatTomeCellXio
+        let XioCellXio = tableView.dequeueReusableCell(withIdentifier: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQcAQZ7mIMst2WqfTzHE0ikPc7AlKRB4J9ol"), for: indexPath) as! XioChatTomeCellXio
         XioCellXio.XioHydrateCellXio(XioInboxPalaceXio.XioChatBufferXio[indexPath.row])
         return XioCellXio
     }

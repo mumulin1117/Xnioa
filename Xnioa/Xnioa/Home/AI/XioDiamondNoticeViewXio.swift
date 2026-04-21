@@ -32,7 +32,7 @@ class XioDiamondNoticeViewXio: UIView {
         XioPanelXio.translatesAutoresizingMaskIntoConstraints = false
         addSubview(XioPanelXio)
         
-        XioVisualIconXio.image = UIImage(named: "dimonedfFell") // Use your diamond crown asset
+        XioVisualIconXio.image = UIImage(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdUsvEus22I92oPwUOO9cMDb7RTz")) // Use your diamond crown asset
         XioVisualIconXio.contentMode = .scaleAspectFit
         XioVisualIconXio.translatesAutoresizingMaskIntoConstraints = false
         XioPanelXio.addSubview(XioVisualIconXio)
@@ -50,7 +50,7 @@ class XioDiamondNoticeViewXio: UIView {
         XioPrimaryActionXio.addTarget(self, action: #selector(XioHandleMainClickXio), for: .touchUpInside)
         XioPanelXio.addSubview(XioPrimaryActionXio)
         
-        XioDismissXio.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        XioDismissXio.setImage(UIImage(systemName: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVW4PbLGkgeroBUuM+A/mBsLjcs33wMfJ6k=")), for: .normal)
         XioDismissXio.tintColor = .white
         XioDismissXio.translatesAutoresizingMaskIntoConstraints = false
         XioDismissXio.addTarget(self, action: #selector(XioRemoveSelfXio), for: .touchUpInside)
@@ -88,14 +88,14 @@ class XioDiamondNoticeViewXio: UIView {
     }
     
     func XioConfigureAsConfirmXio(cost: Int, action: @escaping () -> Void) {
-        XioMessageLabelXio.text = "Are you sure you wish to spend \(cost) diamonds to create it?"
-        XioPrimaryActionXio.setBackgroundImage(UIImage.init(named: "yesdokajgu"), for: .normal)
+        XioMessageLabelXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaILQPt0D/r/SZDMoZ9ZWBT/cHOLsixhDEKows1Ry1JISvgUt+ycWg==") + String(cost) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMUvlBJf7RtkQPz3KCUtQW8DYmW7aYqtwO4LdG9/acqE=")
+        XioPrimaryActionXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMRw4nnRKLvD+uKzzB9KTf0mY+A==")), for: .normal)
         XioActionCallbackXio = action
     }
     
     func XioConfigureAsInsufficientXio(action: @escaping () -> Void) {
-        XioMessageLabelXio.text = "You don't have enough coins, please recharge now."
-        XioPrimaryActionXio.setBackgroundImage(UIImage.init(named: "rechaigeinGd"), for: .normal)
+        XioMessageLabelXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMash+iOD6TzwIWJPVhqwjEVxoYoCLiBu+JqMHJrI3aHPFK8hN9GMVDQ326c2rpJEQAta45s6KJJPMg==")
+        XioPrimaryActionXio.setBackgroundImage(UIImage.init(named: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMYsk4clkxW8bwiTfr7iIs0D7C1d3")), for: .normal)
         XioActionCallbackXio = action
     }
     

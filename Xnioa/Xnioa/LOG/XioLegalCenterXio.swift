@@ -29,7 +29,7 @@ class XioLegalCenterXio: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Xio_Init_Error")
+        fatalError(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMVNIMbxN09esAaPyev3uOpoxrauwsnA="))
     }
 
     override func viewDidLoad() {
@@ -95,7 +95,7 @@ class XioLegalCenterXio: UIViewController {
     private func XioPopulateContentXio() {
         switch XioCurrentTypeXio {
         case .XioEulaXio:
-            XioHeadlineXio.text = "EULA"
+            XioHeadlineXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMS9KGkc/Og89BZEgAQ==")
             XioLegalTextXio.text = """
             Last Updated: 2026-03-01
             Contact: xiona@gmail.com
@@ -120,7 +120,7 @@ class XioLegalCenterXio: UIViewController {
             Automation: The use of bots, scrapers, or automated screen-scrolling scripts is prohibited to ensure authentic human interaction.
 """
         case .XioPrivacyXio:
-            XioHeadlineXio.text = "Privacy Policy"
+            XioHeadlineXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMcNqwDHSD1IUGtvqQ6sJr39ZYXajNfQ=")
             XioLegalTextXio.text = """
 Last Updated: 2026-03-01
 Contact: xiona@gmail.com
@@ -153,7 +153,7 @@ V. Your Rights
 You have the right to access, update, or delete your shared moments at any time. If you wish to disappear from the retro gathering, you can delete your account, and your personal data will be purged from our active systems within a reasonable timeframe.
 """
         case .XioTermsXio:
-            XioHeadlineXio.text = "User Agreement"
+            XioHeadlineXio.text = XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaJJFMd5b5k4EUlvK7EmEIMXE6uyomQ=")
             XioLegalTextXio.text = """
             Last Updated: 2026-03-01
             Contact: xiona@gmail.com
@@ -191,13 +191,13 @@ You have the right to access, update, or delete your shared moments at any time.
         XioLegalTextXio.textColor = UIColor(white: 0.85, alpha: 1.0)
         XioLegalTextXio.font = .systemFont(ofSize: 15, weight: .light)
         
-        XioRejectTriggerXio.setTitle("Decline", for: .normal)
+        XioRejectTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMTkW5kwRnDtAaVFXh7/DQg=="), for: .normal)
         XioRejectTriggerXio.setTitleColor(.white, for: .normal)
         XioRejectTriggerXio.layer.borderWidth = 1
         XioRejectTriggerXio.layer.borderColor = UIColor.gray.cgColor
         XioRejectTriggerXio.layer.cornerRadius = 8
         
-        XioConfirmTriggerXio.setTitle("I Agree", for: .normal)
+        XioConfirmTriggerXio.setTitle(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQGYCJfiAgCX1BkXvOS98g=="), for: .normal)
         XioConfirmTriggerXio.setTitleColor(.black, for: .normal)
         XioConfirmTriggerXio.backgroundColor = UIColor(red: 0.7, green: 0.9, blue: 0.6, alpha: 1.0)
         XioConfirmTriggerXio.layer.cornerRadius = 8
@@ -233,18 +233,17 @@ func XioTriggerLegalFlowXio(from XioHostXio: UIViewController, XioCategoryXio: X
     XioLegalPortalXio.modalTransitionStyle = .crossDissolve
     
     XioLegalPortalXio.XioAgreedCallbackXio = {
-        print("User_Accepted_\(XioCategoryXio)_Successfully")
+        print(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMT3OpTwzKV4jl2vfu+6dUyJhsPhQIZA=") + String(describing: XioCategoryXio) + XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMd8xkt1GaAQIIMnDVY/VcriOepNcXw=="))
         XIOEntryViewController.ifAccept = true
-        NotificationCenter.default.post(name: NSNotification.Name.init("ifAccept"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV1zK1IfDWuEpGd1ut+TWwA=")), object: nil)
     }
     
     XioLegalPortalXio.XiodisAgreedCallbackXio = {
         
         XIOEntryViewController.ifAccept = false
-        NotificationCenter.default.post(name: NSNotification.Name.init("ifAccept"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name.init(XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMV1zK1IfDWuEpGd1ut+TWwA=")), object: nil)
     }
     
     XioHostXio.present(XioLegalPortalXio, animated: true)
 }
-
 
