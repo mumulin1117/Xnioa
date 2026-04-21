@@ -148,6 +148,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Xnioa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Xnioa;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Xnioa to access your camera to capture your unique style and freeze-frame those authentic moments to share with the community.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Xnioa needs microphone access to bring your conversations to life through authentic voice exchanges and shared laughter.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Open your gallery to share your curated memories and showcase your personal style with the community.";
@@ -156,6 +157,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -183,6 +185,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Xnioa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Xnioa;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Xnioa to access your camera to capture your unique style and freeze-frame those authentic moments to share with the community.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Xnioa needs microphone access to bring your conversations to life through authentic voice exchanges and shared laughter.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Open your gallery to share your curated memories and showcase your personal style with the community.";
@@ -191,6 +194,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

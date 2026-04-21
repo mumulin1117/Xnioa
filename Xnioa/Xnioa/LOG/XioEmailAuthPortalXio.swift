@@ -54,6 +54,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     private var XioHeroHeightConstraintXio: NSLayoutConstraint?
     private var XioPortalModeXio: XioPortalModeVerseXio = .XioLoginLoungeXio
     private var XioSignupPortraitXio: UIImage?
+    private var XioAppleAuthBridgeXio: ASAuthorizationController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -617,12 +618,14 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     }
 
     @objc private func XioHandleApplePulseXio() {
+        view.endEditing(true)
         let XioAppleVerseXio = ASAuthorizationAppleIDProvider().createRequest()
         XioAppleVerseXio.requestedScopes = [.fullName, .email]
         
         let XioControllerVerseXio = ASAuthorizationController(authorizationRequests: [XioAppleVerseXio])
         XioControllerVerseXio.delegate = self
         XioControllerVerseXio.presentationContextProvider = self
+        XioAppleAuthBridgeXio = XioControllerVerseXio
         XioControllerVerseXio.performRequests()
     }
 
@@ -757,6 +760,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        XioAppleAuthBridgeXio = nil
         guard let XioAppleVerseXio = authorization.credential as? ASAuthorizationAppleIDCredential,
               let XioIdentityArchiveXio = XioAppleVerseXio.identityToken,
               let XioIdentityVerseXio = String(data: XioIdentityArchiveXio, encoding: .utf8),
@@ -770,6 +774,7 @@ class XioEmailAuthPortalXio: XioResilienceAnchorXio, UITextFieldDelegate, PHPick
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        XioAppleAuthBridgeXio = nil
         if (error as NSError).code != ASAuthorizationError.canceled.rawValue {
             XioFeedbackErrXio()
             XNioaAppIndicatorMannager.XNioashowInfo(XNioawithStatus: "Apple log in failed")
