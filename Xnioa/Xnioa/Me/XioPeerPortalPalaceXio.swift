@@ -274,7 +274,7 @@ class XioPeerPortalPalaceXio: UIViewController {
         
         XioHandleLabelXio.text = XioPartnerDataXio?.XioPartnerNameXio
         XioSocialMetricsLabelXio.text = "\(XioPartnerDataXio?.XioFanCountXio ?? 0) Followers   \(XioPartnerDataXio?.XioFocusCountXio ?? 0) Following"
-        
+        XioFaceOrbitXio.setImage(UIImage.init(named: usier.XioAvatarXio), for: .normal)
         if XioCurrentTabXio == 0 {
             
             let XioFakePostXio = XioPartyViewXio()
