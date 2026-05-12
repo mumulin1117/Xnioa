@@ -31,6 +31,7 @@ class XioTreasureVaultXio: UIViewController {
     
     private var XioSelectedIdxXio: Int = 0
     private let XioWScaleXio = UIScreen.main.bounds.width / 375
+    
     private let XioHScaleXio = UIScreen.main.bounds.height / 812
     
     private let XioInventoryXio: [XioWealthPackageXio] = [
