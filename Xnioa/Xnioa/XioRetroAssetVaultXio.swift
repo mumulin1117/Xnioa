@@ -6,7 +6,9 @@ final class XioRetroAssetVaultXio: NSObject {
     static let XioSharedVaultXio = XioRetroAssetVaultXio()
     
     private let XioImageCacheVerseXio = NSCache<NSString, UIImage>()
+    private let XioVaultTrackCacheVerseXio = NSCache<NSString, NSURL>()
     private let XioExcludedLaunchDeckXio: Set<String> = ["suhxioa"]
+    private let XioVaultLaneDeckXio = ["Images", "TrendyOutfit"]
     private var XioHasInstalledBridgeXio = false
     
     private override init() {}
@@ -39,7 +41,7 @@ final class XioRetroAssetVaultXio: NSObject {
         }
         
         let XioTrackVerseXio = XioRetroCipherCoreXio.XioVaultTrackNameXio(for: assetName)
-        guard let XioVaultUrlXio = Bundle.main.resourceURL?.appendingPathComponent("XioRetroVaultXio/Images/\(XioTrackVerseXio)"),
+        guard let XioVaultUrlXio = XioResolveVaultTrackUrlXio(for: XioTrackVerseXio),
               let XioCapsuleArchiveXio = try? Data(contentsOf: XioVaultUrlXio),
               let XioImageVerseXio = XioRetroCipherCoreXio.XioOpenVaultImageXio(XioCapsuleArchiveXio, assetName: assetName) else {
             return nil
@@ -51,6 +53,33 @@ final class XioRetroAssetVaultXio: NSObject {
         
         XioImageCacheVerseXio.setObject(XioImageVerseXio, forKey: assetName as NSString)
         return XioImageVerseXio
+    }
+    
+    private func XioResolveVaultTrackUrlXio(for trackName: String) -> URL? {
+        if let XioCachedTrackXio = XioVaultTrackCacheVerseXio.object(forKey: trackName as NSString) {
+            return XioCachedTrackXio as URL
+        }
+        
+        guard let XioVaultRootXio = Bundle.main.resourceURL?.appendingPathComponent("XioRetroVaultXio", isDirectory: true) else {
+            return nil
+        }
+        
+        for XioLaneVerseXio in XioVaultLaneDeckXio {
+            let XioLaneTrackXio = XioVaultRootXio.appendingPathComponent(XioLaneVerseXio, isDirectory: true).appendingPathComponent(trackName)
+            if FileManager.default.fileExists(atPath: XioLaneTrackXio.path) {
+                XioVaultTrackCacheVerseXio.setObject(XioLaneTrackXio as NSURL, forKey: trackName as NSString)
+                return XioLaneTrackXio
+            }
+        }
+        
+        if let XioVaultScanXio = FileManager.default.enumerator(at: XioVaultRootXio, includingPropertiesForKeys: nil) {
+            for case let XioTrackUrlXio as URL in XioVaultScanXio where XioTrackUrlXio.lastPathComponent == trackName {
+                XioVaultTrackCacheVerseXio.setObject(XioTrackUrlXio as NSURL, forKey: trackName as NSString)
+                return XioTrackUrlXio
+            }
+        }
+        
+        return nil
     }
 }
 

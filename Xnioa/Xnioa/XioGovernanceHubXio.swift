@@ -331,19 +331,8 @@ class XioGovernanceHubXio {
         if XioTesterPassportXio.XioDisplayVibeXio.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             XioTesterPassportXio.XioDisplayVibeXio = XioDisplayNameFromMailXio(XioTesterMailXio)
         }
-        XioEnsureRoomPoolXio()
-        if let XioRetroFanXio = XioRoomPoolXio.first {
-            var XioFollowingBadgeDeckXio = XioTesterPassportXio.XioFollowingBadgeDeckXio ?? []
-            var XioFollowerBadgeDeckXio = XioTesterPassportXio.XioFollowerBadgeDeckXio ?? []
-            if !XioFollowingBadgeDeckXio.contains(XioRetroFanXio.XioBadgeIDXio) {
-                XioFollowingBadgeDeckXio.append(XioRetroFanXio.XioBadgeIDXio)
-            }
-            if !XioFollowerBadgeDeckXio.contains(XioRetroFanXio.XioBadgeIDXio) {
-                XioFollowerBadgeDeckXio.append(XioRetroFanXio.XioBadgeIDXio)
-            }
-            XioTesterPassportXio.XioFollowingBadgeDeckXio = XioFollowingBadgeDeckXio
-            XioTesterPassportXio.XioFollowerBadgeDeckXio = XioFollowerBadgeDeckXio
-        }
+        XioTesterPassportXio.XioFollowingBadgeDeckXio = []
+        XioTesterPassportXio.XioFollowerBadgeDeckXio = []
         
         XioPassportHarborXio[XioTesterMailXio] = XioTesterPassportXio
         XioSavePassportHarborXio(XioPassportHarborXio)
@@ -384,17 +373,6 @@ class XioGovernanceHubXio {
     private func XioRefreshDialogSeedXio(mailKey: String) {
         XioEnsureRoomPoolXio()
         XioInboxPalaceXio.XioChatBufferXio.removeAll()
-        
-        if mailKey == XioTesterMailXio, XioRoomPoolXio.count > 2 {
-            XioInboxPalaceXio.XioChatBufferXio = [
-                Diolodlisr(Xiouser: XioRoomPoolXio[0], dilog: [
-                    XioChatEntityXio(XioSnippetTextXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMQsEOTcihLc8sK3YOGJwW0DSfvpdbww5SuE7Q14kQsscbXeA"), XioTimestampXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMaKuyZVccL60OucSGuI="), whosayIsMe: false)
-                ]),
-                Diolodlisr(Xiouser: XioRoomPoolXio[2], dilog: [
-                    XioChatEntityXio(XioSnippetTextXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMca1knN93V/90RcSQvfCoxs="), XioTimestampXio: XioRetroCipherCoreXio.XioOpenPhraseXio("xv1:WFBIMdaeWFtU9/XCmprzV5I="), whosayIsMe: true)
-                ])
-            ]
-        }
     }
     
     private func XioEnsureRoomPoolXio() {
